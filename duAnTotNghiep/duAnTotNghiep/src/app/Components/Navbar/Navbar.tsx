@@ -108,7 +108,7 @@ export default function Navbar() {
             <Link href={"/"}>Trang chủ</Link>
           </li>
           <li>
-            <Link href={"/order"}>Dặt vé</Link>
+            <Link href={"/order"}>Đặt vé</Link>
           </li>
           {links.map((link) => (
             <li key={link.id}>
