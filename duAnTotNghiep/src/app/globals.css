@@ -49,6 +49,7 @@ body {
 }
 
 body {
+  color: #fff;
   background: var(--background);
   /* background-blend-mode: overlay; */
   font-family: Arial, Helvetica, sans-serif;
