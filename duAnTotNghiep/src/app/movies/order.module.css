@@ -1,0 +1,24 @@
+.boxNow{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.movieNow{
+    background-image:  url("https://homepage.momocdn.net/img/momo-upload-api-230912110927-638301137672516955.jpeg" 
+    );
+    /* background-repeat: no-repeat; */
+    width: 100%;
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 80%;
+
+    h1{
+        text-align: center;
+        padding-top: 30px;
+        margin-bottom: -40px;
+    }
+}
