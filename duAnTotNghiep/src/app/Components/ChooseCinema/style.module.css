@@ -1,0 +1,66 @@
+.chooseCinema-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid #9700b9;
+  box-shadow: 0 0 10px 0 #9700b9;
+  border-radius: 10px 10px 0 0;
+  padding: 20px 20px 10px;
+}
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span {
+    display: block;
+  }
+}
+.location {
+  display: flex;
+  width: 200px;
+  border-radius: 5px;
+  color: #2396f3;
+  border: 1px solid #2396f3;
+  align-items: center;
+  padding: 8px 15px;
+  justify-content: space-between;
+  .location-name {
+    display: flex;
+    gap: 5px;
+  }
+}
+.your-location {
+  display: flex;
+  padding: 8px 15px;
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+}
+.cinemas {
+  display: flex;
+  gap: 20px;
+  .cinema {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .icon-cinema {
+    width: 45px;
+    height: 45px;
+    background-color: #2396f3;
+  }
+  .name {
+    color: #2396f3;
+    font-size: 12px;
+  }
+}
