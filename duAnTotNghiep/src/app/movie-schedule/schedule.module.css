@@ -1,0 +1,13 @@
+.schedule {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+}
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

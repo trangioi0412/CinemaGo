@@ -1,0 +1,104 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+} */
+
+.container {
+  /* display: flex; */
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh; /* Căn giữa theo chiều dọc */
+  background: #f0f2f5;
+  padding-top: 100px;
+}
+
+.left {
+  flex: 1; /* Chia cột đều */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.left h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1877f2;
+}
+
+.right {
+  flex: 1; /* Chia cột đều */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 12px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background: #166fe5;
+}
+
+.forgot {
+  display: block;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* hr {
+    margin: 15px 0;
+    border: 0.5px solid #dddfe2;
+} */
+
+.registerBtn {
+  background: #42b72a;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.registerBtn:hover {
+  background: #36a420;
+}
