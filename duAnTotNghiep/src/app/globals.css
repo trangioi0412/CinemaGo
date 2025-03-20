@@ -49,7 +49,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: #fff;
   background: var(--background);
   /* background-blend-mode: overlay; */
   font-family: Arial, Helvetica, sans-serif;
