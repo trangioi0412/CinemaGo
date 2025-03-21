@@ -45,6 +45,13 @@
         display: flex;
         gap: 10px;
         align-items: center;
+        .name-item {
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* Số dòng tối đa */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .icon-item {
           background-color: #2396f3;
           width: 40px;
@@ -93,6 +100,7 @@
           -webkit-line-clamp: 1; /* Số dòng tối đa */
           -webkit-box-orient: vertical;
           overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -147,7 +155,8 @@
         .age {
           background-color: red;
           color: #fff;
-          padding: 5px 10px;
+          border-radius: 5px;
+          padding: 3px 7px;
           align-self: flex-start;
         }
         .name-movie {
