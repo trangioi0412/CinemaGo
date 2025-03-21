@@ -6,8 +6,202 @@
     text-align: center;
   }
 }
+
 .schedule-container {
   display: flex;
+}
+.list-cinema {
+  flex: 1;
+  display: flex;
   flex-direction: column;
-  gap: 30px;
+  padding: 10px 20px;
+  border: 2px solid #9700b9;
+  border-top: none;
+  box-shadow: 0 0 10px 0 #9700b9;
+  gap: 20px;
+  max-height: 700px;
+  border-radius: 0 0 0 10px;
+  .search {
+    input {
+      padding: 10px 20px;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #9700b9;
+      background: rgb(0, 0, 0, 0.5);
+      color: #fff;
+    }
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    .item {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .content {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .name-item {
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* Số dòng tối đa */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .icon-item {
+          background-color: #2396f3;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+.screening {
+  flex: 4;
+  position: sticky;
+  max-height: 700px;
+  .cinema-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #9700b9;
+    border-top: none;
+    border-left: none;
+    box-shadow: 0 0 10px 0 #9700b9;
+    padding: 20px 20px 10px;
+
+    .cinema {
+      display: flex;
+      gap: 20px;
+      /* align-items: center; */
+      .icon {
+        background-color: #2396f3;
+        width: 40px;
+        height: 40px;
+        align-self: center;
+      }
+      .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .name {
+          font-weight: 600;
+        }
+        .address {
+          font-size: 14px;
+          font-weight: 400;
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* Số dòng tối đa */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .times {
+      display: flex;
+      gap: 10px;
+      .time-item {
+        border: 1px solid #2396f3;
+        border-radius: 5px;
+        .date {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #2396f3;
+          padding: 10px 0;
+        }
+        .detail {
+          padding: 5px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .movies {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 0;
+    max-height: calc(700px - 156px);
+    overflow-y: auto;
+    border-bottom: 2px solid #9700b9;
+    box-shadow: 0 0 10px 0 #9700b9;
+    .movie {
+      display: flex;
+      align-items: start;
+      gap: 30px;
+      border: 2px solid #9700b9;
+      border-right: 2px solid #9700b9;
+      border-top: none;
+      border-left: none;
+
+      padding: 20px;
+      box-shadow: 0 0 10px 0 #9700b9;
+      .img {
+        width: 120px;
+        height: 170px;
+        background-color: #2396f3;
+      }
+      .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .age {
+          background-color: red;
+          color: #fff;
+          border-radius: 5px;
+          padding: 3px 7px;
+          align-self: flex-start;
+        }
+        .name-movie {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .name {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          .cate {
+            color: #2396f3;
+            font-size: 14px;
+          }
+        }
+      }
+      .types {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+        flex-direction: column;
+        .type {
+          flex-direction: column;
+          display: flex;
+          gap: 10px;
+          .title {
+            font-weight: 600;
+          }
+          .timeShow {
+            display: flex;
+            gap: 20px;
+            .time {
+              display: flex;
+              gap: 5px;
+              padding: 8px 15px;
+              border: 1px solid #2396f3;
+              border-radius: 5px;
+              color: #2396f3;
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
