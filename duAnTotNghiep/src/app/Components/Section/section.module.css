@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 .movie-img {
   width: 280px;
@@ -50,4 +51,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.heart{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #2296F3;
+  font-size: 22px;
 }

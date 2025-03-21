@@ -1,8 +1,15 @@
+"use client";
+import { useState } from "react";
 import styles from "../section.module.css";
 import { Movies } from "@/app/movie.interface";
+import { FaCartPlus, FaRegHeart, FaHeart } from "react-icons/fa"
 function Movie({ movie }: { movie: Movies }) {
+  const [like, setLike] = useState(false);
   return (
     <div className={styles.movie}>
+      <div className={styles["heart"]} onClick={() => setLike(!like)}>
+        {like ? <FaHeart /> : <FaRegHeart />}
+      </div>
       <div className={styles["movie-img"]}>
         <img src={movie.image} alt="" />
       </div>
