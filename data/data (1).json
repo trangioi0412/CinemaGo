@@ -178,25 +178,45 @@
                 {
                     "id": 2,
                     "diagram": {
-                        
+                        "row": 14,
+                        "colunm": 6,
+                        "element_remove": ["A15","A4","A7","B1","C6","B9"],
+                        "double_Chair": ["I4","I6"],
+                        "element_selected": ["A13","A18"],
+                        "element_selecting": ["A12","A16"]
                     }
                 },
                 {
                     "id": 3,
                     "diagram": {
-                        
+                        "row": 15,
+                        "colunm": 8,
+                        "element_remove": ["A5","A6","A7","B5","B6","B7"],
+                        "double_Chair": ["I2","I3"],
+                        "element_selected": ["A10","A12"],
+                        "element_selecting": ["A13","A15"]
                     }
                 },
                 {
                     "id": 4,
                     "diagram": {
-                        
+                        "row": 17,
+                        "colunm": 8,
+                        "element_remove": ["A5","A6","A7","B5","B6","B7"],
+                        "double_Chair": ["I2","I3"],
+                        "element_selected": ["A10","A12"],
+                        "element_selecting": ["A13","A15"]
                     }
                 },
                 {
                     "id": 5,
                     "diagram": {
-                        
+                        "row": 18,
+                        "colunm": 8,
+                        "element_remove": ["A5","A6","A7","B5","B6","B7"],
+                        "double_Chair": ["I2","I3"],
+                        "element_selected": ["A10","A12"],
+                        "element_selecting": ["A13","A15"]
                     }
                 }
             ]
