@@ -1,104 +1,193 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-} */
 
-.container {
-  /* display: flex; */
-  justify-content: center;
-  /* align-items: center; */
-  height: 100vh; /* Căn giữa theo chiều dọc */
-  background: #f0f2f5;
-  padding-top: 100px;
+
+
+.background_login_resgister{
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  backdrop-filter: blur(3px);
 }
 
-.left {
-  flex: 1; /* Chia cột đều */
+.login{
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  background: linear-gradient(132deg, #121443 10%, #2d0336 25%, #311448 40%, #2d0032 55%, #121443 70%, #2d0336 85%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.left h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #1877f2;
-}
-
-.right {
-  flex: 1; /* Chia cột đều */
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.loginBox {
-  background: white;
-  padding: 20px;
-  width: 350px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.header{
+  text-align: center;
+  margin: 100px 0 20px;
+}
+
+.logoImg{
+  height: 75px;
+  margin-bottom: 30px;
+}
+
+.button{
+  border: 3px solid #2396F3;
+  border-radius: 25px;
+  width: 280px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-bottom: 30px;
+
+}
+.action{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  height: 100%;
+  width: 50%;
+  color: #2396F3;
+  font-weight: 600;
+}
+
+.actionSelected{
+  background: linear-gradient(to right, #2396F3, #8A2BE2);
+  border-radius: 20px;
+  color: white;
+}
+
+.loginForm{
+  width: 80%;
   text-align: center;
 }
 
-.loginBox input {
+.input{
+  height: 20%;
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #dddfe2;
-  border-radius: 6px;
-  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: rgb(0, 0, 0,0.3);
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  position: relative;
 }
 
-.loginBtn {
-  width: 100%;
-  padding: 12px;
-  background: #1877f2;
+.input .icon{
+  font-size: 25px;
+}
+
+.input input{
+  font-size: 16px;
+  outline: none;
+  height: 100%;
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  padding: 0 10px;
+
+}
+
+.placeholderText{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  scale: 1;
+  left: 10px;
+  pointer-events: none;
+}
+
+.input input::placeholder{
+  color: white;
+  position: absolute;
+}
+.input:focus-within{
+  border-color: #2396F3;
+}
+
+.input:focus-within .icon{
+  color: #2396F3;
+}
+.input:focus-within .placeholderText{
+  top: 0;
+  transform: translateY(-135%);
+  scale: 1.2;
+  transition: 0.5s;
+  color: #2396F3;
+}
+
+.input input:focus-within + .placeholderText {
+  top: 50%;
+  transform: translateY(-50%);
+  scale: 1;
+}
+
+.loginAction{
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.loginAction input {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 2px solid #2396F3;
+  border-radius: 3px;
+}
+
+.loginAction input:checked {
+  background-color: #2396F3;
+  border-color: #2396F3;
+}
+
+
+.buttonLogin {
+  position: relative;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  background-color: #2396F3;
   color: white;
   border: none;
-  border-radius: 6px;
+  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
+  overflow: hidden; /* Đảm bảo hiệu ứng không tràn */
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.loginBtn:hover {
-  background: #166fe5;
-}
-
-.forgot {
-  display: block;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  color: #1877f2;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.forgot:hover {
-  text-decoration: underline;
-}
-
-/* hr {
-    margin: 15px 0;
-    border: 0.5px solid #dddfe2;
-} */
-
-.registerBtn {
-  background: #42b72a;
+.buttonLogin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #2396f3 0%,
+    #5761eb 31%,
+    #7046e6 59%,
+    #8a2be2 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
 }
 
-.registerBtn:hover {
-  background: #36a420;
+.buttonLogin:hover::before {
+  opacity: 1;
 }
+
+.buttonLogin:hover {
+  color: white;
+  z-index: 1;
+}
+
+
