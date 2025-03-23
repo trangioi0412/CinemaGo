@@ -54,4 +54,5 @@
   flex-wrap: wrap;
   gap: 20px;
   z-index: 10;
+  row-gap: 30px;
 }

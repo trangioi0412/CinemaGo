@@ -36,6 +36,7 @@
   text-transform: capitalize;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-height: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,0 +1,51 @@
+.item {
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  &:hover {
+    img {
+      scale: 1.1;
+    }
+  }
+}
+.offer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+.img {
+  width: 100%;
+  height: 179px;
+  background-color: aqua;
+  overflow: hidden;
+  border-radius: 15px;
+  img {
+    width: 100%;
+    transition: all 0.5s ease;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.title {
+  font-size: var(--size-heading-24);
+  font-weight: 600;
+  text-transform: capitalize;
+  user-select: none;
+}
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-detail {
+  position: absolute;
+  top: 179px;
+  transform: translateY(-25px);
+  left: 20px;
+}

@@ -5,7 +5,7 @@ import { FaFacebook, FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
 const footerLink = [
   {
     id: 1,
-    title: "gocinema",
+    title: "ticknow",
     children: [
       {
         url: "/#",
@@ -25,28 +25,7 @@ const footerLink = [
       },
     ],
   },
-  {
-    id: 2,
-    title: "góc điện ảnh",
-    children: [
-      {
-        url: "/#",
-        name: "Thể loại phim",
-      },
-      {
-        url: "/#",
-        name: "Bình luận phim",
-      },
-      {
-        url: "/#",
-        name: "Blog điện ảnh",
-      },
-      {
-        url: "/#",
-        name: "Phim hay tháng",
-      },
-    ],
-  },
+
   {
     id: 3,
     title: "hổ trợ",
@@ -57,7 +36,7 @@ const footerLink = [
       },
       {
         url: "/#",
-        name: "Rạp/Giá vé",
+        name: "Rạp chiếu",
       },
       {
         url: "/#",
@@ -78,22 +57,22 @@ function Footer() {
         <div className={style["footer-primary"]}>
           <div className={style["footer_logo"]}>
             <div className={style.logo}>
-              <a href="/">LOGO</a>
+              <img src="/logo.png" alt="" />
             </div>
             <p className="slogan">Đặt vé dễ dàng, tận hưởng trọn vẹn</p>
             <div className={style["socials"]}>
-              <span>
+              <a href="#">
                 <FaFacebook />
-              </span>
-              <span>
+              </a>
+              <a href="#">
                 <FaTiktok />
-              </span>
-              <span>
+              </a>
+              <a href="#">
                 <FaYoutube />
-              </span>
-              <span>
+              </a>
+              <a href="#">
                 <FaInstagram />
-              </span>
+              </a>
             </div>
           </div>
           <div className={style["footer_nav"]}>
@@ -108,7 +87,7 @@ function Footer() {
         </div>
         <div className={style["footer-secondary"]}>
           <div className="copyright">
-            &copy; 2025 GoCinema: All rights reserved
+            &copy; 2025 TickNOw: All rights reserved
           </div>
           <div>
             <img
@@ -118,7 +97,7 @@ function Footer() {
             />
           </div>
           <p>
-            <span>NHÓM:</span> GOCINEMA
+            <span>NHÓM:</span> TICKNOW
           </p>
           <p>
             <span>ĐỊA CHỈ:</span> FPT POLYTECHNIC HỒ CHÍ MINH

@@ -12,5 +12,17 @@
 .contents {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+}
+.offer_list {
+  display: flex;
+  width: 200%;
+  gap: 20px;
+}
+.offer-container {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
+  width: 100%;
+  overflow: hidden;
 }

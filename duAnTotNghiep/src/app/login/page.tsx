@@ -8,45 +8,56 @@ export default function Login() {
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
   return (
-    <>
-    <div className={login.background_login_resgister}>
-    </div>
-    <div className={login.login}>
-      <div className={login.header}>
-        <img src="/logo.png" alt="" className={login.logoImg}/>
-        <div className={login.button}>
-          <button className={`${login.action} ${login.actionSelected}`}>Đăng Nhập</button>
-          <button className={login.action}>Đăng Ký</button>
+    <div className={login.container}>
+      <div className={login.background_login_resgister}></div>
+      <div className={login.login}>
+        <div className={login.header}>
+          <img src="/logo.png" alt="" className={login.logoImg} />
+          <div className={login.button}>
+            <button className={`${login.action} ${login.actionSelected}`}>
+              Đăng Nhập
+            </button>
+            <button className={login.action}>Đăng Ký</button>
+          </div>
         </div>
+        <form action="" className={login.loginForm}>
+          <div className={login.input}>
+            <label htmlFor="" className={login.placeholderText}>
+              Email
+            </label>
+            <input type="email" />
+            <MdOutlineMail className={login.icon} />
+          </div>
+          <br />
+          <br />
+          <br />
+          <div className={login.input}>
+            <label htmlFor="" className={login.placeholderText}>
+              Password
+            </label>
+            <input type="password" />
+            <FaRegEye className={login.icon} />
+          </div>
+          <div className={login.loginAction}>
+            <div className={login.savePassword}>
+              <input type="checkbox" />
+              <label htmlFor="">Nhớ mật khẩu</label>
+            </div>
+            <div className={login.forgotPassword}>
+              <p>Quên Mật Khẩu?</p>
+            </div>
+          </div>
+          <button className={login.buttonLogin}>
+            <p>Đăng Nhập</p>
+          </button>
+        </form>
       </div>
-      <form action="" className={login.loginForm}>
-        <div className={login.input}>
-          <label htmlFor="" className={login.placeholderText}>Email</label>
-          <input type="email"/>
-          <MdOutlineMail className={login.icon}/>
-        </div><br /><br /><br />
-        <div className={login.input}>
-          <label htmlFor="" className={login.placeholderText}>Password</label>
-          <input type="password"/>
-          <FaRegEye  className={login.icon}/>
-        </div>
-        <div className={login.loginAction}>
-          <div className={login.savePassword}>
-            <input type="checkbox" />
-            <label htmlFor="">Nhớ mật khẩu</label>
-          </div>
-          <div className={login.forgotPassword}>
-            <p>Quên Mật Khẩu?</p>
-          </div>
-        </div>
-        <button className={login.buttonLogin}><p>Đăng Nhập</p></button>
-      </form>
     </div>
-    </>
   );
 }
 
-{/* <div className={login.left}>
+{
+  /* <div className={login.left}>
 <h1>Đăng nhập</h1>
 </div>
 <div className={login.right}>
@@ -69,4 +80,5 @@ export default function Login() {
     </a>
     <button className={login.registerBtn}>Tạo tài khoản mới</button>
   </div>
-</div> */}
+</div> */
+}
