@@ -17,6 +17,16 @@
     #121443 70%,
     #2d0336 85%
   );
+  --size-12: 1.2rem;
+  --size-14: 1.4rem;
+  --size-16: 1.6rem;
+  --size-16: 1.8rem;
+  --size-2: 2rem;
+  --size-heading-24: 2.4rem;
+  --size-heading-32: 3.2rem;
+  --size-heading-4: 4rem;
+  --color-primary: #2396f3;
+  --color-secondary: #8a2be2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +51,10 @@
     );
   }
 }
-
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
 html,
 body {
   max-width: 100vw;
@@ -52,9 +65,10 @@ body {
   color: #fff;
   background: var(--background);
   /* background-blend-mode: overlay; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-be-vietnam-pro-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--size-16);
 }
 
 * {
@@ -80,17 +94,29 @@ ul {
   height: 100vh;
 } */
 .container {
-  max-width: 90%;
+  max-width: 85%;
   margin: auto;
+  overflow: hidden;
 }
 .btn {
   padding: 10px 20px;
-  background-color: red;
+  background: var(--color-primary);
   color: #fff;
   font-weight: 600;
-  border-radius: 8px;
+  font-size: var(--size-16);
+  border-radius: 99px;
   border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: var(--color-secondary);
+  }
 }
 main {
   margin-top: 100px;
+}
+h1,
+h2 {
+  font-family: var(--font-oswald-sans), sans-serif;
 }

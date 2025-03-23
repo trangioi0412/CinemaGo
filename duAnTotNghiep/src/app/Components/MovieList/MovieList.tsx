@@ -1,4 +1,4 @@
-import styles from "./section.module.css";
+import styles from "./movieList.module.css";
 import { Movies } from "@/app/movie.interface";
 import Movie from "./Movie/Movie";
 import { getAllMovies } from "@/app/service/movie.service";
@@ -7,10 +7,10 @@ async function Section({
   title,
   filter,
 }: {
-  title: string;
+  title?: string;
   filter?: (movie: any) => boolean;
 }) {
-  const data = await getAllMovies()
+  const data = await getAllMovies();
   // console.log(data);
   const filteredMovies = filter ? data.filter(filter) : data;
   return (
