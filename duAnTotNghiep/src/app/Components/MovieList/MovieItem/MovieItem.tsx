@@ -1,8 +1,8 @@
-import styles from "../movieList.module.css";
+import styles from "./movieItem.module.css";
 import { Movies } from "@/app/movie.interface";
 import { BsInfoLg } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
-function Movie({ movie }: { movie: Movies }) {
+function MovieItem({ movie }: { movie: Movies }) {
   return (
     <a href="#" className={styles.movie}>
       <div className={styles["movie-option"]}>
@@ -27,4 +27,4 @@ function Movie({ movie }: { movie: Movies }) {
   );
 }
 
-export default Movie;
+export default MovieItem;

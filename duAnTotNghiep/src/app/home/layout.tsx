@@ -1,22 +1,19 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import MovieList from "../Components/MovieList/MovieList";
-function Layout() {
+import {
+  getMoviesComingSoon,
+  getMoviesShowing,
+} from "../service/movie.service";
+async function Layout() {
+  const showing = await getMoviesShowing();
+  const comingSoon = await getMoviesComingSoon();
+
   return (
     <div>
       <div className={`${styles.contents} container`}>
-        <MovieList
-          filter={(movie) => movie.status === 2}
-          title="Phim đang chiếu"
-        />
-        <MovieList
-          filter={(movie) => movie.status === 1}
-          title="Phim sắp chiếu"
-        />
-        <MovieList
-          filter={(movie) => movie.nation.toLowerCase() === "việt nam"}
-          title="Phim Việt"
-        />
+        <MovieList data={showing} title="Phim đang chiếu" />
+        <MovieList data={comingSoon} title="Phim sắp chiếu" />
       </div>
     </div>
   );

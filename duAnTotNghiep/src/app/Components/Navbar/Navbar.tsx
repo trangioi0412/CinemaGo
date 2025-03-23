@@ -1,12 +1,13 @@
 "use client";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import style from "./navbar.module.css";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
 const links = [
   { id: 1, url: "/home", name: "Trang chủ" },
-  { id: 2, url: "/moives", name: "Phim chiếu" },
+  { id: 2, url: "/movies", name: "Phim chiếu" },
   { id: 3, url: "/movie-schedule", name: "Lịch chiếu" },
   { id: 4, url: "/cinema", name: "Rạp chiếu" },
 ];
@@ -42,9 +43,24 @@ const menuLink = [
   },
 ];
 export default function Navbar() {
+  const [activeHeader, setActiveHeader] = useState(false);
+  useEffect(() => {
+    const handleChangeHeader = () => {
+      setActiveHeader(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleChangeHeader);
+    return () => {
+      window.removeEventListener("scroll", handleChangeHeader);
+    };
+  }, []);
+
   const pathName = usePathname();
   return (
-    <header className={style["header-container"]}>
+    <header
+      className={`${activeHeader && "activeHeader"} ${
+        style["header-container"]
+      }`}
+    >
       <div className={`container ${style.header}`}>
         <a href="/" className={style.logo}>
           <img src="/logo.png" className={style.imgLogo} alt="" />

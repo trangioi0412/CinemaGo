@@ -1,18 +1,9 @@
 import styles from "./movieList.module.css";
 import { Movies } from "@/app/movie.interface";
-import Movie from "./Movie/Movie";
+import MovieItem from "./MovieItem/MovieItem";
 import { getAllMovies } from "@/app/service/movie.service";
 
-async function Section({
-  title,
-  filter,
-}: {
-  title?: string;
-  filter?: (movie: any) => boolean;
-}) {
-  const data = await getAllMovies();
-  // console.log(data);
-  const filteredMovies = filter ? data.filter(filter) : data;
+async function Section({ title, data }: { title?: string; data: Movies[] }) {
   return (
     <section className={styles.section}>
       <div className={styles.heading}>
@@ -21,8 +12,8 @@ async function Section({
         </h1>
       </div>
       <div className={styles.movies}>
-        {filteredMovies.map((m: any) => {
-          return <Movie key={m.id} movie={m} />;
+        {data.map((m: any) => {
+          return <MovieItem key={m.id} movie={m} />;
         })}
       </div>
     </section>

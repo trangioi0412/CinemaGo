@@ -96,7 +96,7 @@ ul {
 .container {
   max-width: 85%;
   margin: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .btn {
   padding: 10px 20px;
@@ -119,4 +119,7 @@ main {
 h1,
 h2 {
   font-family: var(--font-oswald-sans), sans-serif;
+}
+.activeHeader {
+  backdrop-filter: blur(10px);
 }
