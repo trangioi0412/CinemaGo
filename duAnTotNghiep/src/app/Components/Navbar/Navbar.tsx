@@ -1,45 +1,16 @@
+"use client";
+import { usePathname } from "next/navigation";
 import style from "./navbar.module.css";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
-import { FaRegCircleUser } from "react-icons/fa6";
-import { IoIosArrowDown } from "react-icons/io";
+import { LuUserRound } from "react-icons/lu";
 const links = [
-  { id: 1, url: "/movie-schedule", name: "Lịch chiếu" },
-  { id: 2, url: "/blog", name: "Tin tức" },
-  { id: 3, url: "/cinema", name: "Rạp chiếu" },
-  { id: 4, url: "/review", name: "Góc điện ảnh" },
+  { id: 1, url: "/home", name: "Trang chủ" },
+  { id: 2, url: "/moives", name: "Phim chiếu" },
+  { id: 3, url: "/movie-schedule", name: "Lịch chiếu" },
+  { id: 4, url: "/cinema", name: "Rạp chiếu" },
 ];
 const menuLink = [
-  {
-    id: 1,
-    children: [
-      {
-        url: "/#",
-        name: "Phim chiếu hôm nay",
-      },
-      {
-        url: "/#",
-        name: "Phim đang chiếu",
-      },
-      {
-        url: "/#",
-        name: "Phim sắp chiếu",
-      },
-    ],
-  },
-  {
-    id: 2,
-    children: [
-      {
-        url: "/#",
-        name: "Ưu đãi",
-      },
-      {
-        url: "/#",
-        name: "Khuyến mãi",
-      },
-    ],
-  },
   {
     id: 3,
     children: [
@@ -69,81 +40,53 @@ const menuLink = [
       },
     ],
   },
-
-  {
-    id: 4,
-    children: [
-      {
-        url: "/#",
-        name: "Thể loại",
-      },
-      {
-        url: "/#",
-        name: "Đạo diễn",
-      },
-      {
-        url: "/#",
-        name: "Diễn viên",
-      },
-      {
-        url: "/#",
-        name: "Bình luận phim",
-      },
-      {
-        url: "/#",
-        name: "Blog điện ảnh",
-      },
-    ],
-  },
 ];
 export default function Navbar() {
+  const pathName = usePathname();
   return (
-    <div className={style.header}>
-      <a href="/" className={style.logo}>
-        <img src="/logo.png" className={style.imgLogo} alt="" />
-      </a>
-
-      <nav>
-        <ul className={style.navbar}>
-          <li>
-            <Link href={"/"}>Trang chủ</Link>
-          </li>
-          <li>
-            <Link href={"/movies"}>Phim chiếu</Link>
-          </li>
-          {links.map((link) => (
-            <li key={link.id}>
-              <Link href={link.url} className={style.linkNav}>
-                {link.name}
-                <span>
-                  {" "}
-                  <IoIosArrowDown fontSize={18} />
-                </span>
-              </Link>
-              <nav className={style.dropdown}>
-                <ul>
-                  {menuLink.map((i) => {
-                    if (i.id === link.id) {
-                      return i.children.map((l) => (
-                        <li key={l.name}>
-                          <Link
-                            href={l.url}
-                            key={l.name}
-                            className={style.linkMenu}
-                          >
-                            {l.name}
-                          </Link>
-                        </li>
-                      ));
-                    }
-                  })}
-                </ul>
-              </nav>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div>
+    <header className={style["header-container"]}>
+      <div className={`container ${style.header}`}>
+        <a href="/" className={style.logo}>
+          <img src="/logo.png" className={style.imgLogo} alt="" />
+        </a>
+        <nav>
+          <ul className={style.navbar}>
+            {links.map((link) => (
+              <li
+                key={link.id}
+                className={`${pathName === link.url && style.active}`}
+              >
+                <Link href={link.url} className={` ${style["linkNav"]}`}>
+                  {link.name}
+                  {/* <span>
+                    {" "}
+                    <IoIosArrowDown fontSize={18} />
+                  </span> */}
+                </Link>
+                {/* <nav className={style.dropdown}>
+                  <ul>
+                    {menuLink.map((i) => {
+                      if (i.id === link.id) {
+                        return i.children.map((l) => (
+                          <li key={l.name}>
+                            <Link
+                              href={l.url}
+                              key={l.name}
+                              className={style.linkMenu}
+                            >
+                              {l.name}
+                            </Link>
+                          </li>
+                        ));
+                      }
+                    })}
+                  </ul>
+                </nav> */}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        {/* <div> */}
         <div className={style["search-container"]}>
           <input
             className={style["search-box"]}
@@ -154,12 +97,16 @@ export default function Navbar() {
             <IoSearchOutline />
           </div>
         </div>
+        {/* </div> */}
+        <div className={style["login-container"]}>
+          <Link href={"/login"} className={style.login}>
+            <span>
+              <LuUserRound />
+            </span>
+            Đăng nhập
+          </Link>
+        </div>
       </div>
-      <div>
-        <Link href={"/login"}>
-          <FaRegCircleUser fontSize={"30px"} />
-        </Link>
-      </div>
-    </div>
+    </header>
   );
 }
