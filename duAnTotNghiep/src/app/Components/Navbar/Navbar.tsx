@@ -100,7 +100,7 @@ export default function Navbar() {
   return (
     <div className={style.header}>
       <a href="/" className={style.logo}>
-        <img src="/logo.svg" className={style.imgLogo} alt="" />
+        <img src="/logo.png" className={style.imgLogo} alt="" />
       </a>
 
       <nav>

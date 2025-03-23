@@ -14,3 +14,4 @@ export interface Movies {
   banner: string;
   trailer: string;
 }
+ 
