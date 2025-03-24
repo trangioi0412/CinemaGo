@@ -203,13 +203,33 @@
         }
     ],
     "ticket": [
-        
+        {
+            "id": "",
+            "price": 10,
+            "type": "",
+            "id_suat":"",
+            "id_ghe": ""
+
+        }
     ],
     "bill": [
-
+        {
+            "id": "",
+            "id_user": "",
+            "id_ticket": "",
+            "id_payment": "",
+            "day": "",
+            "price": 10
+        }
     ],
     "payments": [
-
+        {
+            "id": "",
+            "bank_number": "",
+            "bank_brand": "",
+            "QR_code": "",
+            "name": ""
+        }
     ],
     "user": [
 
