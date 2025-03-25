@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import style from "./movies.module.css";
 import {
   getMoviesComingSoon,
@@ -37,6 +37,7 @@ function Movies() {
           </button>
         ))}
       </div>
+
       <div className={style.movies}>
         {data.map((m: any) => {
           return <MovieItem key={m.id} movie={m} />;

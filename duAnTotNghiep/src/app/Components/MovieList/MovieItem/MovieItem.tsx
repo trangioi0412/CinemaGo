@@ -4,7 +4,7 @@ import { BsInfoLg } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
 function MovieItem({ movie }: { movie: Movies }) {
   return (
-    <a href="#" className={styles.movie}>
+    <a href={`/movies/${movie.id}`} className={styles.movie}>
       <div className={styles["movie-option"]}>
         <span className={styles.play}>
           <FaPlay />

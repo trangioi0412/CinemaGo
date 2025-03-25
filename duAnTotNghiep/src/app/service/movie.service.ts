@@ -13,4 +13,9 @@ const getMoviesComingSoon = async () => {
   const data = await res.json();
   return data;
 };
-export { getAllMovies, getMoviesShowing, getMoviesComingSoon };
+const getMovie = async (id: string | number) => {
+  const res = await fetch("http://localhost:5000/movies/" + id);
+  const data = await res.json();
+  return data;
+};
+export { getAllMovies, getMoviesShowing, getMoviesComingSoon, getMovie };
