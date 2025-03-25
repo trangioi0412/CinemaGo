@@ -10,19 +10,23 @@
 .background_login_resgister {
   width: 100%;
   background-color: rgb(0, 0, 0, 0.5);
-  height: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .wrapper {
   background: var(--background);
   width: 500px;
-  height: 100%;
-  padding: 0 30px;
+  height: 100vh;
+  padding: 0 30px 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: fixed;
+  top: 0;
   text-align: center;
   overflow-y: auto;
-  position: absolute;
   right: 0;
 }
 .formInput {
@@ -44,8 +48,9 @@
   align-self: center;
   border-top: none;
   width: 320px;
+
   border-radius: 99px;
-  overflow: hidden;
+
   border: 2px solid var(--color-primary);
   button {
     font-size: var(--size-2);
@@ -73,11 +78,17 @@ button.active {
   height: 40px;
   position: relative;
   top: 20px;
-  &:focus-within {
-    label {
-      transform: translate(-10px, calc(-100% - 15px));
-      color: var(--color-primary);
+  &:focus-within label,
+  input:valid + label,
+  input:user-valid + label {
+    transform: translate(-10px, calc(-100% - 15px));
+    color: var(--color-primary);
+    &::after {
+      content: " *";
+      color: red;
     }
+  }
+  &:focus-within {
     input {
       border-color: var(--color-primary);
     }
@@ -85,13 +96,31 @@ button.active {
       color: var(--color-primary);
     }
   }
+
   input {
+    padding-left: 15px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     outline: none;
     border: none;
+    color: #fff;
     border-bottom: 2px solid #fff;
+    &::placeholder {
+      color: #fff;
+    }
+    &[type="date"]:not(:valid) {
+      color: transparent;
+    }
+    &[type="date"]:focus:not(:valid) {
+      color: #fff;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
   }
   label {
     position: absolute;
@@ -102,7 +131,7 @@ button.active {
     font-size: var(--size-14);
   }
   span {
-    font-size: var(--size-heading-24);
+    font-size: var(--size-heading-2);
     position: absolute;
     right: 10px;
     top: 50%;
@@ -130,4 +159,20 @@ button.active {
 }
 .buttonLogin {
   width: 50%;
+  &:disabled {
+    background-color: rgb(35, 150, 243, 0.5);
+    color: rgb(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
+}
+.savePassword,
+.forgotPassword {
+  display: flex;
+  align-items: center;
+  font-size: var(--size-14);
+}
+.forgotPassword {
+  a:hover {
+    color: var(--color-primary);
+  }
 }

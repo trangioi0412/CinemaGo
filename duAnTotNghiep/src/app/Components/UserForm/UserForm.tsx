@@ -2,6 +2,7 @@
 import { useState } from "react";
 import style from "./userForm.module.css";
 import LoginForm from "./LoginForm/LoginForm";
+import SignUpForm from "./SignUpForm/SignUpForm";
 const tabs = ["Đăng nhập", "Đăng ký"];
 function UserForm({ isOpen }: { isOpen: any }) {
   const [type, setType] = useState("Đăng nhập");
@@ -23,7 +24,7 @@ function UserForm({ isOpen }: { isOpen: any }) {
             </button>
           ))}
         </div>
-        <LoginForm />
+        {type === "Đăng nhập" ? <LoginForm /> : <SignUpForm />}
       </div>
     </div>
   );

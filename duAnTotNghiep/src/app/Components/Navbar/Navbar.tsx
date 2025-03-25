@@ -59,6 +59,7 @@ export default function Navbar() {
   useEffect(() => {
     document.body.style.overflowY = open ? "hidden" : "auto";
   }, [open]);
+
   const pathName = usePathname();
   return (
     <>
