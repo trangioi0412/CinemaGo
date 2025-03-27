@@ -1,0 +1,58 @@
+.main{
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    height: 100vh;           /* Chiều cao full màn hình */
+    margin: 0;
+    /* background-color: rgb(114, 114, 162); */
+}
+
+.main_detail{
+    width: 80%;
+    height: 100vh;
+    /* background-color: rgb(65, 60, 60); */
+}
+
+.title{
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.info_film{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 20px 0;
+}
+
+.info_film_left{
+    width: 30%;
+    flex: 1;
+    img{
+        width: 300px;
+
+    }
+}
+
+.info_film_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    flex: 2;
+
+    .info{
+        padding: 8px 0;
+    }
+    .view_trailer{
+        width: 200px;
+    }
+}
+
+.video{
+    /* background-color: antiquewhite; */
+    width: 80%;
+    grid-column: span 2; /* Chiếm cả 2 cột để nằm bên dưới */
+    justify-self: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px;
+}

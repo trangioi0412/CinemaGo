@@ -14,7 +14,7 @@ const getMoviesComingSoon = async () => {
   return data;
 };
 const getMovie = async (id: string | number) => {
-  const res = await fetch("http://localhost:5000/movies/" + id);
+  const res = await fetch("http://localhost:5000/movies?id=" + id);
   const data = await res.json();
   return data;
 };
