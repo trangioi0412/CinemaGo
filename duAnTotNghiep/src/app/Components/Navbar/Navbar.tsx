@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
 import UserForm from "../UserForm/UserForm";
+import { useRouter } from "next/navigation";
 const links = [
   { id: 1, url: "/home", name: "Trang chủ" },
   { id: 2, url: "/movies", name: "Phim chiếu" },
@@ -44,8 +45,14 @@ const menuLink = [
   },
 ];
 export default function Navbar() {
+  const pathName = usePathname();
   const [activeHeader, setActiveHeader] = useState(false);
   const [open, setOpen] = useState(false);
+  const [username, setUsername] = useState<{
+    name: string;
+    email: string;
+  } | null>(null);
+  const router = useRouter();
   useEffect(() => {
     const handleChangeHeader = () => {
       setActiveHeader(window.scrollY > 100);
@@ -60,7 +67,24 @@ export default function Navbar() {
     document.body.style.overflowY = open ? "hidden" : "auto";
   }, [open]);
 
-  const pathName = usePathname();
+  useEffect(() => {
+    const storedUsername = sessionStorage.getItem("user");
+
+    if (storedUsername) {
+      try {
+        setUsername(JSON.parse(storedUsername));
+      } catch (error) {
+        console.log(error);
+        setUsername(null);
+      }
+    } else {
+      setUsername(null);
+    }
+  }, []);
+  const handleLogout = () => {
+    sessionStorage.removeItem("user");
+    setUsername(null);
+  };
   return (
     <>
       <header
@@ -122,16 +146,25 @@ export default function Navbar() {
           </div>
           {/* </div> */}
           <div className={style["login-container"]}>
-            <Link
-              href={"#"}
-              className={style.login}
-              onClick={() => setOpen(true)}
-            >
-              <span>
-                <LuUserRound />
-              </span>
-              Đăng nhập
-            </Link>
+            {username ? (
+              <div className={style.info}>
+                <Link href={"#"} className={` ${style["linkNav"]}`}>
+                  {username.name}
+                </Link>
+                <button onClick={handleLogout}>Đăng xuất</button>
+              </div>
+            ) : (
+              <Link
+                href={"#"}
+                className={style.login}
+                onClick={() => setOpen(true)}
+              >
+                <span>
+                  <LuUserRound />
+                </span>
+                Đăng nhập
+              </Link>
+            )}
           </div>
         </div>
       </header>

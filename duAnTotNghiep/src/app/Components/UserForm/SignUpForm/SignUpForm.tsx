@@ -5,23 +5,86 @@ import Input from "../Input/Input";
 import style from "../userForm.module.css";
 import { FaPhone, FaRegEye, FaUser } from "react-icons/fa6";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
+import { Users } from "@/app/user.interface";
+import { getUser } from "@/app/service/user.service";
+import { toast, ToastContainer } from "react-toastify";
 function SignUpForm() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [date, setDate] = useState("");
-  const [phone, setPhone] = useState("");
-  const [pass, setPass] = useState("");
-  const [repass, setRepass] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    date: "",
+    phone: "",
+    pass: "",
+    repass: "",
+  });
   const [showPass, setShowPass] = useState(false);
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.pass ||
+      !formData.repass ||
+      !formData.phone ||
+      !formData.date
+    ) {
+      toast("Vui long dien du thong tin");
+      return;
+    }
+    try {
+      const user = await getUser();
+      const checkEmail = user.some((u: Users) => u.email === formData.email);
+      if (checkEmail) {
+        toast("email nay da ton tai");
+        return;
+      }
+      if (formData.repass !== formData.pass) {
+        toast("Mat khau khong trung khop");
+        return;
+      }
+      const response = await fetch("http://localhost:5000/user", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          sdt: formData.phone,
+          email: formData.email,
+          password: formData.pass,
+          year: formData.date,
+          cinema: "Lotte",
+          status: "inactive",
+          role: "admin",
+          type_admin: "super",
+        }),
+      });
+
+      if (response.ok) {
+        toast("Đăng ký thành công!");
+        setFormData({
+          email: "",
+          name: "",
+          date: "",
+          phone: "",
+          pass: "",
+          repass: "",
+        });
+      } else {
+        toast("Lỗi đăng ký!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <form action="">
+    <form onSubmit={onSubmit} action="">
+      <ToastContainer />
       <div className={style.formInput}>
         <Input
           id="email"
           label="Email"
           required={true}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         >
           <span>
             <MdOutlineMail />
@@ -31,8 +94,8 @@ function SignUpForm() {
           id="name"
           required={true}
           label="Họ và tên"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         >
           <span>
             {" "}
@@ -45,16 +108,18 @@ function SignUpForm() {
             id="birthday"
             required={true}
             label="Ngày sinh"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={formData.date}
+            onChange={(e) => setFormData({ ...formData, date: e.target.value })}
           ></Input>
           <Input
             type="text"
             id="phone"
             required={true}
             label="Số điện thoại"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
           >
             <span>
               <FaPhone />
@@ -66,8 +131,8 @@ function SignUpForm() {
           type={showPass ? "text" : "password"}
           required={true}
           label="Mật khẩu"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
+          value={formData.pass}
+          onChange={(e) => setFormData({ ...formData, pass: e.target.value })}
         >
           <span onClick={() => setShowPass(!showPass)}>
             {showPass ? <IoIosEyeOff /> : <IoIosEye />}
@@ -78,8 +143,8 @@ function SignUpForm() {
           type={showPass ? "text" : "password"}
           required={true}
           label="Nhập lại mật khẩu"
-          value={repass}
-          onChange={(e) => setRepass(e.target.value)}
+          value={formData.repass}
+          onChange={(e) => setFormData({ ...formData, repass: e.target.value })}
         >
           <span onClick={() => setShowPass(!showPass)}>
             {showPass ? <IoIosEyeOff /> : <IoIosEye />}
