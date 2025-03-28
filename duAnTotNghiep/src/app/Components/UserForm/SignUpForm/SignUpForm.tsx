@@ -16,6 +16,7 @@ function SignUpForm() {
     phone: "",
     pass: "",
     repass: "",
+    checked: false,
   });
   const [showPass, setShowPass] = useState(false);
   const onSubmit = async (e: any) => {
@@ -26,20 +27,21 @@ function SignUpForm() {
       !formData.pass ||
       !formData.repass ||
       !formData.phone ||
-      !formData.date
+      !formData.date ||
+      !formData.checked
     ) {
-      toast("Vui long dien du thong tin");
+      toast.error("Vui long dien du thong tin");
       return;
     }
     try {
       const user = await getUser();
       const checkEmail = user.some((u: Users) => u.email === formData.email);
       if (checkEmail) {
-        toast("email nay da ton tai");
+        toast.error("email nay da ton tai");
         return;
       }
       if (formData.repass !== formData.pass) {
-        toast("Mat khau khong trung khop");
+        toast.error("Mat khau khong trung khop");
         return;
       }
       const response = await fetch("http://localhost:5000/user", {
@@ -59,7 +61,7 @@ function SignUpForm() {
       });
 
       if (response.ok) {
-        toast("Đăng ký thành công!");
+        toast.success("Đăng ký thành công!");
         setFormData({
           email: "",
           name: "",
@@ -67,9 +69,10 @@ function SignUpForm() {
           phone: "",
           pass: "",
           repass: "",
+          checked: true,
         });
       } else {
-        toast("Lỗi đăng ký!");
+        toast.error("Lỗi đăng ký!");
       }
     } catch (error) {
       console.log(error);
@@ -153,11 +156,31 @@ function SignUpForm() {
       </div>
       <div className={style.loginAction}>
         <div className={style.savePassword}>
-          <input type="checkbox" id="article" />
+          <input
+            type="checkbox"
+            id="article"
+            checked={formData.checked}
+            onChange={(e) => {
+              setFormData({ ...formData, checked: e.target.checked });
+            }}
+          />
           <label htmlFor="article">Đồng ý với các điều khoản</label>
         </div>
       </div>
-      <button className={`btn ${style.buttonLogin}`}>
+      <button
+        disabled={
+          !formData.name ||
+          !formData.email ||
+          !formData.pass ||
+          !formData.repass ||
+          !formData.phone ||
+          !formData.date ||
+          !formData.checked
+            ? true
+            : false
+        }
+        className={`btn ${style.buttonLogin}`}
+      >
         <p>Đăng Ký</p>
       </button>
     </form>

@@ -18,28 +18,28 @@ function LoginForm() {
   const onSubmit = async (e: any) => {
     e.preventDefault();
     if (!formData.email) {
-      toast("Vui lòng nhập Email");
+      toast.error("Vui lòng nhập Email");
       return;
     }
     if (!formData.password) {
-      toast("Vui lòng nhập mật khẩu của bạn");
+      toast.error("Vui lòng nhập mật khẩu của bạn");
       return;
     }
     try {
       const user = await getUser();
       const checkUser = user.find((u: Users) => u.email === formData.email);
       if (!checkUser) {
-        toast("Không tìm thấy tài khoản này");
+        toast.error("Không tìm thấy tài khoản này");
 
         return;
       }
 
       if (formData.password !== checkUser.password) {
-        toast("Sai mật khẩu");
+        toast.error("Sai mật khẩu");
         return;
       }
 
-      toast("Đâng nhập thành công");
+      toast.success("Đâng nhập thành công");
       const userFound = {
         name: checkUser.name,
         email: checkUser.email,
