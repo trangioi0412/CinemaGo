@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import BannerItem from "./BannerItem/BannerItem";
-import { getAllMovies, getMovie } from "@/app/service/movie.service";
+import { slideshow } from "@/app/service/movie.service";
 function SampleNextArrow(props: any) {
   const { onClick } = props;
   return (
@@ -45,7 +45,7 @@ function Banner() {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getAllMovies();
+      const res = await slideshow();
       setData(res);
     };
     fetchData();

@@ -11,12 +11,12 @@ function BannerItem({ movie }: { movie: Movies }) {
       <div className={styles["banner_contents"]}>
         <h1>{movie.name}</h1>
         <div className={styles["info"]}>
-          <div className={styles.age}>{movie.age}</div>
+          <div className={styles.age}>{movie.age}+</div>
           <div className={styles.duration}>
             <span>
               <RxLapTimer />
             </span>
-            {movie.time}m
+            {movie.time}min
           </div>
         </div>
         <div className={styles["description"]} title={movie.text_summary}>

@@ -80,7 +80,7 @@ function SignUpForm() {
   };
   return (
     <form onSubmit={onSubmit} action="">
-      <ToastContainer />
+      <ToastContainer theme="colored" />
       <div className={style.formInput}>
         <Input
           id="email"
