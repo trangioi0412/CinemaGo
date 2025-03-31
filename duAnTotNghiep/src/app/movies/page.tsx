@@ -12,8 +12,7 @@ function Movies() {
   const [type, setType] = useState("đang chiếu");
 
   const [data, setData] = useState([]);
-  //   console.log(data);
-  //   const data = await getMoviesShowing();
+
   useEffect(() => {
     const getData = async () => {
       const api =
@@ -24,6 +23,7 @@ function Movies() {
     };
     getData();
   }, [type]);
+
   return (
     <div className={`container ${style.container}`}>
       <div className={style["options"]}>

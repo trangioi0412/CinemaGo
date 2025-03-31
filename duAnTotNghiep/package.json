@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-slick": "^0.23.13",
+    "framer-motion": "^12.6.2",
     "json-server": "^1.0.0-beta.3",
     "next": "15.2.2",
     "react": "^19.0.0",
