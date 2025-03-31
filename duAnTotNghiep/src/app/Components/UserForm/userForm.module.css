@@ -3,6 +3,7 @@
   height: 100vh;
   position: fixed;
   top: 0;
+
   z-index: 999;
   backdrop-filter: blur(10px);
   display: flex;
@@ -27,12 +28,33 @@
   top: 0;
   text-align: center;
   overflow-y: auto;
-  right: 0;
+  right: -500px;
+  animation: mount 0.5s forwards;
 }
 .formInput {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.closeForm {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  right: 20px;
+  background: transparent;
+  border: none;
+  span {
+    display: flex;
+    align-items: center;
+    font-size: var(--size-heading-32);
+    color: #fff;
+  }
+  &:hover {
+    span {
+      color: var(--color-primary);
+    }
+  }
 }
 .logo {
   width: 99px;
@@ -174,5 +196,13 @@ button.active {
 .forgotPassword {
   a:hover {
     color: var(--color-primary);
+  }
+}
+@keyframes mount {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0;
   }
 }
