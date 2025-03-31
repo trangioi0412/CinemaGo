@@ -52,7 +52,7 @@ async function Detail({
             <iframe
               width="560"
               height="315"
-              src={data.trailer}
+              src={data[0].trailer}
               frameBorder={0}
               allowFullScreen
             ></iframe>
