@@ -29,13 +29,13 @@ async function Detail({
                   <button className='btn' >Trailer</button>
                 </div>
                 <div className={styles.video}>
-                <iframe 
-                  width="560" 
-                  height="315" 
-                  src={`https://www.youtube.com/embed/${data.trailer}`} 
-                  frameBorder={0} 
-                  allowFullScreen
-                ></iframe>
+                  <iframe 
+                    width="560" 
+                    height="315" 
+                    src={`https://www.youtube.com/embed/${data.trailer}`} 
+                    frameBorder={0} 
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>

@@ -55,4 +55,5 @@
     grid-column: span 2; /* Chiếm cả 2 cột để nằm bên dưới */
     justify-self: center; /* Căn giữa theo chiều ngang */
     margin-top: 20px;
+    padding-bottom: 1 ;
 }
