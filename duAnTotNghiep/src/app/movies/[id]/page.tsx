@@ -17,7 +17,7 @@ async function Detail({
         <div className={styles.info_film}>
           <div className={styles.contents}>
             <div className={styles.info_film_left}>
-              <img src={data[0].image} alt="" />
+              <img src={`/img/film/${data[0].image}`} alt="" />
             </div>
             <div className={styles.info_film_right}>
               <div className={`${styles.info} ${styles.name}`}>
