@@ -14,7 +14,7 @@ function MovieItem({ movie }: { movie: Movies }) {
         </span>
       </div>
       <div className={styles["movie-img"]}>
-        <img src={movie.image} alt="" />
+        <img src={`/img/film/${movie.image}`} alt="" />
       </div>
       <div className={styles["movie-info"]}>
         <div className={styles["movie-name"]} title={movie.name}>

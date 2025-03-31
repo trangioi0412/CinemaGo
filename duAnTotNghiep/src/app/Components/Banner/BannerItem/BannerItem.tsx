@@ -6,7 +6,7 @@ function BannerItem({ movie }: { movie: Movies }) {
   return (
     <div className={styles.banner_item}>
       <div className={styles.banner_img}>
-        <img src={movie.banner} alt="" />
+        <img src={`/img/banner/${movie.banner}`} alt="" />
       </div>
       <div className={styles["banner_contents"]}>
         <h1>{movie.name}</h1>

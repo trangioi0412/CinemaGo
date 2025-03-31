@@ -94,7 +94,7 @@ export default function Navbar() {
       >
         <div className={`container ${style.header}`}>
           <a href="/" className={style.logo}>
-            <img src="/logo.png" className={style.imgLogo} alt="" />
+            <img src="/img/logo/logo.png" className={style.imgLogo} alt="" />
           </a>
           <nav>
             <ul className={style.navbar}>
