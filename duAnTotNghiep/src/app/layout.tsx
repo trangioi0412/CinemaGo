@@ -22,6 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathName = usePathname();
+  if (pathName === "/admin") {
+    return <>{children}</>;
+  }
   return (
     <html lang="en">
       <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
