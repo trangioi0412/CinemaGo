@@ -17,7 +17,7 @@ function UserForm({ isOpen }: { isOpen: any }) {
           </span>
         </button>
         <div className={style.logo}>
-          <img src="/logo.png" alt="" />
+          <img src="/img/logo/logo.png" alt="" />
         </div>
         <div className={style.option}>
           {tabs.map((tab) => (
