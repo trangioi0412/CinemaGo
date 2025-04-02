@@ -1,11 +1,10 @@
 "use client";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./movies.module.css";
 import {
   getMoviesComingSoon,
   getMoviesShowing,
 } from "../service/movie.service";
-
 import MovieItem from "../Components/MovieList/MovieItem/MovieItem";
 const tabs = ["đang chiếu", "sắp chiếu"];
 function Movies() {
