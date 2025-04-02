@@ -337,15 +337,12 @@
       "trailer": "https://www.youtube.com/embed/9MFHYvdtrRw?si=7t9CziixhOnKW-ec"
     }
   ],
-
-
   "brand": [
     {
       "id": "1",
       "name": "cinema"
     }
   ],
-
   "location": [
     {
       "id": "1",
@@ -356,7 +353,6 @@
       "city": "Hà Nội"
     }
   ],
-
   "thear": [
     {
       "id": 1,
@@ -405,9 +401,7 @@
         },
         {
           "id": 2,
-          "diagram": {
-
-          }
+          "diagram": {}
         },
         {
           "id": 3,
@@ -423,31 +417,101 @@
             "row": 19,
             "colunm": 17,
             "element_remove": {
-              "A": [1,2,3,4],
-              "B": [1,2,3,4],
-              "C": [1,2,3,4],
-              "D": [1,2,3,4],
-              "E": [1,2,3,4],
-              "F": [1,2,3,4],
-              "G": [3,4],
-              "H": [3,4],
-              "J": [3,4],
-              "K": [3,4,19],
-              "L": [3,4],
-              "M": [3,4,19],
-              "N": [3,4],
-              "O": [3,4,19],
-              "P": [3,4],
-              "Q": [3,4,10,11,12]
+              "A": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "B": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "C": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "D": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "E": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "F": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "G": [
+                3,
+                4
+              ],
+              "H": [
+                3,
+                4
+              ],
+              "J": [
+                3,
+                4
+              ],
+              "K": [
+                3,
+                4,
+                19
+              ],
+              "L": [
+                3,
+                4
+              ],
+              "M": [
+                3,
+                4,
+                19
+              ],
+              "N": [
+                3,
+                4
+              ],
+              "O": [
+                3,
+                4,
+                19
+              ],
+              "P": [
+                3,
+                4
+              ],
+              "Q": [
+                3,
+                4,
+                10,
+                11,
+                12
+              ]
             },
             "double_Chair": {
-              "R": [1,2,3,4,5,6]
+              "R": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
             },
-            "element_selected": [
-
-            ],
-            "element_selecting": [
-            ]
+            "element_selected": [],
+            "element_selecting": []
           }
         }
       ]
@@ -459,10 +523,9 @@
       "price": 10,
       "type": "",
       "id_suat": "",
-      "id_ghe": ""    
+      "id_ghe": ""
     }
   ],
-  
   "bill": [
     {
       "id": 1,
@@ -473,7 +536,6 @@
       "price": 10
     }
   ],
-
   "payments": [
     {
       "id": 1,
@@ -490,7 +552,6 @@
       "name": "Trần Văn Giới"
     }
   ],
-
   "user": [
     {
       "id": 1,
@@ -599,6 +660,18 @@
       "status": "banned",
       "role": "user",
       "type_admin": "none"
+    },
+    {
+      "id": "47ac",
+      "name": "NGUYỄN THẾ QUANG",
+      "sdt": "0363396502",
+      "email": "nguyenquang.96502@gmail.com",
+      "password": "111",
+      "year": "2002-12-11",
+      "cinema": "Lotte",
+      "status": "inactive",
+      "role": "admin",
+      "type_admin": "super"
     }
   ]
 }

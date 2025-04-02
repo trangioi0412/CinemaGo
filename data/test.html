@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Film</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Ticknow Logo">
+            </div>
+            <ul class="menu">
+                <li>Quản lý film</li>
+                <li class="active">Quản lý ticket</li>
+                <li>Quản lý room</li>
+                <li>Quản lý cinema</li>
+                <li>Quản lý suất chiếu</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <input type="text" placeholder="Search ...">
+                <div class="user-info">
+                    <span class="notification">🔔 3</span>
+                    <span class="message">💬 3</span>
+                    <span class="user-name">Thế Quang</span>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <div class="table-header">
+                    <h2>DANH SÁCH FILM</h2><br>
+                    <button class="add-user">+ Tạo Mới Film</button>
+                </div>
+                <div class="table-controls">
+                    <select>
+                        <option>Hiện 10 danh mục</option>
+                        <option>Hiện 20 danh mục</option>
+                        <option>Hiện 50 danh mục</option>
+                    </select>
+                    <div class="export-buttons">
+                        <button>Copy</button>
+                        <button>CSV</button>
+                        <button>Excel</button>
+                        <button>PDF</button>
+                        <button>Print</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên film</th>
+                            <th>Date</th>
+                            <th>Director</th>
+                            <th>Nation</th>
+                            <th>Age</th>
+                            <th>Category</th>
+                            <th>Time</th>
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>QUỶ NHẬP TRÀNG</td>
+                            <td>07/03/2025</td>
+                            <td>Pom Nguyễn</td>
+                            <td>Việt Nam</td>
+                            <td>18</td>
+                            <td>Kinh Dị</td>
+                            <td>122</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CÔ GÁI NĂM ẤY CHÚNG TA CÙNG THEO ĐUỔI</td>
+                            <td>21/03/2025</td>
+                            <td>Cho Young-Myoung</td>
+                            <td>Hàn Quốc</td>
+                            <td>16</td>
+                            <td>Tình Cảm, Hài</td>
+                            <td>102</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>TIẾNG VỌNG KINH HOÀNG</td>
+                            <td>14/03/2025</td>
+                            <td>Osgood Perkins</td>
+                            <td>Hoa Kỳ</td>
+                            <td>18</td>
+                            <td>Kinh Dị</td>
+                            <td>98</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ANH KHÔNG ĐAU</td>
+                            <td>14/03/2025</td>
+                            <td>Dan Berk, Robert Olsen</td>
+                            <td>Hoa Kỳ</td>
+                            <td>18</td>
+                            <td>Hài, Hành Động</td>
+                            <td>110</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>VUA SƯ TỬ</td>
+                            <td>10/04/2025</td>
+                            <td>Jon Favreau</td>
+                            <td>Hoa Kỳ</td>
+                            <td>7</td>
+                            <td>Hoạt Hình, Phiêu Lưu</td>
+                            <td>118</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>FAST & FURIOUS 10</td>
+                            <td>19/04/2025</td>
+                            <td>Louis Leterrier</td>
+                            <td>Hoa Kỳ</td>
+                            <td>16</td>
+                            <td>Hành Động</td>
+                            <td>130</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>NGƯỜI NHỆN: KHÔNG CÒN NHÀ</td>
+                            <td>15/05/2025</td>
+                            <td>Jon Watts</td>
+                            <td>Hoa Kỳ</td>
+                            <td>13</td>
+                            <td>Hành Động, Viễn Tưởng</td>
+                            <td>148</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>HÀNH TINH KHỈ: VƯƠNG TRIỀU MỚI</td>
+                            <td>30/05/2025</td>
+                            <td>Wes Ball</td>
+                            <td>Hoa Kỳ</td>
+                            <td>13</td>
+                            <td>Hành Động, Phiêu Lưu</td>
+                            <td>120</td>
+                            <td>
+                                <button class="action update">Sửa</button>
+                                <button class="action delete">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <span>Hiện 1 đến 5 của 5 danh mục</span>
+                    <div class="pagination-buttons">
+                        <button>Trước</button>
+                        <button class="active">1</button>
+                        <button>Sau</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
