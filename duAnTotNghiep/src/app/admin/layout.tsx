@@ -1,6 +1,7 @@
 "use client";
 import { Be_Vietnam_Pro, Oswald } from "next/font/google";
 import "./globalAdmin.css";
+import Navbar from "../Components/Navbar/Navbar";
 
 const beVietNamProSans = Be_Vietnam_Pro({
   weight: ["400", "700"],
@@ -12,6 +13,7 @@ const oswald = Oswald({
   variable: "--font-oswald-sans",
   subsets: ["latin", "vietnamese"],
 });
+
 export default function AdminLayout({
   children,
 }: Readonly<{
@@ -20,6 +22,7 @@ export default function AdminLayout({
   return (
     <html lang="en">
       <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
