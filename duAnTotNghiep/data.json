@@ -361,15 +361,6 @@
       "location": {
         "city": 1,
         "detail": "271 Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1"
-      }
-    },
-    {
-      "id": 2,
-      "id_brand": 1,
-      "name": "Cinestar Hai Bà Trưng",
-      "location": {
-        "city": 1,
-        "detail": "135 Hai Bà Trưng, Phường Bến Nghé Quận 1"
       },
       "room": [
         {
@@ -377,26 +368,10 @@
           "diagram": {
             "row": 16,
             "colunm": 8,
-            "element_remove": [
-              "A5",
-              "A6",
-              "A7",
-              "B5",
-              "B6",
-              "B7"
-            ],
-            "double_Chair": [
-              "I2",
-              "I3"
-            ],
-            "element_selected": [
-              "A10",
-              "A12"
-            ],
-            "element_selecting": [
-              "A13",
-              "A15"
-            ]
+            "element_remove": ["A5", "A6", "A7", "B5", "B6", "B7"],
+            "double_Chair": ["I2", "I3"],
+            "element_selected": ["A10", "A12"],
+            "element_selecting": ["A13", "A15"]
           }
         },
         {
@@ -417,100 +392,95 @@
             "row": 19,
             "colunm": 17,
             "element_remove": {
-              "A": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "B": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "C": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "D": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "E": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "F": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "G": [
-                3,
-                4
-              ],
-              "H": [
-                3,
-                4
-              ],
-              "J": [
-                3,
-                4
-              ],
-              "K": [
-                3,
-                4,
-                19
-              ],
-              "L": [
-                3,
-                4
-              ],
-              "M": [
-                3,
-                4,
-                19
-              ],
-              "N": [
-                3,
-                4
-              ],
-              "O": [
-                3,
-                4,
-                19
-              ],
-              "P": [
-                3,
-                4
-              ],
-              "Q": [
-                3,
-                4,
-                10,
-                11,
-                12
-              ]
+              "A": [1, 2, 3, 4],
+              "B": [1, 2, 3, 4],
+              "C": [1, 2, 3, 4],
+              "D": [1, 2, 3, 4],
+              "E": [1, 2, 3, 4],
+              "F": [1, 2, 3, 4],
+              "G": [3, 4],
+              "H": [3, 4],
+              "J": [3, 4],
+              "K": [3, 4, 19],
+              "L": [3, 4],
+              "M": [3, 4, 19],
+              "N": [3, 4],
+              "O": [3, 4, 19],
+              "P": [3, 4],
+              "Q": [3, 4, 10, 11, 12]
             },
             "double_Chair": {
-              "R": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
-              ]
+              "R": [1, 2, 3, 4, 5, 6]
             },
-            "element_selected": [],
+            "element_selected": { "F": [1, 2, 3, 4], "P": [3, 4] },
+            "element_selecting": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "id_brand": 1,
+      "name": "Cinestar Hai Bà Trưng",
+      "location": {
+        "city": 1,
+        "detail": "135 Hai Bà Trưng, Phường Bến Nghé Quận 1"
+      },
+      "room": [
+        {
+          "id": 1,
+          "diagram": {
+            "row": 16,
+            "colunm": 8,
+            "element_remove": ["A5", "A6", "A7", "B5", "B6", "B7"],
+            "double_Chair": ["I2", "I3"],
+            "element_selected": ["A10", "A12"],
+            "element_selecting": ["A13", "A15"]
+          }
+        },
+        {
+          "id": 2,
+          "diagram": {}
+        },
+        {
+          "id": 3,
+          "diagram": {}
+        },
+        {
+          "id": 4,
+          "diagram": {}
+        },
+        {
+          "id": 5,
+          "diagram": {
+            "row": 19,
+            "colunm": 17,
+            "element_remove": {
+              "A": [1, 2, 3, 4],
+              "B": [1, 2, 3, 4],
+              "C": [1, 2, 3, 4],
+              "D": [1, 2, 3, 4],
+              "E": [1, 2, 3, 4],
+              "F": [1, 2, 3, 4],
+              "G": [3, 4],
+              "H": [3, 4],
+              "J": [3, 4],
+              "K": [3, 4, 19],
+              "L": [3, 4],
+              "M": [3, 4, 19],
+              "N": [3, 4],
+              "O": [3, 4, 19],
+              "P": [3, 4],
+              "Q": [3, 4, 10, 11, 12]
+            },
+            "double_Chair": {
+              "R": [1, 2, 3, 4, 5, 6]
+            },
+            "element_selected": {
+              "F": [1, 2, 3, 4],
+              "P": [3, 4],
+              "A": [1, 2, 3, 4]
+            },
             "element_selecting": []
           }
         }
