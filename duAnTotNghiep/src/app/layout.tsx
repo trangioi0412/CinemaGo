@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import { usePathname } from "next/navigation";
-import Banner from "./Components/Banner/Banner";
 import { AppProvider } from "./Context/context";
 const beVietNamProSans = Be_Vietnam_Pro({
   weight: ["400", "700"],
@@ -31,12 +30,7 @@ export default function RootLayout({
       <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
         <AppProvider>
           <Navbar />
-          {(pathName === "/" || pathName === "/home") && <Banner />}
-          {pathName === "/" || pathName === "/home" ? (
-            <main style={{ marginTop: 0 }}>{children}</main>
-          ) : (
-            <main>{children}</main>
-          )}
+          <main style={{ display: "contents" }}>{children}</main>
           <Footer />
         </AppProvider>
       </body>

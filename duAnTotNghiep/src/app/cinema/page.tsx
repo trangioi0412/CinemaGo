@@ -10,7 +10,7 @@ import { FaChevronCircleLeft, FaChevronDown } from "react-icons/fa";
 import ChooseCinema from "../Components/ChooseCinema/ChooseCinema";
 export default async function Cinema({ title }: { title: string }) {
   return (
-    <div className={`container ${style.schedule}`}>
+    <div className={`wrapper container ${style.schedule}`}>
       <h1>Tìm rạp chiếu phim</h1>
       <div className={style.wrapper}>
         <ChooseCinema />

@@ -24,7 +24,7 @@ function Movies() {
   }, [type]);
 
   return (
-    <div className={`container ${style.container}`}>
+    <div className={`wrapper container ${style.container}`}>
       <div className={style["options"]}>
         {tabs.map((tab) => (
           <button
