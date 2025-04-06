@@ -1,17 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import style from "./userForm.module.css";
 import LoginForm from "./LoginForm/LoginForm";
 import SignUpForm from "./SignUpForm/SignUpForm";
 import { IoCloseSharp } from "react-icons/io5";
+import { AppContext } from "@/app/Context/context";
 const tabs = ["Đăng nhập", "Đăng ký"];
-function UserForm({ isOpen }: { isOpen: any }) {
+function UserForm() {
   const [type, setType] = useState("Đăng nhập");
+  const context = useContext(AppContext);
+  if (!context)
+    throw new Error("useAuth phải được sử dụng bên trong AuthProvider");
+  const { setOpen } = context;
+
   return (
     <div className={style.container}>
-      <div onClick={isOpen} className={style.background_login_resgister}></div>
+      <div
+        onClick={() => setOpen(false)}
+        className={style.background_login_resgister}
+      ></div>
       <div className={style.wrapper}>
-        <button onClick={isOpen} className={style.closeForm}>
+        <button onClick={() => setOpen(false)} className={style.closeForm}>
           <span>
             <IoCloseSharp />
           </span>

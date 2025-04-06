@@ -1,10 +1,11 @@
 import styles from "./movieItem.module.css";
 import { Movies } from "@/app/movie.interface";
+import Link from "next/link";
 import { BsInfoLg } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
 function MovieItem({ movie }: { movie: Movies }) {
   return (
-    <a href={`/movies/${movie.id}`} className={styles.movie}>
+    <Link href={`/movies/${movie.id}`} className={styles.movie}>
       <div className={styles["movie-option"]}>
         <span className={styles.play}>
           <FaPlay />
@@ -23,7 +24,7 @@ function MovieItem({ movie }: { movie: Movies }) {
 
         <button className={`btn ${styles["btn-order"]}`}>Đặt vé ngay</button>
       </div>
-    </a>
+    </Link>
   );
 }
 

@@ -1,12 +1,12 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import style from "./navbar.module.css";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
 import UserForm from "../UserForm/UserForm";
-import { useRouter } from "next/navigation";
+import { AppContext } from "@/app/Context/context";
 const links = [
   { id: 1, url: "/home", name: "Trang chủ" },
   { id: 2, url: "/movies", name: "Phim chiếu" },
@@ -45,14 +45,20 @@ const menuLink = [
   },
 ];
 export default function Navbar() {
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("useAuth phải được sử dụng bên trong AuthProvider");
+  }
+  const { open, setOpen } = context;
+
   const pathName = usePathname();
   const [activeHeader, setActiveHeader] = useState(false);
-  const [open, setOpen] = useState(false);
+
   const [username, setUsername] = useState<{
     name: string;
     email: string;
   } | null>(null);
-  const router = useRouter();
+
   useEffect(() => {
     const handleChangeHeader = () => {
       setActiveHeader(window.scrollY > 100);
@@ -168,7 +174,7 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      {open && <UserForm isOpen={() => setOpen(false)} />}
+      {open && <UserForm />}
     </>
   );
 }
