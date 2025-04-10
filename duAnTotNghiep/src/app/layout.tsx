@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathName = usePathname();
-  if (pathName === "/admin") {
+  if (pathName.startsWith("/admin")) {
     return <>{children}</>;
   }
   return (
