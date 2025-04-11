@@ -112,79 +112,79 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      {open && <UserForm isOpen={() => setOpen(false)} />}
+      {open && <UserForm  />}
     </>
   );
 }
 
-                  {/* <nav className={style.dropdown}>
-                    <ul>
-                      {menuLink.map((i) => {
-                        if (i.id === link.id) {
-                          return i.children.map((l) => (
-                            <li key={l.name}>
-                              <Link
-                                href={l.url}
-                                key={l.name}
-                                className={style.linkMenu}
-                              >
-                                {l.name}
-                              </Link>
-                            </li>
-                          ));
-                        }
-                      })}
-                    </ul>
-                  </nav> */}
-<<<<<<< HEAD
+//                   {/* <nav className={style.dropdown}>
+//                     <ul>
+//                       {menuLink.map((i) => {
+//                         if (i.id === link.id) {
+//                           return i.children.map((l) => (
+//                             <li key={l.name}>
+//                               <Link
+//                                 href={l.url}
+//                                 key={l.name}
+//                                 className={style.linkMenu}
+//                               >
+//                                 {l.name}
+//                               </Link>
+//                             </li>
+//                           ));
+//                         }
+//                       })}
+//                     </ul>
+//                   </nav> */}
+// <<<<<<< HEAD
 
 
-                                      {/* <span>
-                      {" "}
-                      <IoIosArrowDown fontSize={18} />
-                    </span> */}
-=======
-                </li>
-              ))}
-            </ul>
-          </nav>
-          {/* <div> */}
-          <div className={style["search-container"]}>
-            <input
-              className={style["search-box"]}
-              type="text"
-              placeholder="Tìm kiếm"
-            />
-            <div className={style["search-icon"]}>
-              <IoSearchOutline />
-            </div>
-          </div>
-          {/* </div> */}
-          <div className={style["login-container"]}>
-            {username ? (
-              <div className={style.info}>
-                <Link href={"#"} className={` ${style["linkNav"]}`}>
-                  {username.name}
-                </Link>
-                <button onClick={handleLogout}>Đăng xuất</button>
-              </div>
-            ) : (
-              <Link
-                href={"#"}
-                className={style.login}
-                onClick={() => setOpen(true)}
-              >
-                <span>
-                  <LuUserRound />
-                </span>
-                Đăng nhập
-              </Link>
-            )}
-          </div>
-        </div>
-      </header>
-      {open && <UserForm />}
-    </>
-  );
-}
->>>>>>> 8ef97d96391f6b62043c0e94d6d60c524ef1cdda
+//                                       {/* <span>
+//                       {" "}
+//                       <IoIosArrowDown fontSize={18} />
+//                     </span> */}
+// =======
+//                 </li>
+//               ))}
+//             </ul>
+//           </nav>
+//           {/* <div> */}
+//           <div className={style["search-container"]}>
+//             <input
+//               className={style["search-box"]}
+//               type="text"
+//               placeholder="Tìm kiếm"
+//             />
+//             <div className={style["search-icon"]}>
+//               <IoSearchOutline />
+//             </div>
+//           </div>
+//           {/* </div> */}
+//           <div className={style["login-container"]}>
+//             {username ? (
+//               <div className={style.info}>
+//                 <Link href={"#"} className={` ${style["linkNav"]}`}>
+//                   {username.name}
+//                 </Link>
+//                 <button onClick={handleLogout}>Đăng xuất</button>
+//               </div>
+//             ) : (
+//               <Link
+//                 href={"#"}
+//                 className={style.login}
+//                 onClick={() => setOpen(true)}
+//               >
+//                 <span>
+//                   <LuUserRound />
+//                 </span>
+//                 Đăng nhập
+//               </Link>
+//             )}
+//           </div>
+//         </div>
+//       </header>
+//       {open && <UserForm />}
+//     </>
+//   );
+// }
+// >>>>>>> 8ef97d96391f6b62043c0e94d6d60c524ef1cdda
