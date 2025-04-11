@@ -17,32 +17,14 @@ const menuLink = [
   {
     id: 3,
     children: [
-      {
-        url: "/#",
-        name: "CGV",
-      },
-      {
-        url: "/#",
-        name: "Galaxy cinema",
-      },
-      {
-        url: "/#",
-        name: "Beta cinema",
-      },
-      {
-        url: "/#",
-        name: "Mega CS",
-      },
-      {
-        url: "/#",
-        name: "BHD Star",
-      },
-      {
-        url: "/#",
-        name: "Lotte cinema",
-      },
+      { url: "/#", name: "CGV",},
+      { url: "/#", name: "Galaxy cinema",},
+      { url: "/#", name: "Beta cinema",},
+      { url: "/#", name: "Mega CS",},
+      { url: "/#", name: "BHD Star",},
+      { url: "/#", name: "Lotte cinema",},
     ],
-  },
+  }
 ];
 export default function Navbar() {
   const pathName = usePathname();
@@ -87,11 +69,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <header
-        className={`${activeHeader && "activeHeader"} ${
-          style["header-container"]
-        }`}
-      >
+      <header className={`${activeHeader && "activeHeader"} ${style["header-container"]}`}>
         <div className={`container ${style.header}`}>
           <a href="/" className={style.logo}>
             <img src="/img/logo/logo.png" className={style.imgLogo} alt="" />
@@ -99,17 +77,40 @@ export default function Navbar() {
           <nav>
             <ul className={style.navbar}>
               {links.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${pathName === link.url && style.active}`}
-                >
-                  <Link href={link.url} className={` ${style["linkNav"]}`}>
-                    {link.name}
-                    {/* <span>
-                      {" "}
-                      <IoIosArrowDown fontSize={18} />
-                    </span> */}
-                  </Link>
+                <li key={link.id} className={`${pathName === link.url && style.active}`}>
+                  <Link href={link.url} className={` ${style["linkNav"]}`}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className={style["search-container"]}>
+            <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
+            <div className={style["search-icon"]}>
+              <IoSearchOutline/>
+            </div>
+          </div>
+          <div className={style["login-container"]}>
+            {username ? (
+              <div className={style.info}>
+                <Link href={"#"} className={` ${style["linkNav"]}`}>
+                  {username.name}
+                </Link>
+                <button onClick={handleLogout}>Đăng xuất</button>
+              </div>
+            ) : (
+              <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
+                <span> <LuUserRound /></span>
+                Đăng nhập
+              </Link>
+            )}
+          </div>
+        </div>
+      </header>
+      {open && <UserForm isOpen={() => setOpen(false)} />}
+    </>
+  );
+}
+
                   {/* <nav className={style.dropdown}>
                     <ul>
                       {menuLink.map((i) => {
@@ -129,46 +130,9 @@ export default function Navbar() {
                       })}
                     </ul>
                   </nav> */}
-                </li>
-              ))}
-            </ul>
-          </nav>
-          {/* <div> */}
-          <div className={style["search-container"]}>
-            <input
-              className={style["search-box"]}
-              type="text"
-              placeholder="Tìm kiếm"
-            />
-            <div className={style["search-icon"]}>
-              <IoSearchOutline />
-            </div>
-          </div>
-          {/* </div> */}
-          <div className={style["login-container"]}>
-            {username ? (
-              <div className={style.info}>
-                <Link href={"#"} className={` ${style["linkNav"]}`}>
-                  {username.name}
-                </Link>
-                <button onClick={handleLogout}>Đăng xuất</button>
-              </div>
-            ) : (
-              <Link
-                href={"#"}
-                className={style.login}
-                onClick={() => setOpen(true)}
-              >
-                <span>
-                  <LuUserRound />
-                </span>
-                Đăng nhập
-              </Link>
-            )}
-          </div>
-        </div>
-      </header>
-      {open && <UserForm isOpen={() => setOpen(false)} />}
-    </>
-  );
-}
+
+
+                                      {/* <span>
+                      {" "}
+                      <IoIosArrowDown fontSize={18} />
+                    </span> */}
