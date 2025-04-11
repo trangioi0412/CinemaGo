@@ -9,9 +9,7 @@ import MovieItem from "../Components/MovieList/MovieItem/MovieItem";
 const tabs = ["đang chiếu", "sắp chiếu"];
 function Movies() {
   const [type, setType] = useState("đang chiếu");
-
   const [data, setData] = useState([]);
-
   useEffect(() => {
     const getData = async () => {
       const api =
@@ -24,7 +22,7 @@ function Movies() {
   }, [type]);
 
   return (
-    <div className={`container ${style.container}`}>
+    <div className={`wrapper container ${style.container}`}>
       <div className={style["options"]}>
         {tabs.map((tab) => (
           <button

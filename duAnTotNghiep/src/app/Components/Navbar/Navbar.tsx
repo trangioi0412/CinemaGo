@@ -1,12 +1,12 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import style from "./navbar.module.css";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
 import UserForm from "../UserForm/UserForm";
-import { useRouter } from "next/navigation";
+import { AppContext } from "@/app/Context/context";
 const links = [
   { id: 1, url: "/home", name: "Trang chủ" },
   { id: 2, url: "/movies", name: "Phim chiếu" },
@@ -27,14 +27,20 @@ const menuLink = [
   }
 ];
 export default function Navbar() {
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("useAuth phải được sử dụng bên trong AuthProvider");
+  }
+  const { open, setOpen } = context;
+
   const pathName = usePathname();
   const [activeHeader, setActiveHeader] = useState(false);
-  const [open, setOpen] = useState(false);
+
   const [username, setUsername] = useState<{
     name: string;
     email: string;
   } | null>(null);
-  const router = useRouter();
+
   useEffect(() => {
     const handleChangeHeader = () => {
       setActiveHeader(window.scrollY > 100);
@@ -130,9 +136,55 @@ export default function Navbar() {
                       })}
                     </ul>
                   </nav> */}
+<<<<<<< HEAD
 
 
                                       {/* <span>
                       {" "}
                       <IoIosArrowDown fontSize={18} />
                     </span> */}
+=======
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {/* <div> */}
+          <div className={style["search-container"]}>
+            <input
+              className={style["search-box"]}
+              type="text"
+              placeholder="Tìm kiếm"
+            />
+            <div className={style["search-icon"]}>
+              <IoSearchOutline />
+            </div>
+          </div>
+          {/* </div> */}
+          <div className={style["login-container"]}>
+            {username ? (
+              <div className={style.info}>
+                <Link href={"#"} className={` ${style["linkNav"]}`}>
+                  {username.name}
+                </Link>
+                <button onClick={handleLogout}>Đăng xuất</button>
+              </div>
+            ) : (
+              <Link
+                href={"#"}
+                className={style.login}
+                onClick={() => setOpen(true)}
+              >
+                <span>
+                  <LuUserRound />
+                </span>
+                Đăng nhập
+              </Link>
+            )}
+          </div>
+        </div>
+      </header>
+      {open && <UserForm />}
+    </>
+  );
+}
+>>>>>>> 8ef97d96391f6b62043c0e94d6d60c524ef1cdda

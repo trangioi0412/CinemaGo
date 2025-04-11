@@ -6,12 +6,14 @@ import {
   getMoviesShowing,
 } from "../service/movie.service";
 import OfferItem from "../Components/OfferItem/OfferItem";
+import Banner from "../Components/Banner/Banner";
 async function Layout() {
   const showing = await getMoviesShowing();
   const comingSoon = await getMoviesComingSoon();
 
   return (
     <div>
+      <Banner />
       <div className={`${styles.contents} container`}>
         <MovieList data={showing} title="Phim đang chiếu" />
         <MovieList data={comingSoon} title="Phim sắp chiếu" />
