@@ -1,192 +1,119 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Film</title>
-    <link rel="stylesheet" href="./test.css">
+    <title>Document</title>
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="logo">
-            </div>
-            <ul class="menu">
-                <li>Quản lý film</li>
-                <li class="active">Quản lý ticket</li>
-                <li>Quản lý room</li>
-                <li>Quản lý cinema</li>
-                <li>Quản lý suất chiếu</li>
-            </ul>
-        </div>
-        <div class="main-content">
-            <div class="header">
-                <input type="text" placeholder="Search ...">
-                <div class="user-info">
-                    <span class="notification">🔔 3</span>
-                    <span class="message">💬 3</span>
-                    <span class="user-name">Thế Quang</span>
-                </div>
-            </div>
+<style>
+.open-btn {
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-            <div class="table-section">
-                <div class="table-header">
-                    <h2>DANH SÁCH FILM</h2><br>
-                    <button class="add-user">+ Tạo Mới Film</button>
-                </div>
-                <div class="table-controls">
-                    <select>
-                        <option>Hiện 10 danh mục</option>
-                        <option>Hiện 20 danh mục</option>
-                        <option>Hiện 50 danh mục</option>
-                    </select>
-                    <div class="export-buttons">
-                        <button>Copy</button>
-                        <button>CSV</button>
-                        <button>Excel</button>
-                        <button>PDF</button>
-                        <button>Print</button>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên film</th>
-                            <th>Date</th>
-                            <th>Director</th>
-                            <th>Nation</th>
-                            <th>Age</th>
-                            <th>Category</th>
-                            <th>Time</th>
-                            <th>Hành Động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>QUỶ NHẬP TRÀNG</td>
-                            <td>07/03/2025</td>
-                            <td>Pom Nguyễn</td>
-                            <td>Việt Nam</td>
-                            <td>18</td>
-                            <td>Kinh Dị</td>
-                            <td>122</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>CÔ GÁI NĂM ẤY CHÚNG TA CÙNG THEO ĐUỔI</td>
-                            <td>21/03/2025</td>
-                            <td>Cho Young-Myoung</td>
-                            <td>Hàn Quốc</td>
-                            <td>16</td>
-                            <td>Tình Cảm, Hài</td>
-                            <td>102</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>TIẾNG VỌNG KINH HOÀNG</td>
-                            <td>14/03/2025</td>
-                            <td>Osgood Perkins</td>
-                            <td>Hoa Kỳ</td>
-                            <td>18</td>
-                            <td>Kinh Dị</td>
-                            <td>98</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>ANH KHÔNG ĐAU</td>
-                            <td>14/03/2025</td>
-                            <td>Dan Berk, Robert Olsen</td>
-                            <td>Hoa Kỳ</td>
-                            <td>18</td>
-                            <td>Hài, Hành Động</td>
-                            <td>110</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>VUA SƯ TỬ</td>
-                            <td>10/04/2025</td>
-                            <td>Jon Favreau</td>
-                            <td>Hoa Kỳ</td>
-                            <td>7</td>
-                            <td>Hoạt Hình, Phiêu Lưu</td>
-                            <td>118</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>FAST & FURIOUS 10</td>
-                            <td>19/04/2025</td>
-                            <td>Louis Leterrier</td>
-                            <td>Hoa Kỳ</td>
-                            <td>16</td>
-                            <td>Hành Động</td>
-                            <td>130</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>NGƯỜI NHỆN: KHÔNG CÒN NHÀ</td>
-                            <td>15/05/2025</td>
-                            <td>Jon Watts</td>
-                            <td>Hoa Kỳ</td>
-                            <td>13</td>
-                            <td>Hành Động, Viễn Tưởng</td>
-                            <td>148</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>HÀNH TINH KHỈ: VƯƠNG TRIỀU MỚI</td>
-                            <td>30/05/2025</td>
-                            <td>Wes Ball</td>
-                            <td>Hoa Kỳ</td>
-                            <td>13</td>
-                            <td>Hành Động, Phiêu Lưu</td>
-                            <td>120</td>
-                            <td>
-                                <button class="action update">Sửa</button>
-                                <button class="action delete">Xóa</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pagination">
-                    <span>Hiện 1 đến 5 của 5 danh mục</span>
-                    <div class="pagination-buttons">
-                        <button>Trước</button>
-                        <button class="active">1</button>
-                        <button>Sau</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+.open-btn:hover {
+  background-color: #005fcc;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 95%;
+  margin: 5% auto;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 70vh ;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup-form input,
+.popup-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.popup-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-form button:hover {
+  background-color: #218838;
+}
+
+
+
+</style>
+<body>
+<!-- Nút mở popup -->
+<!-- Nút mở popup -->
+<button class="open-btn" onclick="document.getElementById('popup').style.display='block'">
+  Thêm phim
+</button>
+
+<!-- Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Thêm phim mới</h2>
+    <form class="popup-form">
+      <input type="text" placeholder="Tên phim" required />
+      <input type="date" placeholder="Ngày chiếu" required />
+      <input type="text" placeholder="Đạo diễn" required />
+      <input type="text" placeholder="Quốc gia" required />
+      <input type="number" placeholder="Độ tuổi" required />
+      <input type="text" placeholder="Thể loại" required />
+      <input type="text" placeholder="Ngôn ngữ" required />
+      <input type="number" placeholder="Thời lượng (phút)" required />
+      <textarea placeholder="Tóm tắt nội dung" rows="4" required></textarea>
+      <input type="text" placeholder="Trạng thái (1: Sắp chiếu, 2: Đang chiếu, ...)" required />
+      <input type="text" placeholder="Link ảnh đại diện (image)" required />
+      <input type="text" placeholder="Link banner" required />
+      <input type="text" placeholder="Link trailer (YouTube embed)" required />
+      <button type="submit">Lưu phim</button>
+    </form>
+  </div>
+</div>
+
+
 </body>
 </html>
+<span class="close-btn" onclick="document.getElementById('popup').style.display='none'">&times;</span>

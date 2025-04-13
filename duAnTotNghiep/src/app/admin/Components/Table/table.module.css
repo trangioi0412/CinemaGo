@@ -24,5 +24,34 @@
   td {
     padding: 10px 20px;
     text-align: start;
+    p{
+      display: -webkit-box ;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
   }
+}
+
+.btnAction{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  button{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: var(--size-heading-24);
+      
+  }
+}
+
+.btnDelete{
+  color: red;           
+}
+
+.btnEdit{
+  color: goldenrod;
 }
