@@ -361,62 +361,7 @@
       "location": {
         "city": 1,
         "detail": "271 Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1"
-      },
-      "room": [
-        {
-          "id": 1,
-          "diagram": {
-            "row": 16,
-            "colunm": 8,
-            "element_remove": ["A5", "A6", "A7", "B5", "B6", "B7"],
-            "double_Chair": ["I2", "I3"],
-            "element_selected": ["A10", "A12"],
-            "element_selecting": ["A13", "A15"]
-          }
-        },
-        {
-          "id": 2,
-          "diagram": {}
-        },
-        {
-          "id": 3,
-          "diagram": {}
-        },
-        {
-          "id": 4,
-          "diagram": {}
-        },
-        {
-          "id": 5,
-          "diagram": {
-            "row": 19,
-            "colunm": 17,
-            "element_remove": {
-              "A": [1, 2, 3, 4],
-              "B": [1, 2, 3, 4],
-              "C": [1, 2, 3, 4],
-              "D": [1, 2, 3, 4],
-              "E": [1, 2, 3, 4],
-              "F": [1, 2, 3, 4],
-              "G": [3, 4],
-              "H": [3, 4],
-              "J": [3, 4],
-              "K": [3, 4, 19],
-              "L": [3, 4],
-              "M": [3, 4, 19],
-              "N": [3, 4],
-              "O": [3, 4, 19],
-              "P": [3, 4],
-              "Q": [3, 4, 10, 11, 12]
-            },
-            "double_Chair": {
-              "R": [1, 2, 3, 4, 5, 6]
-            },
-            "element_selected": { "F": [1, 2, 3, 4], "P": [3, 4] },
-            "element_selecting": []
-          }
-        }
-      ]
+      }
     },
     {
       "id": 2,
@@ -425,68 +370,132 @@
       "location": {
         "city": 1,
         "detail": "135 Hai Bà Trưng, Phường Bến Nghé Quận 1"
-      },
-      "room": [
-        {
-          "id": 1,
-          "diagram": {
-            "row": 16,
-            "colunm": 8,
-            "element_remove": ["A5", "A6", "A7", "B5", "B6", "B7"],
-            "double_Chair": ["I2", "I3"],
-            "element_selected": ["A10", "A12"],
-            "element_selecting": ["A13", "A15"]
-          }
-        },
-        {
-          "id": 2,
-          "diagram": {}
-        },
-        {
-          "id": 3,
-          "diagram": {}
-        },
-        {
-          "id": 4,
-          "diagram": {}
-        },
-        {
-          "id": 5,
-          "diagram": {
-            "row": 19,
-            "colunm": 17,
-            "element_remove": {
-              "A": [1, 2, 3, 4],
-              "B": [1, 2, 3, 4],
-              "C": [1, 2, 3, 4],
-              "D": [1, 2, 3, 4],
-              "E": [1, 2, 3, 4],
-              "F": [1, 2, 3, 4],
-              "G": [3, 4],
-              "H": [3, 4],
-              "J": [3, 4],
-              "K": [3, 4, 19],
-              "L": [3, 4],
-              "M": [3, 4, 19],
-              "N": [3, 4],
-              "O": [3, 4, 19],
-              "P": [3, 4],
-              "Q": [3, 4, 10, 11, 12]
-            },
-            "double_Chair": {
-              "R": [1, 2, 3, 4, 5, 6]
-            },
-            "element_selected": {
-              "F": [1, 2, 3, 4],
-              "P": [3, 4],
-              "A": [1, 2, 3, 4]
-            },
-            "element_selecting": []
-          }
-        }
-      ]
+      }
     }
   ],
+
+  "room": [
+    {
+      "id": 1,
+      "code_room": 1,
+      "id_thear": 1,
+      "diagram": {
+        "row": 13,
+        "colunm": 22,
+        "element_remove": {
+          "A": [7, 8],
+          "B": [7, 8],
+          "C": [7, 8],
+          "D": [7, 8],
+          "E": [7, 8, 22],
+          "F": [7, 8],
+          "G": [7, 8, 22],
+          "H": [7, 8],
+          "I": [7, 8],
+          "J": [7, 8, 22],
+          "K": [3, 6, 7, 8, 16]
+        },
+        "double_Chair": {
+          "L": [1, 2, 4, 5],
+          "M": [2, 3, 4]
+        },
+        "element_selected": {
+          "A": [10, 11]
+        },
+        "element_selecting": {}
+      }
+    },
+    {
+      "id": 2,
+      "id_thear": 1,
+      "room_code": 3,
+      "diagram": {
+        "row": 9,
+        "colunm": 17,
+        "element_remove": {},
+        "double_Chair": {
+          "I": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "element_selected": {},
+        "element_selecting": []
+      }
+    },
+    {
+      "id": 3,
+      "id_thear": 1,
+      "room_code": 4,
+      "diagram": {
+        "row": 12,
+        "colunm": 17,
+        "element_remove": {
+          "A": [1, 2, 3],
+          "B": [1, 2, 3]
+        },
+        "double_Chair": {
+          "L": [1, 2, 3, 4, 5, 6, 7]
+        },
+        "element_selected": {},
+        "element_selecting": []
+      }
+    },
+    {
+      "id": 4,
+      "id_thear": 1,
+      "room_code": 2,
+      "diagram": {
+        "row": 6,
+        "colunm": 8,
+        "element_remove": {
+          "A": [3, 4],
+          "B": [3, 4],
+          "C": [3, 4],
+          "D": [3, 4],
+          "E": [2, 3, 4, 7],
+          "F": [1, 2, 3, 4, 5, 7, 8]
+        },
+        "double_Chair": {},
+        "element_selected": {},
+        "element_selecting": []
+      }
+    },
+    {
+      "id": 5,
+      "id_thear": 1,
+      "room_code": 5,
+      "diagram": {
+        "row": 19,
+        "colunm": 17,
+        "element_remove": {
+          "A": [1, 2, 3, 4],
+          "B": [1, 2, 3, 4],
+          "C": [1, 2, 3, 4],
+          "D": [1, 2, 3, 4],
+          "E": [1, 2, 3, 4],
+          "F": [1, 2, 3, 4],
+          "G": [3, 4],
+          "H": [3, 4],
+          "J": [3, 4],
+          "K": [3, 4, 19],
+          "L": [3, 4],
+          "M": [3, 4, 19],
+          "N": [3, 4],
+          "O": [3, 4, 19],
+          "P": [3, 4],
+          "Q": [3, 4, 10, 11, 12]
+        },
+        "double_Chair": {
+          "R": [1, 2, 3, 4, 5, 6]
+        },
+        "element_selected": {
+          "F": [1, 2, 3, 4],
+          "P": [3, 4],
+          "A": [1, 2, 3, 4]
+        },
+        "element_selecting": []
+      }
+    }
+  ],
+
   "ticket": [
     {
       "id": "",

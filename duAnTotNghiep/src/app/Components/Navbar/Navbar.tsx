@@ -17,14 +17,14 @@ const menuLink = [
   {
     id: 3,
     children: [
-      { url: "/#", name: "CGV",},
-      { url: "/#", name: "Galaxy cinema",},
-      { url: "/#", name: "Beta cinema",},
-      { url: "/#", name: "Mega CS",},
-      { url: "/#", name: "BHD Star",},
-      { url: "/#", name: "Lotte cinema",},
+      { url: "/#", name: "CGV" },
+      { url: "/#", name: "Galaxy cinema" },
+      { url: "/#", name: "Beta cinema" },
+      { url: "/#", name: "Mega CS" },
+      { url: "/#", name: "BHD Star" },
+      { url: "/#", name: "Lotte cinema" },
     ],
-  }
+  },
 ];
 export default function Navbar() {
   const context = useContext(AppContext);
@@ -75,7 +75,11 @@ export default function Navbar() {
   };
   return (
     <>
-      <header className={`${activeHeader && "activeHeader"} ${style["header-container"]}`}>
+      <header
+        className={`${activeHeader && "activeHeader"} ${
+          style["header-container"]
+        }`}
+      >
         <div className={`container ${style.header}`}>
           <a href="/" className={style.logo}>
             <img src="/img/logo/logo.png" className={style.imgLogo} alt="" />
@@ -83,16 +87,25 @@ export default function Navbar() {
           <nav>
             <ul className={style.navbar}>
               {links.map((link) => (
-                <li key={link.id} className={`${pathName === link.url && style.active}`}>
-                  <Link href={link.url} className={` ${style["linkNav"]}`}>{link.name}</Link>
+                <li
+                  key={link.id}
+                  className={`${pathName === link.url && style.active}`}
+                >
+                  <Link href={link.url} className={` ${style["linkNav"]}`}>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
           <div className={style["search-container"]}>
-            <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
+            <input
+              className={style["search-box"]}
+              type="text"
+              placeholder="Tìm kiếm"
+            />
             <div className={style["search-icon"]}>
-              <IoSearchOutline/>
+              <IoSearchOutline />
             </div>
           </div>
           <div className={style["login-container"]}>
@@ -104,15 +117,22 @@ export default function Navbar() {
                 <button onClick={handleLogout}>Đăng xuất</button>
               </div>
             ) : (
-              <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
-                <span> <LuUserRound /></span>
+              <Link
+                href={"#"}
+                className={style.login}
+                onClick={() => setOpen(true)}
+              >
+                <span>
+                  {" "}
+                  <LuUserRound />
+                </span>
                 Đăng nhập
               </Link>
             )}
           </div>
         </div>
       </header>
-      {open && <UserForm  />}
+      {open && <UserForm />}
     </>
   );
 }
@@ -137,7 +157,6 @@ export default function Navbar() {
 //                     </ul>
 //                   </nav> */}
 // <<<<<<< HEAD
-
 
 //                                       {/* <span>
 //                       {" "}
@@ -187,4 +206,3 @@ export default function Navbar() {
 //     </>
 //   );
 // }
-// >>>>>>> 8ef97d96391f6b62043c0e94d6d60c524ef1cdda

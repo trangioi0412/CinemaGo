@@ -5,7 +5,9 @@
 }
 .search_bar {
   input {
-    border: 1px solid var(--border-container);
+    min-width: 240px;
+    background-color: #fff;
+    border: 2px solid var(--border-container);
     padding: 10px 10px;
     outline: none;
     border-radius: 5px;
