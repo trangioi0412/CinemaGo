@@ -17,14 +17,14 @@ const menuLink = [
   {
     id: 3,
     children: [
-      { url: "/#", name: "CGV",},
-      { url: "/#", name: "Galaxy cinema",},
-      { url: "/#", name: "Beta cinema",},
-      { url: "/#", name: "Mega CS",},
-      { url: "/#", name: "BHD Star",},
-      { url: "/#", name: "Lotte cinema",},
+      { url: "/#", name: "CGV" },
+      { url: "/#", name: "Galaxy cinema" },
+      { url: "/#", name: "Beta cinema" },
+      { url: "/#", name: "Mega CS" },
+      { url: "/#", name: "BHD Star" },
+      { url: "/#", name: "Lotte cinema" },
     ],
-  }
+  },
 ];
 export default function Navbar() {
   const context = useContext(AppContext);
@@ -75,7 +75,11 @@ export default function Navbar() {
   };
   return (
     <>
-      <header className={`${activeHeader && "activeHeader"} ${style["header-container"]}`}>
+      <header
+        className={`${activeHeader && "activeHeader"} ${
+          style["header-container"]
+        }`}
+      >
         <div className={`container ${style.header}`}>
           <a href="/" className={style.logo}>
             <img src="/img/logo/logo.png" className={style.imgLogo} alt="" />
@@ -83,16 +87,37 @@ export default function Navbar() {
           <nav>
             <ul className={style.navbar}>
               {links.map((link) => (
-                <li key={link.id} className={`${pathName === link.url && style.active}`}>
-                  <Link href={link.url} className={` ${style["linkNav"]}`}>{link.name}</Link>
+                <li
+                  key={link.id}
+                  className={`${pathName === link.url && style.active}`}
+                >
+                  <Link href={link.url} className={` ${style["linkNav"]}`}>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
           <div className={style["search-container"]}>
+<<<<<<< Updated upstream
             <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
             <div className={style["search-icon"]}>
               <IoSearchOutline/>
+=======
+<<<<<<< HEAD
+            <input
+              className={style["search-box"]}
+              type="text"
+              placeholder="Tìm kiếm"
+            />
+            <div className={style["search-icon"]}>
+              <IoSearchOutline />
+=======
+            <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
+            <div className={style["search-icon"]}>
+              <IoSearchOutline/>
+>>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
+>>>>>>> Stashed changes
             </div>
           </div>
           <div className={style["login-container"]}>
@@ -104,15 +129,40 @@ export default function Navbar() {
                 <button onClick={handleLogout}>Đăng xuất</button>
               </div>
             ) : (
+<<<<<<< Updated upstream
               <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
                 <span> <LuUserRound /></span>
+=======
+<<<<<<< HEAD
+              <Link
+                href={"#"}
+                className={style.login}
+                onClick={() => setOpen(true)}
+              >
+                <span>
+                  {" "}
+                  <LuUserRound />
+                </span>
+=======
+              <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
+                <span> <LuUserRound /></span>
+>>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
+>>>>>>> Stashed changes
                 Đăng nhập
               </Link>
             )}
           </div>
         </div>
       </header>
+<<<<<<< Updated upstream
       {open && <UserForm  />}
+=======
+<<<<<<< HEAD
+      {open && <UserForm />}
+=======
+      {open && <UserForm  />}
+>>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
+>>>>>>> Stashed changes
     </>
   );
 }
@@ -138,7 +188,14 @@ export default function Navbar() {
 //                   </nav> */}
 // <<<<<<< HEAD
 
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
+>>>>>>> Stashed changes
 //                                       {/* <span>
 //                       {" "}
 //                       <IoIosArrowDown fontSize={18} />
