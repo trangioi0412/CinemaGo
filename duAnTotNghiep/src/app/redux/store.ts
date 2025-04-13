@@ -4,7 +4,7 @@ import searchSlice from "./slices/searchSlice";
 const store = configureStore({
   reducer: {
     filmCrud: filmSlice,
-    // search: searchSlice,
+    search: searchSlice,
   },
 });
 export default store;

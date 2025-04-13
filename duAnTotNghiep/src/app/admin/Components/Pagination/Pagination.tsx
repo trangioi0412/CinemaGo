@@ -6,34 +6,70 @@ import {
   MdKeyboardDoubleArrowLeft,
   MdKeyboardDoubleArrowRight,
 } from "react-icons/md";
-const Pagination = () => (
-  <div className={style.pagination}>
-    <p>Hiện 1 đến 10 của 10 mục</p>
-    <div className={style.btn_paginations}>
-      <button>
-        <span>
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  from: number;
+  to: number;
+  total: number;
+}
+
+const Pagination = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+  from,
+  to,
+  total,
+}: PaginationProps) => {
+  const goToPage = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      onPageChange(page);
+    }
+  };
+
+  return (
+    <div className={style.pagination}>
+      <p>
+        Hiện {from} đến {to} của {total} mục
+      </p>
+      <div className={style.btn_paginations}>
+        <button onClick={() => goToPage(1)} disabled={currentPage === 1}>
           <MdKeyboardDoubleArrowLeft />
-        </span>
-      </button>
-      <button>
-        <span>
+        </button>
+        <button
+          onClick={() => goToPage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
           <MdKeyboardArrowLeft />
-        </span>
-      </button>
-      <button className={style.active}>1</button>
-      <button>2</button>
-      <button>
-        <span>
+        </button>
+
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i + 1}
+            onClick={() => goToPage(i + 1)}
+            className={currentPage === i + 1 ? style.active : ""}
+          >
+            {i + 1}
+          </button>
+        ))}
+
+        <button
+          onClick={() => goToPage(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
           <MdKeyboardArrowRight />
-        </span>
-      </button>
-      <button>
-        <span>
+        </button>
+        <button
+          onClick={() => goToPage(totalPages)}
+          disabled={currentPage === totalPages}
+        >
           <MdKeyboardDoubleArrowRight />
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Pagination;

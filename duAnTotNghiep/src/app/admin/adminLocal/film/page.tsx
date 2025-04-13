@@ -14,7 +14,7 @@ import { Movies } from "@/app/movie.interface";
 import { getAllMovies } from "@/app/service/movie.service";
 import { useDispatch, useSelector } from "react-redux";
 import { addData, deleteData, getData } from "@/app/redux/slices/filmSlice";
-import { filmSelector } from "@/app/redux/selectors";
+import { dataRemaining, filmSelector } from "@/app/redux/selectors";
 
 // const data = [
 //   { id: 1, filmname: "Phim hấp dẫn",  date: "07/03/2025", director: "Pom Nguyễn", nation: "Việt Nam", age: "18", category: "Kinh dị", time: "122",  },
@@ -66,7 +66,7 @@ const Film = () => {
     };
     fetchData();
   }, [dispatch]);
-  const data = useSelector(filmSelector);
+  const data = useSelector(dataRemaining);
 
   const handleAdd = () => {
     dispatch(
@@ -100,8 +100,7 @@ const Film = () => {
         <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
       </HeadingCard>
       <OptionTable />
-      <Table data={data} column={column} />
-      <Pagination />
+      <Table data={data} column={column} rowsPerPage={5} />
       {open && <AddFromFilm onClick={() => setOpen(!open)}></AddFromFilm>}
     </Card>
   );
