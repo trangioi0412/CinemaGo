@@ -4,7 +4,6 @@ const User = () => {
   return (
     <div style={{ flexGrow: "1", display: "flex", flexDirection: "column" }}>
       <div className={style.header}>
-        
         <div className={style.user_info}>
           <div className={style.notifications}>
             <span className={style.badge}>3</span>
