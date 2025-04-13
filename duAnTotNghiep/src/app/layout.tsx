@@ -30,7 +30,9 @@ export default function RootLayout({
       <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
         <AppProvider>
           <Navbar />
-          <main style={{ display: "contents" }}>{children}</main>
+          <main style={{ display: "contents" }}>
+            
+            {children}</main>
           <Footer />
         </AppProvider>
       </body>
