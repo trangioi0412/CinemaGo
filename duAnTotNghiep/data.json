@@ -378,6 +378,7 @@
         {
         "id": 1,
         "code_room": 1,
+        "id_thear": 1,
         "diagram": {
         "row": 13,
         "colunm": 22,
@@ -406,6 +407,7 @@
         },
         {
           "id": 2,
+          "id_thear": 1,
           "room_code": 3,
           "diagram": {
             "row": 9,
@@ -422,6 +424,7 @@
         },
         {
           "id": 3,
+          "id_thear": 1,
           "room_code": 4,
           "diagram": {
             "row": 12,
@@ -440,6 +443,7 @@
         },
         {
           "id": 4,
+          "id_thear": 1,
           "room_code": 2,
           "diagram": {
             "row": 6,
@@ -459,6 +463,7 @@
         },
         {
           "id": 5,
+          "id_thear": 1,
           "room_code": 5,
           "diagram": {
             "row": 19,
@@ -491,8 +496,8 @@
             },
             "element_selecting": []
           }
-        }
-      ],
+        } 
+  ],
       
   "ticket": [
     {
