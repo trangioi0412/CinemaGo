@@ -8,6 +8,8 @@ import AppProvider from "./context/AppProvider";
 import { useToggleNav } from "./context/ToggleNavContext";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { Provider } from "react-redux";
+import store from "../redux/store";
 const beVietNamProSans = Be_Vietnam_Pro({
   weight: ["400", "700"],
   variable: "--font-be-vietnam-pro-sans",
@@ -28,26 +30,28 @@ export default function AdminLayout({
   return (
     <html lang="en">
       <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
-        <AppProvider>
-          {toggle && (
-            <Nav
-              links={
-                pathname.startsWith("/admin/adminLocal") ? linkLocal : links
-              }
-            />
-          )}
-          <main style={{ display: "flex" }}>
-            {
-              <Header
-                toggleNav={() => setToggle(!toggle)}
+        <Provider store={store}>
+          <AppProvider>
+            {toggle && (
+              <Nav
                 links={
                   pathname.startsWith("/admin/adminLocal") ? linkLocal : links
                 }
               />
-            }
-            {children}
-          </main>
-        </AppProvider>
+            )}
+            <main style={{ display: "flex" }}>
+              {
+                <Header
+                  toggleNav={() => setToggle(!toggle)}
+                  links={
+                    pathname.startsWith("/admin/adminLocal") ? linkLocal : links
+                  }
+                />
+              }
+              {children}
+            </main>
+          </AppProvider>
+        </Provider>
       </body>
     </html>
   );
