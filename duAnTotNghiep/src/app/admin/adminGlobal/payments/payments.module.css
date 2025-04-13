@@ -1,0 +1,37 @@
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary_card {
+    background: #17a2b8;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+.summary_card:nth-child(2) {
+    background: #28a745;
+}
+
+.summary_card:nth-child(3) {
+    background: #420c4f;
+}
+.summary_card:last-child {
+    margin-right: 0;
+    background: #dc3545;
+}
+
+.summary_card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.summary_card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
