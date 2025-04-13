@@ -1,14 +1,8 @@
 import React from "react";
 import style from "./user.module.css";
 import Table from "../../Components/Table/Table";
-import { IoIosAdd, IoMdAdd } from "react-icons/io";
-import { CgExport } from "react-icons/cg";
-import {
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-  MdKeyboardDoubleArrowLeft,
-  MdKeyboardDoubleArrowRight,
-} from "react-icons/md";
+import { IoMdAdd } from "react-icons/io";
+
 import Card from "../../Components/Card/Card";
 import Pagination from "../../Components/Pagination/Pagination";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
@@ -42,7 +36,7 @@ const User = () => {
     },
   ];
   const column = [
-    { key: "name", title: "Name" },
+    { key: "name", title: "Họ tên" },
     { key: "email", title: "Email" },
     { key: "phone", title: "Số điện thoại" },
     { key: "address", title: "Địa chỉ" },

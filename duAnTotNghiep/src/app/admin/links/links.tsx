@@ -42,4 +42,36 @@ const links: linkInterface[] = [
     icon: <MdOutlineLocalOffer />,
   },
 ];
-export { links };
+const linkLocal: linkInterface[] = [
+  {
+    id: 1,
+    title: "Thống kê",
+    url: "/admin/adminLocal/dashboard",
+    icon: <TfiDashboard />,
+  },
+  {
+    id: 2,
+    title: "Quản lí phim",
+    url: "/admin/adminLocal/film",
+    icon: <FaRegUser />,
+  },
+  {
+    id: 3,
+    title: "Suất chiếu",
+    url: "/admin/adminLocal/brand",
+    icon: <TbBrandCarbon />,
+  },
+  {
+    id: 4,
+    title: "Hóa đơn",
+    url: "/admin/adminLocal/payments",
+    icon: <FaRegMoneyBillAlt />,
+  },
+  {
+    id: 5,
+    title: "Khuyến mãi",
+    url: "/admin/adminLocal/vouchers",
+    icon: <MdOutlineLocalOffer />,
+  },
+];
+export { links, linkLocal };
