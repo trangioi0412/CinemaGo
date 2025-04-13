@@ -99,12 +99,6 @@ export default function Navbar() {
             </ul>
           </nav>
           <div className={style["search-container"]}>
-<<<<<<< Updated upstream
-            <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
-            <div className={style["search-icon"]}>
-              <IoSearchOutline/>
-=======
-<<<<<<< HEAD
             <input
               className={style["search-box"]}
               type="text"
@@ -112,12 +106,6 @@ export default function Navbar() {
             />
             <div className={style["search-icon"]}>
               <IoSearchOutline />
-=======
-            <input className={style["search-box"]} type="text" placeholder="Tìm kiếm"/>
-            <div className={style["search-icon"]}>
-              <IoSearchOutline/>
->>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
->>>>>>> Stashed changes
             </div>
           </div>
           <div className={style["login-container"]}>
@@ -129,11 +117,6 @@ export default function Navbar() {
                 <button onClick={handleLogout}>Đăng xuất</button>
               </div>
             ) : (
-<<<<<<< Updated upstream
-              <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
-                <span> <LuUserRound /></span>
-=======
-<<<<<<< HEAD
               <Link
                 href={"#"}
                 className={style.login}
@@ -143,26 +126,13 @@ export default function Navbar() {
                   {" "}
                   <LuUserRound />
                 </span>
-=======
-              <Link href={"#"} className={style.login} onClick={() => setOpen(true)}>
-                <span> <LuUserRound /></span>
->>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
->>>>>>> Stashed changes
                 Đăng nhập
               </Link>
             )}
           </div>
         </div>
       </header>
-<<<<<<< Updated upstream
-      {open && <UserForm  />}
-=======
-<<<<<<< HEAD
       {open && <UserForm />}
-=======
-      {open && <UserForm  />}
->>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
->>>>>>> Stashed changes
     </>
   );
 }
@@ -188,14 +158,6 @@ export default function Navbar() {
 //                   </nav> */}
 // <<<<<<< HEAD
 
-<<<<<<< Updated upstream
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 1c2a8315a7879a12b60b347857f56c261b6482f7
->>>>>>> Stashed changes
 //                                       {/* <span>
 //                       {" "}
 //                       <IoIosArrowDown fontSize={18} />
@@ -244,4 +206,3 @@ export default function Navbar() {
 //     </>
 //   );
 // }
-// >>>>>>> 8ef97d96391f6b62043c0e94d6d60c524ef1cdda
