@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 const Pagination = () => (
   <div className={style.pagination}>
-    <p>Hiện 1 đến 5 của 5 mục</p>
+    <p>Hiện 1 đến 10 của 10 mục</p>
     <div className={style.btn_paginations}>
       <button>
         <span>
