@@ -3,6 +3,8 @@
 import React, { useEffect,useState } from "react";
 import style from "./user.module.css";
 import Table from "../../Components/Table/Table";
+import { MdDeleteForever } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
 import { FaRegEdit } from "react-icons/fa";
 import AddBtn from "../../Components/AddBtn/AddBtn";
 import { IoMdAdd } from "react-icons/io";
@@ -13,6 +15,10 @@ import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 
 const User = () => {
+  const dispatch = useDispatch();
+      const handleDelete = (id: any) => {
+        // dispatch(deleteData(id));
+      };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [users, setUsers] = useState([
     {
@@ -147,7 +153,13 @@ const User = () => {
     {
       key: "actions",
       title: "Hành động",
-      render: (row: any) => <button>Sửa</button>,
+      render: (row: any) => (
+        <div className={style["btnAction"]}>
+          <button className={style["btnEdit"]}>
+            <FaRegEdit />
+          </button>
+        </div>
+      ),
     },
   ];
 
@@ -199,8 +211,8 @@ const User = () => {
         onClose={handleClosePopup}
         onSubmit={handleAddUser}
       />
-      <Table data={users} column={column} />
-      <Pagination />
+      <Table data={users} column={column} rowsPerPage={5}  />
+      {/* <Pagination /> */}
     </Card>
   );
 };

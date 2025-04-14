@@ -1,12 +1,21 @@
-import React from "react";
-import style from "./user.module.css";
+"use client";
+
+import React , { useEffect,useState } from "react";
+import { MdDeleteForever } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
+import style from "./voucher.module.css"
 import Table from "../../Components/Table/Table";
 import { IoMdAdd } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
 import Card from "../../Components/Card/Card";
 import Pagination from "../../Components/Pagination/Pagination";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 const Vouchers = () => {
+    const dispatch = useDispatch();
+    const handleDelete = (id: any) => {
+      // dispatch(deleteData(id));
+    };
   const data = [
     {
         code: "SALEOFF10",
@@ -121,7 +130,19 @@ const Vouchers = () => {
     {
       key: "actions",
       title: "Hành động",
-      render: (row: any) => <div><button>Sửa</button><button>Xóa</button></div>,
+      render: (row: any) => (
+        <div className={style["btnAction"]}>
+          <button
+            onClick={() => handleDelete(row.id)}
+            className={style["btnDelete"]}
+          >
+            <MdDeleteForever />
+          </button>
+          <button className={style["btnEdit"]}>
+            <FaRegEdit />
+          </button>
+        </div>
+      ),
     },
   ];
   return (
@@ -136,8 +157,7 @@ const Vouchers = () => {
         </button>
       </HeadingCard>
       <OptionTable />
-      <Table data={data} column={column} />
-      <Pagination />
+      <Table data={data} column={column} rowsPerPage={10}/>
     </Card>
   );
 };
