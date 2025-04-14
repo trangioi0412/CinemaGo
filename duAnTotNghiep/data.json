@@ -652,5 +652,107 @@
       "role": "admin",
       "type_admin": "super"
     }
+  ],
+  "vouchers":[
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF15",
+      "name": "15 % Off Sale",
+      "discount": "15%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF20",
+      "name": "20 % Off Sale",
+      "discount": "20%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 40,
+      "daSuDung": 26,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "WELCOME",
+      "name": "New User",
+      "discount": "25%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 100,
+      "daSuDung": 5,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "OFFER2025",
+      "name": "Holiday offer",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 50,
+      "daSuDung": 10,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt"
+    }
   ]
 }
