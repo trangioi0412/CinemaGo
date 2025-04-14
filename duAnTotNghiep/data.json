@@ -112,6 +112,7 @@
             "banner":"https://i.ytimg.com/vi/ODQUOp10WpY/mqdefault.jpg",
             "trailer": "https://youtu.be/Dg9YzHxEkWU"
         },
+<<<<<<< Updated upstream
         {
             "id": 8,
             "name": "TRỪ TÀ KÝ: KHỞI NGUYÊN HẮC ÁM",
@@ -130,3 +131,250 @@
         }
     ]
 }
+=======
+        "double_Chair": {},
+        "element_selected": {},
+        "element_selecting": []
+      }
+    },
+    {
+      "id": 5,
+      "id_thear": 1,
+      "room_code": 5,
+      "diagram": {
+        "row": 19,
+        "colunm": 17,
+        "element_remove": {
+          "A": [1, 2, 3, 4],
+          "B": [1, 2, 3, 4],
+          "C": [1, 2, 3, 4],
+          "D": [1, 2, 3, 4],
+          "E": [1, 2, 3, 4],
+          "F": [1, 2, 3, 4],
+          "G": [3, 4],
+          "H": [3, 4],
+          "J": [3, 4],
+          "K": [3, 4, 19],
+          "L": [3, 4],
+          "M": [3, 4, 19],
+          "N": [3, 4],
+          "O": [3, 4, 19],
+          "P": [3, 4],
+          "Q": [3, 4, 10, 11, 12]
+        },
+        "double_Chair": {
+          "R": [1, 2, 3, 4, 5, 6]
+        },
+        "element_selected": {
+          "F": [1, 2, 3, 4],
+          "P": [3, 4],
+          "A": [1, 2, 3, 4]
+        },
+        "element_selecting": []
+      }
+    }
+  ],
+
+  "ticket": [
+    {
+      "id": "",
+      "price": 10,
+      "type": "",
+      "id_suat": "",
+      "id_ghe": ""
+    }
+  ],
+  "bill": [
+    {
+      "id": 1,
+      "id_user": 2,
+      "id_ticket": "",
+      "id_payment": "",
+      "day": "",
+      "price": 10
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "bank_number": 1028312672,
+      "bank_brand": "Vietcombank",
+      "QR_code": "",
+      "name": "Trần Văn Giới"
+    },
+    {
+      "id": 2,
+      "bank_number": 84375837534,
+      "bank_brand": "Momo",
+      "QR_code": "",
+      "name": "Trần Văn Giới"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Hoàng Duyệt",
+      "sdt": "0901234567",
+      "email": "hoangduyet1122@gmail.com",
+      "password": "password123",
+      "year": 2005,
+      "cinema": "CGV",
+      "status": "active",
+      "role": "user",
+      "type_admin": "none"
+    },
+    {
+      "id": 2,
+      "name": "Trần Văn Giới",
+      "sdt": "0912345678",
+      "email": "trangioi479@gmail.com",
+      "password": "motdieunua123",
+      "year": 2005,
+      "cinema": "Lotte",
+      "status": "inactive",
+      "role": "admin",
+      "type_admin": "super"
+    },
+    {
+      "id": 3,
+      "name": "Phan Phúc Lâm",
+      "sdt": "0923456789",
+      "email": "phanphuclam1122@gmail.com",
+      "password": "abc123",
+      "year": 2005,
+      "cinema": "Galaxy",
+      "status": "active",
+      "role": "moderator",
+      "type_admin": "standard"
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Thế Quang",
+      "sdt": "0934567890",
+      "email": "nguyenthequang1122@gmail.com",
+      "password": "securepass",
+      "year": 2002,
+      "cinema": "BHD",
+      "status": "banned",
+      "role": "user",
+      "type_admin": "none"
+    },
+    {
+      "id": 5,
+      "name": "Lê Thị Nhã Tú",
+      "sdt": "0945678901",
+      "email": "lethinhatu1122@gmail.com",
+      "password": "mypassword",
+      "year": 2005,
+      "cinema": "Cinestar",
+      "status": "active",
+      "role": "user",
+      "type_admin": "none"
+    },
+    {
+      "id": 7,
+      "name": "Nguyễn Thế Gia An",
+      "sdt": "0967890123",
+      "email": "nguyenthegiaan1122@gmail.com",
+      "password": "pass789",
+      "year": 2005,
+      "cinema": "Lotte",
+      "status": "active",
+      "role": "moderator",
+      "type_admin": "none"
+    },
+    {
+      "id": 8,
+      "name": "Nguyễn Đức Mạnh",
+      "sdt": "0978901234",
+      "email": "nguyenducmanh1122@gmail.com",
+      "password": "password987",
+      "year": 2005,
+      "cinema": "Galaxy",
+      "status": "active",
+      "role": "user",
+      "type_admin": "none"
+    },
+    {
+      "id": 9,
+      "name": "Trương Minh Hoàng",
+      "sdt": "0989012345",
+      "email": "truongminhhoang1122@gmail.com",
+      "password": "randompass",
+      "year": 2005,
+      "cinema": "BHD",
+      "status": "inactive",
+      "role": "admin",
+      "type_admin": "super"
+    },
+    {
+      "id": 10,
+      "name": "Nguyễn Minh Kiệt",
+      "sdt": "0990123456",
+      "email": "nguyenminhkiet1122@gmail.com",
+      "password": "do123pass",
+      "year": 2005,
+      "cinema": "Cinestar",
+      "status": "banned",
+      "role": "user",
+      "type_admin": "none"
+    },
+    {
+      "id": "47ac",
+      "name": "NGUYỄN THẾ QUANG",
+      "sdt": "0363396502",
+      "email": "nguyenquang.96502@gmail.com",
+      "password": "111",
+      "year": "2002-12-11",
+      "cinema": "Lotte",
+      "status": "inactive",
+      "role": "admin",
+      "type_admin": "super"
+    }
+  ],
+
+  "showtime": [
+    {
+      "id": 1,
+      "id_movie": 1,
+      "id_room": 1,
+      "cleaningUpTime": 15,
+      "time_start": "8:20",
+      "time_end": "10:22" 
+    },
+    {
+      "id": 2,
+      "id_movie": 1,
+      "id_room": 1,
+      "cleaningUpTime": 15,
+      "time_start": "8:20",
+      "time_end": "10:22" 
+    },
+    {
+      "id": 3,
+      "id_movie": 1,
+      "id_room": 1,
+      "cleaningUpTime": 15,
+      "time_start": "8:20",
+      "time_end": "10:22" 
+    },
+    {
+      "id": 4,
+      "id_movie": 1,
+      "id_room": 1,
+      "cleaningUpTime": 15,
+      "time_start": "8:20",
+      "time_end": "10:22" 
+    },
+    {
+      "id": 5,
+      "id_movie": 1,
+      "id_room": 1,
+      "cleaningUpTime": 15,
+      "time_start": "8:20",
+      "time_end": "10:22" 
+    }
+  ]
+
+}
+>>>>>>> Stashed changes
