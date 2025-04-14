@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "name": "QUỶ NHẬP TRÀNG",
       "date": "07/03/2025",
       "director": "Pom Nguyễn",
@@ -17,7 +17,7 @@
       "trailer": "https://www.youtube.com/embed/EB0nnm6akjA?si=pvBO2RbLlbOq4fI6"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Địa Đạo: Mặt Trời Trong Bóng Tối",
       "date": "25/03/2025",
       "director": "Bùi Thạc Chuyên",
@@ -33,7 +33,7 @@
       "trailer": "https://www.youtube.com/embed/xh6IDHjvytU?si=Q6THaR8Q2y8U88dX"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Phim Điện Ảnh Ninja Rantaro: Giải Cứu Quân Sư",
       "date": "28/03/2025",
       "director": "Masaya Fujimori",
@@ -49,7 +49,7 @@
       "trailer": "https://www.youtube.com/embed/ulOb1dBMS6U?si=DILpGhePD9Z2TnBn"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Huyết Án Truy Hành",
       "date": "28/03/2025",
       "director": "Man Ki Kwok",
@@ -65,7 +65,7 @@
       "trailer": "https://www.youtube.com/embed/kPVXy5rTO7A?si=bSfxrP4y0gvZe063"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Thiếu Nữ Ánh Trăng",
       "date": "28/03/2025",
       "director": "Chuang Ching-shen",
@@ -81,7 +81,7 @@
       "trailer": "https://www.youtube.com/embed/xh4EIV3cicw?si=VSkpFYywVWPmZsv1"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Cuốc Xe Kinh Hoàng",
       "date": "28/03/2025",
       "director": "Bruce Goodison",
@@ -97,7 +97,7 @@
       "trailer": "https://www.youtube.com/embed/sm66bc2juJE?si=Wd9g7H5cWzMrcsaU"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Âm Dương Lộ",
       "date": "28/03/2025",
       "director": "Hoàng Tuấn Cường",
@@ -113,7 +113,7 @@
       "trailer": "https://www.youtube.com/embed/Hy9-IIroldw?si=NEYH9YKyoVi1ef8s"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Nghề Siêu Khó Nói",
       "date": "21/03/2025",
       "director": "LEE Jong-suk",
@@ -129,7 +129,7 @@
       "trailer": "https://www.youtube.com/embed/25NyBoZOoWc?si=7nW18HKhubBfx6oL"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Nàng Bạch Tuyết",
       "date": "21/03/2025",
       "director": "Marc Webb",
@@ -145,7 +145,7 @@
       "trailer": "https://www.youtube.com/embed/_lSVVn1Os0o?si=4aZbNVwW5ElRzpr1"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Nhà Ga Ma Chó",
       "date": "21/03/2025",
       "director": "Luis Prieto",
@@ -161,7 +161,7 @@
       "trailer": "https://www.youtube.com/embed/hF3lLs0LH14?si=ipmseJsKEXjIxtPO"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Gấu Yêu Của Anh",
       "date": "04/04/2025",
       "director": "Ping Lumpraploeng",
@@ -177,7 +177,7 @@
       "trailer": "https://www.youtube.com/embed/VQOOUxTah0w?si=nb3dtx5OVcYg9m-J"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Một Bộ Phim Minecraft",
       "date": "04/04/2025",
       "director": "Jared Hess",
@@ -193,7 +193,7 @@
       "trailer": "https://www.youtube.com/embed/O1f6L1Pqu28?si=IZJX6sksPivBHlMb"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Mật Vụ Phụ Hồ",
       "date": "04/04/2025",
       "director": "David Ayer",
@@ -209,7 +209,7 @@
       "trailer": "https://www.youtube.com/embed/LYrmg2lRjCs?si=cAxW_M-ZTIpmkOom"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Oán Linh Nhập Xác",
       "date": "04/04/2025",
       "director": "Upi Avianto",
@@ -225,7 +225,7 @@
       "trailer": "https://www.youtube.com/embed/5vXzMvh4sMU?si=gAKqSFChf6OgRENS"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Pororo Thám Hiểm Đại Dương Xanh",
       "date": "04/04/2025",
       "director": "Kim Hyunho, Yoon Jewan",
@@ -241,7 +241,7 @@
       "trailer": "https://www.youtube.com/embed/PIVQG-2BWHo?si=meogekfBwxQCBsuS"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Buổi Hẹn Hò Kinh Hoàng",
       "date": "11/04/2025",
       "director": "Christopher Landon",
@@ -257,7 +257,7 @@
       "trailer": "https://www.youtube.com/embed/cQ1eYm_XIcA?si=eUkqnXHm9-80_CsH"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Tà Thuật Huyết Ngải",
       "date": "11/04/2025",
       "director": "Putipong Saisikaew",
@@ -273,7 +273,7 @@
       "trailer": "https://www.youtube.com/embed/3pciNGgdY_g?si=NQrqIIiPWL2rs78R"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Tìm Xác: Ma Không Đầu",
       "date": "18/04/2025",
       "director": "Bùi Văn Hải",
@@ -289,7 +289,7 @@
       "trailer": "https://www.youtube.com/embed/Ij19LCYrGrE?si=Ook7wzC8VENXhhOx"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Đêm Thánh: Hội Săn Quỷ",
       "date": "25/04/2025",
       "director": "Lim Dae-hee",
@@ -305,7 +305,7 @@
       "trailer": "https://www.youtube.com/embed/RWZ5psmKxDk?si=cGjN6PP2EcltOoHy"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Mật Danh: Kế Toán 2",
       "date": "25/04/2025",
       "director": "Gavin O'Connor",
@@ -319,22 +319,6 @@
       "image": "mat-danh-ke-toan.webp",
       "banner": "mat-danh-ke-toan.jpg",
       "trailer": "https://www.youtube.com/embed/x3wVJU0lZ1M?si=bmhyLqXuvO8oKWVU"
-    },
-    {
-      "id": 21,
-      "name": "Kayara: Cô Bé Chiến Binh",
-      "date": "04/04/2025",
-      "director": "César Zelada",
-      "nation": "Khác",
-      "age": "P",
-      "category": "Hoạt hình",
-      "language": "Phụ đề tiếng Việt",
-      "time": 90,
-      "text_summary": "Kayara, một thiếu nữ xinh đẹp và mạnh mẽ, quyết tâm trở thành nữ sứ giả đầu tiên của Đế chế Inca. Trên hành trình đầy thử thách, cô gái phải vượt qua nhiều khó khăn và sự hiểm trở để bảo vệ thành phố Vàng khỏi những nguy cơ khai thác và cứu bạn bè, gia đình khỏi những mối đe dọa bất ngờ. Trong hành trình đầy thử thách đó, Kayara học được rằng sức mạnh thực sự không chỉ nằm ở thể chất mà còn ở sức mạnh của trí tuệ và sự đoàn kết.",
-      "status": 1,
-      "image": "kayara.webp",
-      "banner": "kayara.jpg",
-      "trailer": "https://www.youtube.com/embed/9MFHYvdtrRw?si=7t9CziixhOnKW-ec"
     }
   ],
   "brand": [
@@ -355,7 +339,7 @@
   ],
   "thear": [
     {
-      "id": 1,
+      "id": "1",
       "id_brand": 1,
       "name": "Cinestar Quốc Thanh",
       "location": {
@@ -364,7 +348,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "id_brand": 1,
       "name": "Cinestar Hai Bà Trưng",
       "location": {
@@ -373,67 +357,167 @@
       }
     }
   ],
-
   "room": [
-        {
-          "id": 1,
-          "diagram": {
-            "row": 16,
-            "colunm": 8,
-            "element_remove": ["A5", "A6", "A7", "B5", "B6", "B7"],
-            "double_Chair": ["I2", "I3"],
-            "element_selected": ["A10", "A12"],
-            "element_selecting": ["A13", "A15"]
-          }
+    {
+      "id": "1",
+      "diagram": {
+        "row": 16,
+        "colunm": 8,
+        "element_remove": [
+          "A5",
+          "A6",
+          "A7",
+          "B5",
+          "B6",
+          "B7"
+        ],
+        "double_Chair": [
+          "I2",
+          "I3"
+        ],
+        "element_selected": [
+          "A10",
+          "A12"
+        ],
+        "element_selecting": [
+          "A13",
+          "A15"
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "diagram": {}
+    },
+    {
+      "id": "3",
+      "diagram": {}
+    },
+    {
+      "id": "4",
+      "diagram": {}
+    },
+    {
+      "id": "5",
+      "diagram": {
+        "row": 19,
+        "colunm": 17,
+        "element_remove": {
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "B": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "C": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "D": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "E": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "F": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "G": [
+            3,
+            4
+          ],
+          "H": [
+            3,
+            4
+          ],
+          "J": [
+            3,
+            4
+          ],
+          "K": [
+            3,
+            4,
+            19
+          ],
+          "L": [
+            3,
+            4
+          ],
+          "M": [
+            3,
+            4,
+            19
+          ],
+          "N": [
+            3,
+            4
+          ],
+          "O": [
+            3,
+            4,
+            19
+          ],
+          "P": [
+            3,
+            4
+          ],
+          "Q": [
+            3,
+            4,
+            10,
+            11,
+            12
+          ]
         },
-        {
-          "id": 2,
-          "diagram": {}
+        "double_Chair": {
+          "R": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
         },
-        {
-          "id": 3,
-          "diagram": {}
+        "element_selected": {
+          "F": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "P": [
+            3,
+            4
+          ],
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ]
         },
-        {
-          "id": 4,
-          "diagram": {}
-        },
-        {
-          "id": 5,
-          "diagram": {
-            "row": 19,
-            "colunm": 17,
-            "element_remove": {
-              "A": [1, 2, 3, 4],
-              "B": [1, 2, 3, 4],
-              "C": [1, 2, 3, 4],
-              "D": [1, 2, 3, 4],
-              "E": [1, 2, 3, 4],
-              "F": [1, 2, 3, 4],
-              "G": [3, 4],
-              "H": [3, 4],
-              "J": [3, 4],
-              "K": [3, 4, 19],
-              "L": [3, 4],
-              "M": [3, 4, 19],
-              "N": [3, 4],
-              "O": [3, 4, 19],
-              "P": [3, 4],
-              "Q": [3, 4, 10, 11, 12]
-            },
-            "double_Chair": {
-              "R": [1, 2, 3, 4, 5, 6]
-            },
-            "element_selected": {
-              "F": [1, 2, 3, 4],
-              "P": [3, 4],
-              "A": [1, 2, 3, 4]
-            },
-            "element_selecting": []
-          }
-        }
-      ],
-      
+        "element_selecting": []
+      }
+    }
+  ],
   "ticket": [
     {
       "id": "",
@@ -445,7 +529,7 @@
   ],
   "bill": [
     {
-      "id": 1,
+      "id": "1",
       "id_user": 2,
       "id_ticket": "",
       "id_payment": "",
@@ -455,14 +539,14 @@
   ],
   "payments": [
     {
-      "id": 1,
+      "id": "1",
       "bank_number": 1028312672,
       "bank_brand": "Vietcombank",
       "QR_code": "",
       "name": "Trần Văn Giới"
     },
     {
-      "id": 2,
+      "id": "2",
       "bank_number": 84375837534,
       "bank_brand": "Momo",
       "QR_code": "",
@@ -471,7 +555,7 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hoàng Duyệt",
       "sdt": "0901234567",
       "email": "hoangduyet1122@gmail.com",
@@ -483,7 +567,7 @@
       "type_admin": "none"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Trần Văn Giới",
       "sdt": "0912345678",
       "email": "trangioi479@gmail.com",
@@ -495,7 +579,7 @@
       "type_admin": "super"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Phan Phúc Lâm",
       "sdt": "0923456789",
       "email": "phanphuclam1122@gmail.com",
@@ -507,7 +591,7 @@
       "type_admin": "standard"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Nguyễn Thế Quang",
       "sdt": "0934567890",
       "email": "nguyenthequang1122@gmail.com",
@@ -519,7 +603,7 @@
       "type_admin": "none"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Lê Thị Nhã Tú",
       "sdt": "0945678901",
       "email": "lethinhatu1122@gmail.com",
@@ -531,7 +615,7 @@
       "type_admin": "none"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Nguyễn Thế Gia An",
       "sdt": "0967890123",
       "email": "nguyenthegiaan1122@gmail.com",
@@ -543,7 +627,7 @@
       "type_admin": "none"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Nguyễn Đức Mạnh",
       "sdt": "0978901234",
       "email": "nguyenducmanh1122@gmail.com",
@@ -555,7 +639,7 @@
       "type_admin": "none"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Trương Minh Hoàng",
       "sdt": "0989012345",
       "email": "truongminhhoang1122@gmail.com",
@@ -567,7 +651,7 @@
       "type_admin": "super"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Nguyễn Minh Kiệt",
       "sdt": "0990123456",
       "email": "nguyenminhkiet1122@gmail.com",

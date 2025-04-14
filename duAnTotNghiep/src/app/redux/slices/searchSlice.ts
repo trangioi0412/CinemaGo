@@ -5,7 +5,7 @@ const searchSlice = createSlice({
   name: "search",
   initialState: initialState,
   reducers: {
-    searchAction: (state, action) => {
+    searchAction: (state, action) :any => {
       return state.includes(action.payload);
     },
   },
