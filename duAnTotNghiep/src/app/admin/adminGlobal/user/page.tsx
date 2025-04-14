@@ -12,15 +12,18 @@ import Card from "../../Components/Card/Card";
 import Pagination from "../../Components/Pagination/Pagination";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
+import AddFromUser from "./addFromUser";
 import { addData, deleteData, getData } from "@/app/redux/slices/userSlice";
 import { dataRemaining,userSelector, filmSelector } from "@/app/redux/selectors";
 import { getUser } from "@/app/service/user.service";
 const User = () => {
+  const [open, setOpen] = useState(false);
+
   const dispatch = useDispatch();
       const handleDelete = (id: any) => {
-        // dispatch(deleteData(id));
+        dispatch(deleteData(id));
       };
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+      
   useEffect(() => {
     const fetchData = async () => {
       const res = await getUser();
@@ -51,15 +54,12 @@ const User = () => {
   return (
     <Card>
       <HeadingCard title="DANH SÁCH NGƯỜI DÙNG">
-        <button className={"btn"}>
-          <span>
-            <IoMdAdd />
-          </span>
-          Thêm mới
-        </button>
+        {" "}
+        <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
       </HeadingCard>
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={5}  />
+      {open && <AddFromUser onClick={() => setOpen(!open)}></AddFromUser>}
     </Card>
   );
 };
