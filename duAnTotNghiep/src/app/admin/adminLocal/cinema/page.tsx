@@ -23,7 +23,6 @@ const Cinema = () => {
   const dispatch = useDispatch();
   const data = useSelector(cinemaSelector);
 
-  // Xử lý xóa
   const handleDele = async (id: any) => {
     await deleteCine(id);
     dispatch(deleteData(id));
