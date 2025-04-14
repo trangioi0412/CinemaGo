@@ -1,6 +1,7 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { Movies } from "../movie.interface";
 const filmSelector = (state: any) => state.filmCrud;
+const userSelector = (state: any) => state.userCrud;
 const searchSelector = (state: any) => state.search;
 const dataRemaining = createSelector(
   filmSelector,
@@ -11,4 +12,4 @@ const dataRemaining = createSelector(
     );
   }
 );
-export { filmSelector, dataRemaining };
+export { filmSelector,userSelector, dataRemaining };

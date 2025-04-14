@@ -6,17 +6,9 @@ import styles from "./popup.module.css";
 interface PopupProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: {
-    fullName: string;
-    email: string;
-    phone: string;
-    role: string;
-    permission: string;
-    status: string;
-  }) => void;
 }
 
-function Popup({ isOpen, onClose, onSubmit }: PopupProps) {
+function Popup({ isOpen, onClose }: PopupProps) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = {
@@ -27,7 +19,6 @@ function Popup({ isOpen, onClose, onSubmit }: PopupProps) {
       permission: (e.target as any).permission.value,
       status: (e.target as any).status.value,
     };
-    onSubmit(formData);
     onClose();
   };
 
