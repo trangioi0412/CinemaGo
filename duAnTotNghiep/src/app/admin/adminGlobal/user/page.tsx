@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import style from "./user.module.css";
 import Table from "../../Components/Table/Table";
+import { FaRegEdit } from "react-icons/fa";
+import AddBtn from "../../Components/AddBtn/AddBtn";
 import { IoMdAdd } from "react-icons/io";
 import Popup from "../../Components/Popup/popup";
 import Card from "../../Components/Card/Card";
