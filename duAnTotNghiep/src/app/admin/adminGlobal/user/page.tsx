@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaRegEdit } from "react-icons/fa";
 import AddBtn from "../../Components/AddBtn/AddBtn";
 import { IoMdAdd } from "react-icons/io";
-import Popup from "../../Components/Popup/popup";
 import Card from "../../Components/Card/Card";
 import Pagination from "../../Components/Pagination/Pagination";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
@@ -49,41 +48,10 @@ const User = () => {
       ),
     },
   ];
-
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
-  // const handleAddUser = (data: {
-  //   fullName: string;
-  //   email: string;
-  //   phone: string;
-  //   role: string;
-  //   permission: string;
-  //   status: string;
-  // }) => {
-  //   const newUser = {
-  //     id: users.length + 1,
-  //     name: data.fullName,
-  //     sdt: data.phone,
-  //     email: data.email,
-  //     password: "default123", // Có thể thêm trường password vào form nếu cần
-  //     year: 2005, // Giá trị mặc định, có thể thêm vào form
-  //     cinema: "CGV", // Giá trị mặc định, có thể thêm vào form
-  //     status: data.status,
-  //     role: data.role,
-  //     type_admin: data.permission,
-  //   };
-  // };
-
   return (
     <Card>
       <HeadingCard title="DANH SÁCH NGƯỜI DÙNG">
-        <button className={"btn"} onClick={handleOpenPopup}>
+        <button className={"btn"}>
           <span>
             <IoMdAdd />
           </span>
@@ -91,13 +59,7 @@ const User = () => {
         </button>
       </HeadingCard>
       <OptionTable />
-      <Popup
-        isOpen={isPopupOpen}
-        onClose={handleClosePopup}
-  
-      />
       <Table data={data} column={column} rowsPerPage={5}  />
-      {/* <Pagination /> */}
     </Card>
   );
 };
