@@ -1,30 +1,31 @@
 import React, { useState } from "react";
 import style from "./addForm.module.css";
-import { useDispatch } from "react-redux";
-import { addData } from "@/app/redux/slices/filmSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addData, updateData } from "@/app/redux/slices/filmSlice";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Form/Input/Input";
 import Select from "../../Components/Form/Select/Select";
 import { Movies } from "@/app/movie.interface";
-import { addMovie } from "@/app/service/movie.service";
+import { addMovie, updateFilm } from "@/app/service/movie.service";
 import { toast, ToastContainer } from "react-toastify";
-import { useOpenForm } from "../../context/OpenForm";
-const AddFormFilm = () => {
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+const UpdateFormFilm = ({ data }: { data: Movies }) => {
   const dispatch = useDispatch();
   const initValue: Movies = {
-    name: "",
-    date: "",
-    director: "",
-    nation: "",
-    age: "",
-    category: "",
-    language: "",
-    time: "",
-    text_summary: "",
-    status: "",
-    image: null,
-    banner: null,
-    trailer: "",
+    id: data.id || "",
+    name: data.name || "",
+    date: data.date || "",
+    director: data.director || "",
+    nation: data.nation || "",
+    age: data.age || "",
+    category: data.category || "",
+    language: data.language || "",
+    time: data.time || "",
+    text_summary: data.text_summary || "",
+    status: data.status || "",
+    image: data.image || null,
+    banner: data.banner || null,
+    trailer: data.trailer || "",
   };
   const [formData, setFormData] = useState<Movies>(initValue);
   const age = [
@@ -39,39 +40,27 @@ const AddFormFilm = () => {
   ];
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (
-      !formData.name ||
-      !formData.date ||
-      !formData.director ||
-      !formData.nation ||
-      !formData.age ||
-      !formData.category ||
-      !formData.language ||
-      !formData.time ||
-      !formData.category ||
-      !formData.status ||
-      !formData.text_summary
 
-    ) {
-      toast.error("Vui lòng điền đầy đủ thông tin");
-      return;
-    }
     try {
-      const result = await addMovie(formData);
-      toast.success("Thêm thành công");
-      dispatch(addData(result));
-      setFormData(initValue);
+      if (!data.id) {
+        toast.error("Không tìm thấy ID phim để cập nhật");
+        return;
+      }
+      const result = await updateFilm(data.id, formData);
+      toast.success("Sửa phim thành công");
+      dispatch(updateData(result));
     } catch (error: any) {
-      toast.error("Thêm thất bại");
+      toast.error("Sủa phim thất bại");
       console.log(error);
     }
   };
-  const { setIsOpen } = useOpenForm();
+  const { setIsOpenUpdate } = useOpenUpdateForm();
+
   return (
     <>
       <ToastContainer theme="colored" />
       <Form
-        cancel={() => setIsOpen(false)}
+        cancel={() => setIsOpenUpdate(false)}
         button="Thêm phim"
         title="thêm phim"
         submit={handleSubmit}
@@ -198,4 +187,4 @@ const AddFormFilm = () => {
   );
 };
 
-export default AddFormFilm;
+export default UpdateFormFilm;
