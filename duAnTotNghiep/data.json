@@ -996,6 +996,18 @@
       "status": "inactive",
       "role": "admin",
       "type_admin": "super"
+    },
+    {
+      "id": "bee8",
+      "name": "123",
+      "sdt": "0123456789",
+      "email": "phuclam251005@gmail.com",
+      "password": "123",
+      "year": "2025-04-17",
+      "cinema": "Cinema",
+      "status": "active",
+      "role": "user",
+      "repass": "123"
     }
   ],
   "vouchers": [

@@ -1,34 +1,34 @@
 import { toast } from "react-toastify";
 import { Movies } from "../movie.interface";
-
+const URL_API = "http://localhost:5000/movies";
 const getAllMovies = async () => {
-  const res = await fetch("http://localhost:5000/movies");
+  const res = await fetch(URL_API);
   const data = await res.json();
   return data;
 };
 const getMoviesShowing = async () => {
-  const res = await fetch("http://localhost:5000/movies?status=2");
+  const res = await fetch(`${URL_API}?status=2`);
   const data = await res.json();
   return data;
 };
 const getMoviesComingSoon = async () => {
-  const res = await fetch("http://localhost:5000/movies?status=1");
+  const res = await fetch(`${URL_API}?status=1`);
   const data = await res.json();
   return data;
 };
 const getMovie = async (id: string | number) => {
-  const res = await fetch("http://localhost:5000/movies?id=" + id);
+  const res = await fetch(`${URL_API}/${id}`);
   const data = await res.json();
   return data;
 };
 const slideshow = async () => {
-  const res = await fetch("http://localhost:5000/movies?_limit=5&_sort=-date");
+  const res = await fetch(URL_API + "?_limit=5&_sort=-date");
   const data = res.json();
   return data;
 };
 const addMovie = async (data: Movies) => {
   try {
-    const res = await fetch("http://localhost:5000/movies", {
+    const res = await fetch(URL_API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -38,11 +38,25 @@ const addMovie = async (data: Movies) => {
       const errorData = await res.json();
       throw new Error(errorData.message || "Thêm phim thất bại");
     }
-
-    // Trả về dữ liệu nếu thành công
     return await res.json();
   } catch (err: any) {
-    console.error("Lỗi khi gọi API addMovie:", err.message);
+    console.error("Lỗi khi gọi API addMovie:", err);
+    throw err;
+  }
+};
+const deleteMovie = async (id: number | string) => {
+  try {
+    const res = await fetch(URL_API + `/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || "Xóa phim thất bại");
+    }
+    return id;
+  } catch (err: any) {
+    console.error("Lỗi khi gọi API :", err);
     throw err;
   }
 };
@@ -53,4 +67,5 @@ export {
   getMovie,
   slideshow,
   addMovie,
+  deleteMovie,
 };

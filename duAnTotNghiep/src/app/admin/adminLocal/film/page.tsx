@@ -15,6 +15,7 @@ import { addData, deleteData, getData } from "@/app/redux/slices/filmSlice";
 import { dataRemaining, filmSelector } from "@/app/redux/selectors";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormFilm from "./AddFormFilm";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
 
 // const data = [
 //   { id: 1, filmname: "Phim hấp dẫn",  date: "07/03/2025", director: "Pom Nguyễn", nation: "Việt Nam", age: "18", category: "Kinh dị", time: "122",  },
@@ -23,6 +24,7 @@ import AddFormFilm from "./AddFormFilm";
 // ];
 const Film = () => {
   const { isOpen, setIsOpen } = useOpenForm();
+  const { isOpenUpdate, setIsOpenUpdate } = useOpenUpdateForm();
   const dispatch = useDispatch();
   const handleDelete = (id: any) => {
     dispatch(deleteData(id));
@@ -76,6 +78,7 @@ const Film = () => {
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={5} />
       {isOpen && <AddFormFilm />}
+      {isOpenUpdate && <AddFormFilm />}
     </Card>
   );
 };

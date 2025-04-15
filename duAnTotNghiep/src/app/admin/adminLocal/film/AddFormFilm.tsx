@@ -38,6 +38,7 @@ const AddFormFilm = () => {
   ];
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     try {
       const result = await addMovie(formData);
       toast.success("Thêm thành công");
