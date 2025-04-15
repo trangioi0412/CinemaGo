@@ -1,49 +1,129 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./addFromVouchers.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addData } from "@/app/redux/slices/voucherSlice";
-const AddFromVouchers = ({ onClick }: { onClick: () => void }) => {
-  const [code, setCode] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [discount, setDiscount] = React.useState("");
-  const [startDay, setStartDay] = React.useState("");
-  const [endDay, setEndDay] = React.useState("");
-  const [soLuong, setSoLuong] = React.useState("");
-  const [daSuDung, setSuDung] = React.useState("0");
-  const [trangThai, setStatus] = React.useState("");
+import { toast, ToastContainer } from "react-toastify";
+import Form from "../../Components/Form/Form";
+import Input from "../../Components/Form/Input/Input";
+import { Vouchers } from "@/app/voucher.interface";
+import Select from "../../Components/Form/Select/Select";
+import { voucherSelector } from "@/app/redux/selectors";
+import { addVouchers } from "@/app/service/voucher.service";
+const AddFromVouchers = () => {
   const dispatch = useDispatch();
-  const formData = { code,name,discount,startDay,endDay,soLuong,daSuDung,trangThai };
+  const initValue = {
+    code:"",
+    name: "",
+    discount: "",
+    startDay: "",
+    endDay: "",
+    soLuong: 1,
+    daSuDung: 0,
+    trangThai: "active",
+  };
+  const [formData, setFormData] = useState(initValue);
+  const trangThai = [
+    { id: 1, value: "active", name: "Hoạt Động" },
+    { id: 2, value: "activate", name: "Chưa Kích Hoạt" },
+    { id: 3, value: "outOfCode", name: "Hết Mã" },
+  ];
 
-  const handleAdd = (e: any) => {
+  const vouchers = useSelector(voucherSelector);
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    dispatch(addData(formData));
+
+    if (
+      !formData.code ||
+      !formData.name ||
+      !formData.discount ||
+      !formData.startDay ||
+      !formData.endDay ||
+      !formData.soLuong
+    ) {
+      toast.error("Vui lòng điền đầy đủ thông tin");
+      return;
+    }
+    try {
+      const checkVouchers = vouchers.some(
+        (item: Vouchers) => item.code === formData.code
+      );
+
+      if (checkVouchers) {
+        toast.error("Mã Code đã tồn tại trong hệ thống");
+        return;
+      }
+      const result = await addVouchers({
+        ...formData,
+        soLuong: Number(formData.soLuong),
+        daSuDung: Number(formData.daSuDung),
+      });
+      toast.success("Thêm người dùng thành công");
+      dispatch(addData(result));
+      setFormData(initValue);
+    } catch (error) {
+      toast.error("Thêm người dùng thất bại");
+      console.log(error);
+    }
   };
   return (
-    <div className={style.form}>
-      <div className={style.background} onClick={onClick}></div>
-      <div className={style.popupContent}>
-        <h2>Thêm Voucher Mới</h2>
-        <form className={style.popupForm} onSubmit={handleAdd}>
-          <input
-            type="text"
-            placeholder="Mã Code"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            required
-          />
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tên Mã" required />
-          <input type="text" value={discount} onChange={(e) => setDiscount(e.target.value)} placeholder="Phần % Giảm" required />
-          Ngày Bắt Đầu:
-          <input type="date" value={startDay} onChange={(e) => setStartDay(e.target.value)} placeholder="Ngày Bắt Đầu" required />
-          Ngày Kết Thúc:
-          <input type="date" value={endDay} onChange={(e) => setEndDay(e.target.value)} placeholder="Ngày Kết Thúc" required />
-          <input type="number" value={soLuong} onChange={(e) => setSoLuong(e.target.value)} placeholder="Số Lượng" required />
-          <input type="hidden" value={daSuDung}  placeholder="Đã Dùng" />
-          <input type="text" value={trangThai} onChange={(e) => setStatus(e.target.value)} placeholder="Trạng Thái" required />
-          <button type="submit">Thêm New Voucher</button>
-        </form>
-      </div>
-    </div>
+    <>
+      <ToastContainer theme="colored" />
+      <Form
+        button="Thêm Vouchers"
+        title="thêm Vouchers"
+        submit={handleSubmit}
+      >
+        <Input
+          value={formData.code}
+          onChange={(e) => setFormData({ ...formData, code: e.target.value })}
+          type=""
+          label="Mã Code"
+          placeholder="Nhập Mã Code"
+          required={true}
+        />
+        <Input
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          type=""
+          label="Tên Mã Vouchers"
+          placeholder="Nhập Tên Mã Vouchers"
+          required={true}
+        />
+        <Input
+          value={formData.discount}
+          onChange={(e) => setFormData({ ...formData, discount: e.target.value })}
+          type="number"
+          label="Phần Trăm Giảm"
+          required={true}
+        />
+        <Input
+          value={formData.startDay}
+          onChange={(e) => setFormData({ ...formData, startDay: e.target.value })}
+          type="date"
+          label="Ngày Bắt Đầu"
+          required={true}
+        />
+        <Input
+          value={formData.endDay}
+          type="date"
+          onChange={(e) => setFormData({ ...formData, endDay: e.target.value })}
+          label="Ngày Kết Thúc"
+          required={true}
+
+        />
+        <Input
+          value={formData.soLuong.toString()}
+          onChange={(e) =>
+            setFormData({ ...formData, soLuong: Number(e.target.value) })
+          }
+          type="number"
+          label="Số Lượng"
+          placeholder="Nhập Số Lượng"
+          required={true}
+        />
+      </Form>
+    </>
   );
 };
 

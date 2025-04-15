@@ -10,7 +10,7 @@ import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 import { deleteData, getData } from "@/app/redux/slices/userSlice";
 import { userSelector } from "@/app/redux/selectors";
-import { getUser } from "@/app/service/user.service";
+import { getUser,deleteUser } from "@/app/service/user.service";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormUser from "./addFromUser";
 const User = () => {

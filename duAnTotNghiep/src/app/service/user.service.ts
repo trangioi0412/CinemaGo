@@ -25,3 +25,19 @@ export const addUser = async (data: Users) => {
     throw err;
   }
 };
+export const deleteUser = async (id: number | string) => {
+  try {
+    const res = await fetch(URL_API + `/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || "Xóa người dùng thất bại");
+    }
+    return id;
+  } catch (err: any) {
+    console.error("Lỗi khi gọi API :", err);
+    throw err;
+  }
+};

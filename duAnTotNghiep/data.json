@@ -1120,6 +1120,17 @@
       "daSuDung": 16,
       "trangThai": "Kích hoạt",
       "id": "1146"
+    },
+    {
+      "id": "5dee",
+      "code": "HoangDuyetDepTrai",
+      "name": "Duyệt Đẹp Trai",
+      "discount": "90",
+      "startDay": "2025-04-16",
+      "endDay": "2025-04-30",
+      "soLuong": 10,
+      "daSuDung": 0,
+      "trangThai": "active"
     }
   ]
 }

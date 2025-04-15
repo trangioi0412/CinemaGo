@@ -1,5 +1,5 @@
 export interface Vouchers {
-    id: number | string;
+    id?: number | string;
     code: string;
     name: string;
     discount: string;

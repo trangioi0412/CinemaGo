@@ -19,8 +19,9 @@ import {
   voucherSelector,
   filmSelector,
 } from "@/app/redux/selectors";
+import { useOpenForm } from "../../context/OpenForm";
 const Vouchers = () => {
-  const [open, setOpen] = useState(false);
+   const { isOpen, setIsOpen } = useOpenForm();
   const dispatch = useDispatch();
   const handleDelete = (id: any) => {
     dispatch(deleteData(id));
@@ -64,13 +65,11 @@ const Vouchers = () => {
     <Card>
       <HeadingCard title="DANH SÁCH VOUCHERS">
         {" "}
-        <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
+        <AddBtn onClick={() => setIsOpen(true)}></AddBtn>{" "}
       </HeadingCard>
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={10} />
-      {open && (
-        <AddFromVouchers onClick={() => setOpen(!open)}></AddFromVouchers>
-      )}
+      {isOpen && <AddFromVouchers />}
     </Card>
   );
 };
