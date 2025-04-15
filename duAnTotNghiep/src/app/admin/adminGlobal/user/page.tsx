@@ -15,7 +15,7 @@ import OptionTable from "../../Components/OptionTable/OptionTable";
 import AddFromUser from "./addFromUser";
 import { addData, deleteData, getData } from "@/app/redux/slices/userSlice";
 import { dataRemaining,userSelector, filmSelector } from "@/app/redux/selectors";
-import { getUser } from "@/app/service/user.service";
+import { getUser,addUser,deleteUser,updateUser } from "@/app/service/user.service";
 const User = () => {
   const [open, setOpen] = useState(false);
 
