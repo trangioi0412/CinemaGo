@@ -14,4 +14,4 @@ const dataRemaining = createSelector(
     );
   }
 );
-export { filmSelector,userSelector,voucherSelector, dataRemaining };
+export { filmSelector, userSelector, voucherSelector, dataRemaining };

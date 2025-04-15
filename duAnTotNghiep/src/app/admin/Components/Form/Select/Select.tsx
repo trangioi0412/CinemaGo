@@ -9,12 +9,15 @@ const Select = ({
   title: string;
   data: any[];
   value: string | number;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }) => {
   return (
     <div className={style.inputbox}>
       <div className={style.input}>
-        <select className={style.select}>
+        <select className={style.select} value={value} onChange={onChange}>
+          <option value="">
+            --Chọn <span style={{ textTransform: "lowercase" }}>{title}</span>
+          </option>
           {data.map((i) => (
             <option key={i.id} value={i.value}>
               {i.name}
