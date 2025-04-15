@@ -1,40 +1,27 @@
-import {Users} from "@/app/user.interface";
+import { Users } from "../user.interface";
+
+const URL_API = "http://localhost:5000/user";
 export const getUser = async () => {
-  const res = await fetch("http://localhost:5000/user");
-  const data = await res.json();
-  return data;
-};
-// Thêm user
-export const addUser = async (formData:Users) => {
-  const res = await fetch("http://localhost:5000/user", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
+  const res = await fetch(URL_API);
   const data = await res.json();
   return data;
 };
 
-// Cập nhật user
-export const updateUser = async (id:string, formData:Users) => {
-  const res = await fetch(`http://localhost:5000/user/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
-  const data = await res.json();
-  return data;
-};
+export const addUser = async (data: Users) => {
+  try {
+    const res = await fetch(URL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-// Xóa user
-export const deleteUser = async (id:string) => {
-  const res = await fetch(`http://localhost:5000/user/${id}`, {
-    method: "DELETE",
-  });
-  const data = await res.json();
-  return data;
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || "Thêm người dùng thất bại");
+    }
+    return await res.json();
+  } catch (err: any) {
+    console.error("Lỗi khi gọi API:", err);
+    throw err;
+  }
 };

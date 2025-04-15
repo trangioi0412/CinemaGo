@@ -1,12 +1,12 @@
 export interface Users {
-  id: number | string;
+  id?: number | string;
   name: string;
   sdt: string;
   email: string;
   password: string;
-  year: number;
+  year: string;
   cinema: string;
-  status: string;
-  role: string;
-  type_admin: string;
+  status: string | number;
+  role: string | number;
+  type_admin?: string | number;
 }
