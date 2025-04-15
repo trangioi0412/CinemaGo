@@ -1,0 +1,88 @@
+.inputbox {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  label {
+    font-weight: 600;
+    font-size: var(--size-18);
+  }
+}
+.input {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  p {
+    text-wrap: nowrap;
+    max-width: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  input,
+  .select,
+  textarea {
+    min-width: 100%;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 5px var(--color-primary);
+    }
+  }
+}
+
+.input:has(input:required) + label::after,
+.input:has(textarea:required) + label::after {
+  content: " *";
+  color: red;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  background: rgba(0, 0, 0, 0.5);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.form-group {
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 90%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  h2 {
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+  }
+}
+.form {
+  flex: 1;
+  min-width: 100%;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.btn-group {
+  position: sticky;
+  top: 100%;
+  display: flex;
+  align-self: flex-end;
+  gap: 20px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

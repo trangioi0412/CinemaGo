@@ -319,6 +319,182 @@
       "image": "mat-danh-ke-toan.webp",
       "banner": "mat-danh-ke-toan.jpg",
       "trailer": "https://www.youtube.com/embed/x3wVJU0lZ1M?si=bmhyLqXuvO8oKWVU"
+    },
+    {
+      "id": "21",
+      "name": "Kayara: Cô Bé Chiến Binh",
+      "date": "04/04/2025",
+      "director": "César Zelada",
+      "nation": "Khác",
+      "age": "P",
+      "category": "Hoạt hình",
+      "language": "Phụ đề tiếng Việt",
+      "time": 90,
+      "text_summary": "Kayara, một thiếu nữ xinh đẹp và mạnh mẽ, quyết tâm trở thành nữ sứ giả đầu tiên của Đế chế Inca. Trên hành trình đầy thử thách, cô gái phải vượt qua nhiều khó khăn và sự hiểm trở để bảo vệ thành phố Vàng khỏi những nguy cơ khai thác và cứu bạn bè, gia đình khỏi những mối đe dọa bất ngờ. Trong hành trình đầy thử thách đó, Kayara học được rằng sức mạnh thực sự không chỉ nằm ở thể chất mà còn ở sức mạnh của trí tuệ và sự đoàn kết.",
+      "status": 1,
+      "image": "kayara.webp",
+      "banner": "kayara.jpg",
+      "trailer": "https://www.youtube.com/embed/9MFHYvdtrRw?si=7t9CziixhOnKW-ec"
+    },
+    {
+      "id": "734a",
+      "name": "1212",
+      "date": "2025-04-18",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "951f",
+      "name": "123",
+      "date": "2025-04-09",
+      "director": "123",
+      "nation": "123",
+      "age": "",
+      "category": "123",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "3d0a",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "bd3c",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "e48a",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "1aa9",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "81f7",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "7101",
+      "name": "`1212",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "4bbf",
+      "name": "asda",
+      "date": "2025-04-12",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "1212",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "5d1d",
+      "name": "123",
+      "date": "2025-04-12",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
     }
   ],
   "brand": [
@@ -360,45 +536,192 @@
   "room": [
     {
       "id": "1",
+      "code_room": 1,
+      "id_thear": 1,
       "diagram": {
-        "row": 16,
-        "colunm": 8,
-        "element_remove": [
-          "A5",
-          "A6",
-          "A7",
-          "B5",
-          "B6",
-          "B7"
-        ],
-        "double_Chair": [
-          "I2",
-          "I3"
-        ],
-        "element_selected": [
-          "A10",
-          "A12"
-        ],
-        "element_selecting": [
-          "A13",
-          "A15"
-        ]
+        "row": 13,
+        "colunm": 22,
+        "element_remove": {
+          "A": [
+            7,
+            8
+          ],
+          "B": [
+            7,
+            8
+          ],
+          "C": [
+            7,
+            8
+          ],
+          "D": [
+            7,
+            8
+          ],
+          "E": [
+            7,
+            8,
+            22
+          ],
+          "F": [
+            7,
+            8
+          ],
+          "G": [
+            7,
+            8,
+            22
+          ],
+          "H": [
+            7,
+            8
+          ],
+          "I": [
+            7,
+            8
+          ],
+          "J": [
+            7,
+            8,
+            22
+          ],
+          "K": [
+            3,
+            6,
+            7,
+            8,
+            16
+          ]
+        },
+        "double_Chair": {
+          "L": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "M": [
+            2,
+            3,
+            4
+          ]
+        },
+        "element_selected": {
+          "A": [
+            10,
+            11
+          ]
+        },
+        "element_selecting": {}
       }
     },
     {
       "id": "2",
-      "diagram": {}
+      "id_thear": 1,
+      "room_code": 3,
+      "diagram": {
+        "row": 9,
+        "colunm": 17,
+        "element_remove": {},
+        "double_Chair": {
+          "I": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "element_selected": {},
+        "element_selecting": []
+      }
     },
     {
       "id": "3",
-      "diagram": {}
+      "id_thear": 1,
+      "room_code": 4,
+      "diagram": {
+        "row": 12,
+        "colunm": 17,
+        "element_remove": {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "B": [
+            1,
+            2,
+            3
+          ]
+        },
+        "double_Chair": {
+          "L": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        "element_selected": {},
+        "element_selecting": []
+      }
     },
     {
       "id": "4",
-      "diagram": {}
+      "id_thear": 1,
+      "room_code": 2,
+      "diagram": {
+        "row": 6,
+        "colunm": 8,
+        "element_remove": {
+          "A": [
+            3,
+            4
+          ],
+          "B": [
+            3,
+            4
+          ],
+          "C": [
+            3,
+            4
+          ],
+          "D": [
+            3,
+            4
+          ],
+          "E": [
+            2,
+            3,
+            4,
+            7
+          ],
+          "F": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        "double_Chair": {},
+        "element_selected": {},
+        "element_selecting": []
+      }
     },
     {
       "id": "5",
+      "id_thear": 1,
+      "room_code": 5,
       "diagram": {
         "row": 19,
         "colunm": 17,
@@ -673,6 +996,118 @@
       "status": "inactive",
       "role": "admin",
       "type_admin": "super"
+    }
+  ],
+  "vouchers": [
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "99f8"
+    },
+    {
+      "code": "SALEOFF15",
+      "name": "15 % Off Sale",
+      "discount": "15%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "7d5b"
+    },
+    {
+      "code": "SALEOFF20",
+      "name": "20 % Off Sale",
+      "discount": "20%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 40,
+      "daSuDung": 26,
+      "trangThai": "Kích hoạt",
+      "id": "9e63"
+    },
+    {
+      "code": "WELCOME",
+      "name": "New User",
+      "discount": "25%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 100,
+      "daSuDung": 5,
+      "trangThai": "Kích hoạt",
+      "id": "58aa"
+    },
+    {
+      "code": "OFFER2025",
+      "name": "Holiday offer",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 50,
+      "daSuDung": 10,
+      "trangThai": "Kích hoạt",
+      "id": "5fcd"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "4da0"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "3f9e"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "6a93"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "183f"
+    },
+    {
+      "code": "SALEOFF10",
+      "name": "10 % Off Sale",
+      "discount": "10%",
+      "startDay": "15/03/2025",
+      "endDay": "15/04/2025",
+      "soLuong": 30,
+      "daSuDung": 16,
+      "trangThai": "Kích hoạt",
+      "id": "1146"
     }
   ]
 }

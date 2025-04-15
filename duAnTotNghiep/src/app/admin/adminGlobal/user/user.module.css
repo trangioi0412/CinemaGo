@@ -1,193 +1,20 @@
-/* Main Content */
-/* .main_content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  background: #fff;
-  color: #000;
-  border-radius: 10px;
-  overflow-y: auto;
-}
-
-.main_content h2 {
-  margin-bottom: 10px;
-}
-
-.main_content .actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-  height: 75px;
-}
-.main_content .actions button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #f0c14b;
-  color: #000;
-  gap: 5px;
-}
-
-.main_content .actions .add_btn {
-  background: #28a745;
-  color: #fff;
-}
-
-.fail {
-  background-color: red;
-} */
-
-/* Pagination */
-/* .pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pagination button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background: #96b7d4;
-} */
-/* chart */
-/* .summary {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.summary-card {
-  background: #17a2b8;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  margin-right: 20px;
-  text-align: center;
-}
-
-.summary-card:last-child {
-  margin-right: 0;
-  background: #dc3545;
-}
-
-.summary-card h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.summary-card p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-} */
-/* Pie Chart */
-/* .chart-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.pie-chart {
-  width: 200px;
-  height: 200px;
-  background: conic-gradient(#b81775 0% 40%, #148e3d 40% 100%);
-  border-radius: 50%;
-  position: relative;
+.btnAction{
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
+  button{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: var(--size-heading-24);
+      
+  }
 }
 
-.pie-chart::before {
-  content: "100%";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
+.btnDelete{
+  color: red;           
 }
 
-.chart-legend {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.btnEdit{
+  color: goldenrod;
 }
-
-.chart-legend div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.chart-legend .color-box {
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-}
-
-.chart-legend .momo {
-  background: #b81775;
-}
-.chart-legend .nganhang {
-  background: #148e3d;
-} */
-
-/* Thống kê */
-/* .summaryThongke {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.summaryThongke-card {
-  background: #6f42c1;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  margin-right: 20px;
-  text-align: center;
-}
-
-.summaryThongke-card:nth-child(2) {
-  background: #17a2b8;
-}
-
-.summaryThongke-card:nth-child(3) {
-  background: #dc3545;
-}
-
-.summaryThongke-card:last-child {
-  margin-right: 0;
-  background: #f0c14b;
-  color: #000;
-}
-
-.summaryThongke-card h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.summaryThongke-card p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.summary-cardThongke:last-child h3,
-.summary-cardThongke:last-child p {
-  color: #000;
-} */

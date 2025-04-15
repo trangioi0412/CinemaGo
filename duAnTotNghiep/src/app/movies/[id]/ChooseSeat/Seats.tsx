@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import Seat from "@/app/Components/Seat/Seat";
 function Seats() {
-  //   const data = await getAllRoom();
   const [data, setData] = useState<any>([]);
   useEffect(() => {
     const fetchData = async () => {

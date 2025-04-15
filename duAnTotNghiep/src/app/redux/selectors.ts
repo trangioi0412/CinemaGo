@@ -1,4 +1,17 @@
 import { createSelector } from "@reduxjs/toolkit";
+import { Movies } from "../movie.interface";
 const filmSelector = (state: any) => state.filmCrud;
-const cinemaSelector = (state: any) => state.cineCrud;
-export { filmSelector ,cinemaSelector};
+const userSelector = (state: any) => state.userCrud;
+const voucherSelector = (state: any) => state.voucherCrud;
+const searchSelector = (state: any) => state.search;
+const dataRemaining = createSelector(
+  filmSelector,
+  searchSelector,
+  voucherSelector,
+  (filmData, searchText) => {
+    return filmData.filter((i: Movies) =>
+      i.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+  }
+);
+export { filmSelector,userSelector,voucherSelector, dataRemaining };

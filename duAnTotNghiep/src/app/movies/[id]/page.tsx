@@ -26,7 +26,7 @@ function Detail({ params }: { params: Promise<{ id: string | number }> }) {
       <div className={`container ${styles["sections"]}`}>
         <Description data={data} />
         <ScheduleShowing />
-        <ChooseSeat data={data} />
+        {/* <ChooseSeat data={data} /> */}
       </div>
     </div>
   );

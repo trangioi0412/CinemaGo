@@ -122,8 +122,7 @@ const Brand = () => {
                 </div>
         </div>
       <OptionTable />
-      <Table data={data} column={column} />
-      <Pagination />
+      <Table data={data} column={column} rowsPerPage={5} />
     </Card>
   );
 };

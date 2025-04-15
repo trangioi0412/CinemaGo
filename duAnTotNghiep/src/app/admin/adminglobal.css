@@ -37,6 +37,7 @@ main {
   transition: none;
   font-size: var(--size-14);
   color: #fff;
+  cursor: pointer;
   span {
     display: flex;
     justify-content: center;
@@ -47,5 +48,29 @@ main {
   &:hover {
     background-color: #007bff;
     filter: brightness(0.8);
+  }
+}
+.cancel-btn {
+  background-color: #fff;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 10px;
+  color: red;
+  font-weight: 600;
+  transition: none;
+  font-size: var(--size-14);
+  cursor: pointer;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-18);
+  }
+  &:hover {
+    background-color: red;
+    color: #fff;
   }
 }

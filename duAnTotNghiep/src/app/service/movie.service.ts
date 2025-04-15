@@ -1,3 +1,6 @@
+import { toast } from "react-toastify";
+import { Movies } from "../movie.interface";
+
 const getAllMovies = async () => {
   const res = await fetch("http://localhost:5000/movies");
   const data = await res.json();
@@ -23,22 +26,25 @@ const slideshow = async () => {
   const data = res.json();
   return data;
 };
+const addMovie = async (data: Movies) => {
+  try {
+    const res = await fetch("http://localhost:5000/movies", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-const addFilm = async (data: any) => {
-  const res = await fetch("http://localhost:5000/movies", {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  return await res.json();
-};
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || "Thêm phim thất bại");
+    }
 
-const deleteFilm = async (id: any) => {
-  const res = await fetch(`http://localhost:5000/movies/${id}`, {
-    method: 'DELETE',
-  });
-  if(!res.ok) throw new Error("Xóa thất bại")
-  return  id;
+    // Trả về dữ liệu nếu thành công
+    return await res.json();
+  } catch (err: any) {
+    console.error("Lỗi khi gọi API addMovie:", err.message);
+    throw err;
+  }
 };
 export {
   getAllMovies,
@@ -46,6 +52,5 @@ export {
   getMoviesComingSoon,
   getMovie,
   slideshow,
-  addFilm,
-  deleteFilm
+  addMovie,
 };

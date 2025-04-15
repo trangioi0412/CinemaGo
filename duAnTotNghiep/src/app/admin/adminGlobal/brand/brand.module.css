@@ -1,0 +1,20 @@
+.btnAction{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: var(--size-heading-24);
+        
+    }
+}
+
+.btnDelete{
+    color: red;           
+}
+
+.btnEdit{
+    color: goldenrod;
+}
