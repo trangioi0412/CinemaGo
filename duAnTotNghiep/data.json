@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "name": "QUỶ NHẬP TRÀNG",
       "date": "07/03/2025",
       "director": "Pom Nguyễn",
@@ -17,7 +17,7 @@
       "trailer": "https://www.youtube.com/embed/EB0nnm6akjA?si=pvBO2RbLlbOq4fI6"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Địa Đạo: Mặt Trời Trong Bóng Tối",
       "date": "25/03/2025",
       "director": "Bùi Thạc Chuyên",
@@ -33,7 +33,7 @@
       "trailer": "https://www.youtube.com/embed/xh6IDHjvytU?si=Q6THaR8Q2y8U88dX"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Phim Điện Ảnh Ninja Rantaro: Giải Cứu Quân Sư",
       "date": "28/03/2025",
       "director": "Masaya Fujimori",
@@ -49,7 +49,7 @@
       "trailer": "https://www.youtube.com/embed/ulOb1dBMS6U?si=DILpGhePD9Z2TnBn"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Huyết Án Truy Hành",
       "date": "28/03/2025",
       "director": "Man Ki Kwok",
@@ -65,7 +65,7 @@
       "trailer": "https://www.youtube.com/embed/kPVXy5rTO7A?si=bSfxrP4y0gvZe063"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Thiếu Nữ Ánh Trăng",
       "date": "28/03/2025",
       "director": "Chuang Ching-shen",
@@ -81,7 +81,7 @@
       "trailer": "https://www.youtube.com/embed/xh4EIV3cicw?si=VSkpFYywVWPmZsv1"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Cuốc Xe Kinh Hoàng",
       "date": "28/03/2025",
       "director": "Bruce Goodison",
@@ -97,7 +97,7 @@
       "trailer": "https://www.youtube.com/embed/sm66bc2juJE?si=Wd9g7H5cWzMrcsaU"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Âm Dương Lộ",
       "date": "28/03/2025",
       "director": "Hoàng Tuấn Cường",
@@ -113,7 +113,7 @@
       "trailer": "https://www.youtube.com/embed/Hy9-IIroldw?si=NEYH9YKyoVi1ef8s"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Nghề Siêu Khó Nói",
       "date": "21/03/2025",
       "director": "LEE Jong-suk",
@@ -129,7 +129,7 @@
       "trailer": "https://www.youtube.com/embed/25NyBoZOoWc?si=7nW18HKhubBfx6oL"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Nàng Bạch Tuyết",
       "date": "21/03/2025",
       "director": "Marc Webb",
@@ -145,7 +145,7 @@
       "trailer": "https://www.youtube.com/embed/_lSVVn1Os0o?si=4aZbNVwW5ElRzpr1"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Nhà Ga Ma Chó",
       "date": "21/03/2025",
       "director": "Luis Prieto",
@@ -161,7 +161,7 @@
       "trailer": "https://www.youtube.com/embed/hF3lLs0LH14?si=ipmseJsKEXjIxtPO"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Gấu Yêu Của Anh",
       "date": "04/04/2025",
       "director": "Ping Lumpraploeng",
@@ -177,7 +177,7 @@
       "trailer": "https://www.youtube.com/embed/VQOOUxTah0w?si=nb3dtx5OVcYg9m-J"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Một Bộ Phim Minecraft",
       "date": "04/04/2025",
       "director": "Jared Hess",
@@ -193,7 +193,7 @@
       "trailer": "https://www.youtube.com/embed/O1f6L1Pqu28?si=IZJX6sksPivBHlMb"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Mật Vụ Phụ Hồ",
       "date": "04/04/2025",
       "director": "David Ayer",
@@ -209,7 +209,7 @@
       "trailer": "https://www.youtube.com/embed/LYrmg2lRjCs?si=cAxW_M-ZTIpmkOom"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Oán Linh Nhập Xác",
       "date": "04/04/2025",
       "director": "Upi Avianto",
@@ -225,7 +225,7 @@
       "trailer": "https://www.youtube.com/embed/5vXzMvh4sMU?si=gAKqSFChf6OgRENS"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Pororo Thám Hiểm Đại Dương Xanh",
       "date": "04/04/2025",
       "director": "Kim Hyunho, Yoon Jewan",
@@ -241,7 +241,7 @@
       "trailer": "https://www.youtube.com/embed/PIVQG-2BWHo?si=meogekfBwxQCBsuS"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Buổi Hẹn Hò Kinh Hoàng",
       "date": "11/04/2025",
       "director": "Christopher Landon",
@@ -257,7 +257,7 @@
       "trailer": "https://www.youtube.com/embed/cQ1eYm_XIcA?si=eUkqnXHm9-80_CsH"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Tà Thuật Huyết Ngải",
       "date": "11/04/2025",
       "director": "Putipong Saisikaew",
@@ -273,7 +273,7 @@
       "trailer": "https://www.youtube.com/embed/3pciNGgdY_g?si=NQrqIIiPWL2rs78R"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Tìm Xác: Ma Không Đầu",
       "date": "18/04/2025",
       "director": "Bùi Văn Hải",
@@ -289,7 +289,7 @@
       "trailer": "https://www.youtube.com/embed/Ij19LCYrGrE?si=Ook7wzC8VENXhhOx"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Đêm Thánh: Hội Săn Quỷ",
       "date": "25/04/2025",
       "director": "Lim Dae-hee",
@@ -305,7 +305,7 @@
       "trailer": "https://www.youtube.com/embed/RWZ5psmKxDk?si=cGjN6PP2EcltOoHy"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Mật Danh: Kế Toán 2",
       "date": "25/04/2025",
       "director": "Gavin O'Connor",
@@ -321,7 +321,7 @@
       "trailer": "https://www.youtube.com/embed/x3wVJU0lZ1M?si=bmhyLqXuvO8oKWVU"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Kayara: Cô Bé Chiến Binh",
       "date": "04/04/2025",
       "director": "César Zelada",
@@ -335,6 +335,166 @@
       "image": "kayara.webp",
       "banner": "kayara.jpg",
       "trailer": "https://www.youtube.com/embed/9MFHYvdtrRw?si=7t9CziixhOnKW-ec"
+    },
+    {
+      "id": "734a",
+      "name": "1212",
+      "date": "2025-04-18",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "951f",
+      "name": "123",
+      "date": "2025-04-09",
+      "director": "123",
+      "nation": "123",
+      "age": "",
+      "category": "123",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "3d0a",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "bd3c",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "e48a",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "1aa9",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "81f7",
+      "name": "12",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "7101",
+      "name": "`1212",
+      "date": "2025-04-04",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "4bbf",
+      "name": "asda",
+      "date": "2025-04-12",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "1212",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
+    },
+    {
+      "id": "5d1d",
+      "name": "123",
+      "date": "2025-04-12",
+      "director": "12",
+      "nation": "12",
+      "age": "",
+      "category": "12",
+      "language": "12",
+      "time": "12",
+      "text_summary": "12",
+      "status": "",
+      "image": {},
+      "banner": {},
+      "trailer": "12"
     }
   ],
   "brand": [
@@ -355,7 +515,7 @@
   ],
   "thear": [
     {
-      "id": 1,
+      "id": "1",
       "id_brand": 1,
       "name": "Cinestar Quốc Thanh",
       "location": {
@@ -364,7 +524,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "id_brand": 1,
       "name": "Cinestar Hai Bà Trưng",
       "location": {
@@ -373,40 +533,90 @@
       }
     }
   ],
-
   "room": [
     {
-      "id": 1,
+      "id": "1",
       "code_room": 1,
       "id_thear": 1,
       "diagram": {
         "row": 13,
         "colunm": 22,
         "element_remove": {
-          "A": [7, 8],
-          "B": [7, 8],
-          "C": [7, 8],
-          "D": [7, 8],
-          "E": [7, 8, 22],
-          "F": [7, 8],
-          "G": [7, 8, 22],
-          "H": [7, 8],
-          "I": [7, 8],
-          "J": [7, 8, 22],
-          "K": [3, 6, 7, 8, 16]
+          "A": [
+            7,
+            8
+          ],
+          "B": [
+            7,
+            8
+          ],
+          "C": [
+            7,
+            8
+          ],
+          "D": [
+            7,
+            8
+          ],
+          "E": [
+            7,
+            8,
+            22
+          ],
+          "F": [
+            7,
+            8
+          ],
+          "G": [
+            7,
+            8,
+            22
+          ],
+          "H": [
+            7,
+            8
+          ],
+          "I": [
+            7,
+            8
+          ],
+          "J": [
+            7,
+            8,
+            22
+          ],
+          "K": [
+            3,
+            6,
+            7,
+            8,
+            16
+          ]
         },
         "double_Chair": {
-          "L": [1, 2, 4, 5],
-          "M": [2, 3, 4]
+          "L": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "M": [
+            2,
+            3,
+            4
+          ]
         },
         "element_selected": {
-          "A": [10, 11]
+          "A": [
+            10,
+            11
+          ]
         },
         "element_selecting": {}
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "id_thear": 1,
       "room_code": 3,
       "diagram": {
@@ -414,44 +624,94 @@
         "colunm": 17,
         "element_remove": {},
         "double_Chair": {
-          "I": [1, 2, 3, 4, 5, 6, 7, 8]
+          "I": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
         },
         "element_selected": {},
         "element_selecting": []
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "id_thear": 1,
       "room_code": 4,
       "diagram": {
         "row": 12,
         "colunm": 17,
         "element_remove": {
-          "A": [1, 2, 3],
-          "B": [1, 2, 3]
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "B": [
+            1,
+            2,
+            3
+          ]
         },
         "double_Chair": {
-          "L": [1, 2, 3, 4, 5, 6, 7]
+          "L": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         "element_selected": {},
         "element_selecting": []
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "id_thear": 1,
       "room_code": 2,
       "diagram": {
         "row": 6,
         "colunm": 8,
         "element_remove": {
-          "A": [3, 4],
-          "B": [3, 4],
-          "C": [3, 4],
-          "D": [3, 4],
-          "E": [2, 3, 4, 7],
-          "F": [1, 2, 3, 4, 5, 7, 8]
+          "A": [
+            3,
+            4
+          ],
+          "B": [
+            3,
+            4
+          ],
+          "C": [
+            3,
+            4
+          ],
+          "D": [
+            3,
+            4
+          ],
+          "E": [
+            2,
+            3,
+            4,
+            7
+          ],
+          "F": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+          ]
         },
         "double_Chair": {},
         "element_selected": {},
@@ -459,43 +719,128 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "id_thear": 1,
       "room_code": 5,
       "diagram": {
         "row": 19,
         "colunm": 17,
         "element_remove": {
-          "A": [1, 2, 3, 4],
-          "B": [1, 2, 3, 4],
-          "C": [1, 2, 3, 4],
-          "D": [1, 2, 3, 4],
-          "E": [1, 2, 3, 4],
-          "F": [1, 2, 3, 4],
-          "G": [3, 4],
-          "H": [3, 4],
-          "J": [3, 4],
-          "K": [3, 4, 19],
-          "L": [3, 4],
-          "M": [3, 4, 19],
-          "N": [3, 4],
-          "O": [3, 4, 19],
-          "P": [3, 4],
-          "Q": [3, 4, 10, 11, 12]
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "B": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "C": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "D": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "E": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "F": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "G": [
+            3,
+            4
+          ],
+          "H": [
+            3,
+            4
+          ],
+          "J": [
+            3,
+            4
+          ],
+          "K": [
+            3,
+            4,
+            19
+          ],
+          "L": [
+            3,
+            4
+          ],
+          "M": [
+            3,
+            4,
+            19
+          ],
+          "N": [
+            3,
+            4
+          ],
+          "O": [
+            3,
+            4,
+            19
+          ],
+          "P": [
+            3,
+            4
+          ],
+          "Q": [
+            3,
+            4,
+            10,
+            11,
+            12
+          ]
         },
         "double_Chair": {
-          "R": [1, 2, 3, 4, 5, 6]
+          "R": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
         },
         "element_selected": {
-          "F": [1, 2, 3, 4],
-          "P": [3, 4],
-          "A": [1, 2, 3, 4]
+          "F": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "P": [
+            3,
+            4
+          ],
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ]
         },
         "element_selecting": []
       }
     }
   ],
-
   "ticket": [
     {
       "id": "",
@@ -507,7 +852,7 @@
   ],
   "bill": [
     {
-      "id": 1,
+      "id": "1",
       "id_user": 2,
       "id_ticket": "",
       "id_payment": "",
@@ -517,14 +862,14 @@
   ],
   "payments": [
     {
-      "id": 1,
+      "id": "1",
       "bank_number": 1028312672,
       "bank_brand": "Vietcombank",
       "QR_code": "",
       "name": "Trần Văn Giới"
     },
     {
-      "id": 2,
+      "id": "2",
       "bank_number": 84375837534,
       "bank_brand": "Momo",
       "QR_code": "",
@@ -533,7 +878,7 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hoàng Duyệt",
       "sdt": "0901234567",
       "email": "hoangduyet1122@gmail.com",
@@ -545,7 +890,7 @@
       "type_admin": "none"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Trần Văn Giới",
       "sdt": "0912345678",
       "email": "trangioi479@gmail.com",
@@ -557,7 +902,7 @@
       "type_admin": "super"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Phan Phúc Lâm",
       "sdt": "0923456789",
       "email": "phanphuclam1122@gmail.com",
@@ -569,7 +914,7 @@
       "type_admin": "standard"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Nguyễn Thế Quang",
       "sdt": "0934567890",
       "email": "nguyenthequang1122@gmail.com",
@@ -581,7 +926,7 @@
       "type_admin": "none"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Lê Thị Nhã Tú",
       "sdt": "0945678901",
       "email": "lethinhatu1122@gmail.com",
@@ -593,7 +938,7 @@
       "type_admin": "none"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Nguyễn Thế Gia An",
       "sdt": "0967890123",
       "email": "nguyenthegiaan1122@gmail.com",
@@ -605,7 +950,7 @@
       "type_admin": "none"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Nguyễn Đức Mạnh",
       "sdt": "0978901234",
       "email": "nguyenducmanh1122@gmail.com",
@@ -617,7 +962,7 @@
       "type_admin": "none"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Trương Minh Hoàng",
       "sdt": "0989012345",
       "email": "truongminhhoang1122@gmail.com",
@@ -629,7 +974,7 @@
       "type_admin": "super"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Nguyễn Minh Kiệt",
       "sdt": "0990123456",
       "email": "nguyenminhkiet1122@gmail.com",
@@ -653,7 +998,7 @@
       "type_admin": "super"
     }
   ],
-  "vouchers":[
+  "vouchers": [
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
@@ -662,7 +1007,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "99f8"
     },
     {
       "code": "SALEOFF15",
@@ -672,7 +1018,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "7d5b"
     },
     {
       "code": "SALEOFF20",
@@ -682,7 +1029,8 @@
       "endDay": "15/04/2025",
       "soLuong": 40,
       "daSuDung": 26,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "9e63"
     },
     {
       "code": "WELCOME",
@@ -692,7 +1040,8 @@
       "endDay": "15/04/2025",
       "soLuong": 100,
       "daSuDung": 5,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "58aa"
     },
     {
       "code": "OFFER2025",
@@ -702,7 +1051,8 @@
       "endDay": "15/04/2025",
       "soLuong": 50,
       "daSuDung": 10,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "5fcd"
     },
     {
       "code": "SALEOFF10",
@@ -712,7 +1062,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "4da0"
     },
     {
       "code": "SALEOFF10",
@@ -722,7 +1073,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "3f9e"
     },
     {
       "code": "SALEOFF10",
@@ -732,7 +1084,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "6a93"
     },
     {
       "code": "SALEOFF10",
@@ -742,7 +1095,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "183f"
     },
     {
       "code": "SALEOFF10",
@@ -752,7 +1106,8 @@
       "endDay": "15/04/2025",
       "soLuong": 30,
       "daSuDung": 16,
-      "trangThai": "Kích hoạt"
+      "trangThai": "Kích hoạt",
+      "id": "1146"
     }
   ]
 }

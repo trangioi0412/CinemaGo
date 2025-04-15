@@ -1,9 +1,9 @@
 "use client";
 
-import React , { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
-import style from "./voucher.module.css"
+import style from "./voucher.module.css";
 import Table from "../../Components/Table/Table";
 import AddBtn from "../../Components/AddBtn/AddBtn";
 import AddFromVouchers from "./addFromVouchers";
@@ -13,21 +13,26 @@ import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 import { getVouchers } from "@/app/service/voucher.service";
 import { addData, deleteData, getData } from "@/app/redux/slices/voucherSlice";
-import { dataRemaining,userSelector,voucherSelector, filmSelector } from "@/app/redux/selectors";
+import {
+  dataRemaining,
+  userSelector,
+  voucherSelector,
+  filmSelector,
+} from "@/app/redux/selectors";
 const Vouchers = () => {
-    const [open, setOpen] = useState(false);
-    const dispatch = useDispatch();
-    const handleDelete = (id: any) => {
-      dispatch(deleteData(id));
+  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const handleDelete = (id: any) => {
+    dispatch(deleteData(id));
+  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await getVouchers();
+      dispatch(getData(res));
     };
-      useEffect(() => {
-        const fetchData = async () => {
-          const res = await getVouchers();
-          dispatch(getData(res));
-        };
-        fetchData();
-      }, [dispatch]);
-      const data = useSelector(voucherSelector);
+    fetchData();
+  }, [dispatch]);
+  const data = useSelector(voucherSelector);
   const column = [
     { key: "code", title: "Mã" },
     { key: "name", title: "Tên" },
@@ -58,12 +63,14 @@ const Vouchers = () => {
   return (
     <Card>
       <HeadingCard title="DANH SÁCH VOUCHERS">
-      {" "}
-      <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
+        {" "}
+        <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
       </HeadingCard>
       <OptionTable />
-      <Table data={data} column={column} rowsPerPage={10}/>
-      {open && <AddFromVouchers onClick={() => setOpen(!open)}></AddFromVouchers>}
+      <Table data={data} column={column} rowsPerPage={10} />
+      {open && (
+        <AddFromVouchers onClick={() => setOpen(!open)}></AddFromVouchers>
+      )}
     </Card>
   );
 };
