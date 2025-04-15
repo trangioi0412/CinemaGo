@@ -38,7 +38,23 @@ const AddFormFilm = () => {
   ];
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (
+      !formData.name ||
+      !formData.date ||
+      !formData.director ||
+      !formData.nation ||
+      !formData.age ||
+      !formData.category ||
+      !formData.language ||
+      !formData.time ||
+      !formData.category ||
+      !formData.status ||
+      !formData.text_summary
 
+    ) {
+      toast.error("Vui lòng điền đầy đủ thông tin");
+      return;
+    }
     try {
       const result = await addMovie(formData);
       toast.success("Thêm thành công");
