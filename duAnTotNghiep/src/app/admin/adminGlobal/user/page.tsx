@@ -36,6 +36,39 @@ const User = () => {
     { key: "role", title: "Quyền" },
     { key: "status", title: "Trạng Thái" },
   ];
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const handleAddUser = (data: {
+    fullName: string;
+    email: string;
+    phone: string;
+    role: string;
+    permission: string;
+    status: string;
+  }) => {
+    const newUser = {
+      id: users.length + 1,
+      name: data.fullName,
+      sdt: data.phone,
+      email: data.email,
+      password: "default123", // Có thể thêm trường password vào form nếu cần
+      year: 2005, // Giá trị mặc định, có thể thêm vào form
+      cinema: "CGV", // Giá trị mặc định, có thể thêm vào form
+      status: data.status,
+      role: data.role,
+      type_admin: data.permission,
+    };
+    setUsers([...users, newUser]);
+    console.log("Người dùng mới:", newUser);
+  };
+
   return (
     <Card>
       <HeadingCard title="DANH SÁCH NGƯỜI DÙNG">
