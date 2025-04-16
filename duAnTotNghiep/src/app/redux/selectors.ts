@@ -5,6 +5,7 @@ const filmSelector = (state: any) => state.filmCrud;
 const userSelector = (state: any) => state.userCrud;
 const voucherSelector = (state: any) => state.voucherCrud;
 const searchSelector = (state: any) => state.search;
+const cineSelector = (state: any) => state.cineCrud;
 const dataRemaining = createSelector(
   filmSelector,
   searchSelector,
@@ -14,4 +15,10 @@ const dataRemaining = createSelector(
     );
   }
 );
-export { filmSelector, userSelector, voucherSelector, dataRemaining };
+export {
+  filmSelector,
+  userSelector,
+  voucherSelector,
+  cineSelector,
+  dataRemaining,
+};
