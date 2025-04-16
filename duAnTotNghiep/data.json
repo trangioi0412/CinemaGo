@@ -911,7 +911,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -922,7 +922,7 @@
     {
       "code": "SALEOFF15",
       "name": "15 % Off Sale",
-      "discount": "15%",
+      "discount": "15",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -933,7 +933,7 @@
     {
       "code": "SALEOFF20",
       "name": "20 % Off Sale",
-      "discount": "20%",
+      "discount": "20",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 40,
@@ -944,7 +944,7 @@
     {
       "code": "WELCOME",
       "name": "New User",
-      "discount": "25%",
+      "discount": "25",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 100,
@@ -955,7 +955,7 @@
     {
       "code": "OFFER2025",
       "name": "Holiday offer",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 50,
@@ -966,7 +966,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -977,7 +977,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -988,7 +988,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -999,7 +999,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
@@ -1010,7 +1010,7 @@
     {
       "code": "SALEOFF10",
       "name": "10 % Off Sale",
-      "discount": "10%",
+      "discount": "10",
       "startDay": "15/03/2025",
       "endDay": "15/04/2025",
       "soLuong": 30,
