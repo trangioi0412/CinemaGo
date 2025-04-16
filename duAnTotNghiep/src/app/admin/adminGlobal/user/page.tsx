@@ -34,7 +34,30 @@ const User = () => {
     { key: "email", title: "Email" },
     { key: "sdt", title: "Số điện thoại" },
     { key: "role", title: "Quyền" },
-    { key: "status", title: "Trạng Thái" },
+    { key: "status", title: "Trạng Thái",
+      render: (row: any) => (
+        <div className={style["status"]}>
+          <button className={row.status === "active"
+              ? style["btn_active"]
+              : row.status === "inactive"
+              ? style["btn_inactive"]
+              : style["btn_banned"]}>
+              {row.status}
+          </button>
+        </div>
+      ),
+     },
+     {
+      key: "actions",
+      title: "Hành động",
+      render: (row: any) => (
+        <div className={style["btnAction"]}>
+          <button className={style["btnEdit"]}>
+            <FaRegEdit />
+          </button>
+        </div>
+      ),
+    },
   ];
   return (
     <Card>

@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "../../Components/Card/Card";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
-import { getVouchers } from "@/app/service/voucher.service";
+import { getVouchers,deleteVouchers } from "@/app/service/voucher.service";
 import { addData, deleteData, getData } from "@/app/redux/slices/voucherSlice";
 import {
   dataRemaining,
@@ -23,8 +23,10 @@ import { useOpenForm } from "../../context/OpenForm";
 const Vouchers = () => {
    const { isOpen, setIsOpen } = useOpenForm();
   const dispatch = useDispatch();
-  const handleDelete = (id: any) => {
-    dispatch(deleteData(id));
+  const handleDelete = async (id: any) => {
+    await deleteVouchers(id);
+    const res = await getVouchers();
+    dispatch(getData(res));
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -42,7 +44,15 @@ const Vouchers = () => {
     { key: "endDay", title: "Ngày Kết Thúc" },
     { key: "soLuong", title: "Số Lượng" },
     { key: "daSuDung", title: "Đã Sử Dụng" },
-    { key: "trangThai", title: "Trạng Thái" },
+    { key: "trangThai", title: "Trạng Thái",
+      render: (row: any) => (
+        <div className={style["status"]}>
+          <button className={row.trangThai === "Hoạt Động" ? style["btnactive"] : style["btnnotactive"]}>
+              {row.trangThai}
+          </button>
+        </div>
+      ),
+     },
     {
       key: "actions",
       title: "Hành động",

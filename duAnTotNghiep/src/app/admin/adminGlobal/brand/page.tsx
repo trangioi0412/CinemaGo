@@ -43,7 +43,17 @@ const Brand = () => {
     { key: "img", title: "Thương Hiệu" ,
     render: (row: any) => <img src={`/img/brand/${row.img}`} alt="Thương hiệu" style={{ height: "40px" }} />},
     { key: "soluong", title: "Số Lượng" },
-    { key: "status", title: "Trạng Thái" },
+    { key: "status", title: "Trạng Thái",
+      render: (row: any) => (
+        <div className={style["status"]}>
+          <button className={row.status === "Hoạt Động"
+              ? style["btn_active"]
+              : style["btn_inactive"]}>
+              {row.status}
+          </button>
+        </div>
+      ),
+     },
     {
       key: "actions",
       title: "Hành động",

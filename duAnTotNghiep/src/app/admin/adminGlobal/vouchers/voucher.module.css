@@ -18,3 +18,31 @@
 .btnEdit{
     color: goldenrod;
 }
+.btnactive {
+    background-color: #28a745; /* xanh lá tươi */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnactive:hover {
+    background-color: #218838;
+  }
+  .btnnotactive {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnnotactive:hover {
+    background-color: #e0a800;
+  }
