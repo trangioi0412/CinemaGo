@@ -16,7 +16,7 @@ const Select = ({
       <div className={style.input}>
         <select className={style.select} value={value} onChange={onChange}>
           <option value="">
-            --Chọn <span style={{ textTransform: "lowercase" }}>{title}</span>
+            --Chọn  {title}
           </option>
           {data.map((i) => (
             <option key={i.id} value={i.value}>
