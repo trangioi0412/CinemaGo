@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import style from "./addFromUser.module.css";
+import style from "./addForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addData } from "@/app/redux/slices/userSlice";
-import { toast, ToastContainer } from "react-toastify";
+import { addData, updateData } from "@/app/redux/slices/userSlice";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Form/Input/Input";
-import { Users } from "@/app/user.interface";
 import Select from "../../Components/Form/Select/Select";
+import { toast, ToastContainer } from "react-toastify";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+import { Users } from "@/app/user.interface";
 import { userSelector } from "@/app/redux/selectors";
-import { addUser } from "@/app/service/user.service";
-import { useOpenForm } from "../../context/OpenForm";
-const AddFormUser = () => {
+import { addUser, updateUser } from "@/app/service/user.service";
+const UpdateFormUser = ({ data }: { data: Users }) => {
   const dispatch = useDispatch();
   const initValue = {
-    name: "",
-    sdt: "",
-    email: "",
-    password: "",
-    year: "",
-    cinema: "Cinema",
-    status: "active",
-    role: "",
-    repass: "",
+    id: data.id,
+    name: data.name,
+    sdt: data.sdt,
+    email: data.email,
+    password: data.password,
+    year: data.year,
+    cinema: data.cinema,
+    status: data.status,
+    role: data.role,
   };
   const [formData, setFormData] = useState(initValue);
   const role = [
@@ -29,17 +29,13 @@ const AddFormUser = () => {
     { id: 2, value: "admin", name: "Quản trị viên rạp" },
     { id: 3, value: "moderator", name: "Quản trị viên hệ thống" },
   ];
-
   const users = useSelector(userSelector);
-
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (
       !formData.name ||
       !formData.sdt ||
       !formData.email ||
-      !formData.password ||
       !formData.year ||
       !formData.role
     ) {
@@ -51,30 +47,29 @@ const AddFormUser = () => {
         (item: Users) => item.email === formData.email
       );
 
-      if (checkUser) {
+      if (formData.email !== data.email && checkUser) {
         toast.error("Email đã tồn tại trong hệ thống");
         return;
       }
-      if (formData.repass !== formData.password) {
-        toast.error("Mật khẩu không trùng khớp");
+      if (!data.id) {
+        toast.error("Không tìm thấy ID người dùng để cập nhật");
         return;
       }
-      const result = await addUser(formData);
-      toast.success("Thêm người dùng thành công");
-      dispatch(addData(result));
-      setFormData(initValue);
+      const result = await updateUser(data.id, formData);
+      toast.success("Sửa người dùng thành công");
+      dispatch(updateData(result));
     } catch (error) {
-      toast.error("Thêm người dùng thất bại");
+      toast.error("Sủa người dùng thất bại");
       console.log(error);
     }
   };
-  const { setIsOpen } = useOpenForm();
+  const { setIsOpenUpdate } = useOpenUpdateForm();
 
   return (
     <>
       <ToastContainer theme="colored" />
       <Form
-        cancel={() => setIsOpen(false)}
+        cancel={() => setIsOpenUpdate(false)}
         button="Thêm người dùng"
         title="thêm người dùng"
         submit={handleSubmit}
@@ -116,27 +111,9 @@ const AddFormUser = () => {
           onChange={(e) => setFormData({ ...formData, role: e.target.value })}
           title="Vai trò"
         />
-        <Input
-          value={formData.password}
-          onChange={(e) =>
-            setFormData({ ...formData, password: e.target.value })
-          }
-          type="password"
-          label="Mật khẩu"
-          placeholder="Nhập mật khẩu"
-          required={true}
-        />
-        <Input
-          value={formData.repass}
-          onChange={(e) => setFormData({ ...formData, repass: e.target.value })}
-          type=""
-          label="Xác nhận mật khẩu"
-          placeholder="Xác nhận mật khẩu"
-          required={true}
-        />
       </Form>
     </>
   );
 };
 
-export default AddFormUser;
+export default UpdateFormUser;

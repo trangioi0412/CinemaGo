@@ -12,24 +12,27 @@ import { MdDeleteForever } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import AcitonTable from "../../Components/Table/AcitonTable";
 
-const column = [
-  { key: "name", title: "Tên rạp" },
-  {
-    key: "city",
-    title: "Khu vực",
-    render: (row: any) => (
-      <p>{row.location.city === 1 ? "Hồ Chí Minh" : "Hà Nội"}</p>
-    ),
-  },
-  {
-    key: "detail",
-    title: "Địa chỉ",
-    render: (row: any) => <p>{row.location.detail}</p>,
-  },
-  { key: "action", title: "Hành động", render: (row: any) => <AcitonTable /> },
-];
-
 const Cinema = () => {
+  const column = [
+    { key: "name", title: "Tên rạp" },
+    {
+      key: "city",
+      title: "Khu vực",
+      render: (row: any) => (
+        <p>{row.location.city === 1 ? "Hồ Chí Minh" : "Hà Nội"}</p>
+      ),
+    },
+    {
+      key: "detail",
+      title: "Địa chỉ",
+      render: (row: any) => <p>{row.location.detail}</p>,
+    },
+    {
+      key: "action",
+      title: "Hành động",
+    },
+  ];
+
   const [data, setData] = useState<any[]>([]);
   useEffect(() => {
     const getData = async () => {

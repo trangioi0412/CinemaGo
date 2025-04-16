@@ -61,8 +61,8 @@ const UpdateFormFilm = ({ data }: { data: Movies }) => {
       <ToastContainer theme="colored" />
       <Form
         cancel={() => setIsOpenUpdate(false)}
-        button="Thêm phim"
-        title="thêm phim"
+        button="Lưu phim"
+        title="sửa phim"
         submit={handleSubmit}
       >
         <Input

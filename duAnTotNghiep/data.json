@@ -338,7 +338,7 @@
     },
     {
       "id": "4f33",
-      "name": "1234569",
+      "name": "12345678",
       "date": "2025-04-03",
       "director": "123",
       "nation": "123",
@@ -855,15 +855,14 @@
     },
     {
       "id": "bee8",
-      "name": "123",
+      "name": "12310",
       "sdt": "0123456789",
       "email": "phuclam251005@gmail.com",
       "password": "123",
       "year": "2025-04-17",
       "cinema": "Cinema",
       "status": "active",
-      "role": "user",
-      "repass": "123"
+      "role": "user"
     }
   ],
   "vouchers": [
