@@ -50,8 +50,8 @@ const AddFormFilm = () => {
       !formData.time ||
       !formData.category ||
       !formData.status ||
-      !formData.text_summary
-
+      !formData.text_summary ||
+      !formData.trailer
     ) {
       toast.error("Vui lòng điền đầy đủ thông tin");
       return;

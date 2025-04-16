@@ -340,7 +340,7 @@
       "id": "4f33",
       "name": "1234569",
       "date": "2025-04-03",
-      "director": "123",
+      "director": "quang nguyễn",
       "nation": "123",
       "age": "P",
       "category": "123",
@@ -351,6 +351,38 @@
       "image": {},
       "banner": {},
       "trailer": "123"
+    },
+    {
+      "id": "6b2f",
+      "name": "cuộc đời éo le",
+      "date": "2025-04-17",
+      "director": "quang nguyễn",
+      "nation": "vn",
+      "age": "K",
+      "category": "kinh dị",
+      "language": "việt nam",
+      "time": "111",
+      "text_summary": "jjjjjjjjjjjjjjjjjj",
+      "status": "1",
+      "image": {},
+      "banner": {},
+      "trailer": "111111"
+    },
+    {
+      "id": "90dd",
+      "name": "aaaaa",
+      "date": "2025-04-10",
+      "director": "thế quang nguyễn ",
+      "nation": "vn",
+      "age": "K",
+      "category": "tình cảm ",
+      "language": "việt nam",
+      "time": "111",
+      "text_summary": "hihihiha",
+      "status": "1",
+      "image": {},
+      "banner": {},
+      "trailer": "hhhhh"
     }
   ],
   "brand": [
@@ -386,6 +418,15 @@
       "location": {
         "city": 1,
         "detail": "135 Hai Bà Trưng, Phường Bến Nghé Quận 1"
+      }
+    },
+    {
+      "id": "7d87",
+      "id_brand": 1,
+      "name": "tao quang nef",
+      "location": {
+        "city": "K",
+        "detail": "310 kkkkkkk"
       }
     }
   ],

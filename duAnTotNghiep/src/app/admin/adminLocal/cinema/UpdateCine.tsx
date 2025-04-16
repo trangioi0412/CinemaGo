@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./addForm.module.css";
 import { useDispatch } from "react-redux";
-import { addData } from "@/app/redux/slices/cineSlice";
+import { addData, updateData } from "@/app/redux/slices/cineSlice";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Form/Input/Input";
 import Select from "../../Components/Form/Select/Select";
@@ -10,16 +10,18 @@ import { addMovie } from "@/app/service/movie.service";
 import { toast, ToastContainer } from "react-toastify";
 import { useOpenForm } from "../../context/OpenForm";
 import { CineInterface } from "@/app/cine.interface";
-import { addCine } from "@/app/service/cinema.service";
-const AddFormCine = () => {
+import { addCine, updateCine } from "@/app/service/cinema.service";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+const UpdateFormCine = ({ data }: { data: CineInterface }) => {
   const dispatch = useDispatch();
+  
   const initValue: CineInterface = {
-    // id: "",
-    id_brand: 1,
-    name: "",
+    id: data.id || "",
+    id_brand: data.id_brand,
+    name:data.name || "",
     location: {
-      city: "",
-      detail: ""
+      city: data.location.city || "",
+      detail: data.location.detail
     }
   }
   const [formData, setFormData] = useState<CineInterface>(initValue);
@@ -38,21 +40,25 @@ const AddFormCine = () => {
       return;
     }
     try {
-      const result = await addCine(formData);
-      toast.success("Thêm thành công");
-      dispatch(addData(result));
-      setFormData(initValue);
-    } catch (error: any) {
-      toast.error("Thêm thất bại");
-      console.log(error);
-    }
+        if (!data.id) {
+          toast.error("Không tìm thấy ID rạp để cập nhật");
+          return;
+        }
+        const result = await updateCine(data.id, formData);
+        toast.success("Sửa rạp thành công");
+        dispatch(updateData(result));
+      } catch (error: any) {
+        toast.error("Sửa rạp  thất bại");
+        console.log(error);
+      }
   };
-  const { setIsOpen } = useOpenForm();
+  const { setIsOpenUpdate } = useOpenUpdateForm();
+
   return (
     <>
       <ToastContainer theme="colored" />
       <Form
-        cancel={() => setIsOpen(false)}
+        cancel={() => setIsOpenUpdate(false)}
         button="Thêm rạp"
         title="thêm rạp"
         submit={handleSubmit}
@@ -83,4 +89,4 @@ const AddFormCine = () => {
   );
 };
 
-export default AddFormCine;
+export default UpdateFormCine;
