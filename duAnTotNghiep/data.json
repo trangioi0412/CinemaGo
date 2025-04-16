@@ -338,7 +338,7 @@
     },
     {
       "id": "4f33",
-      "name": "12345678",
+      "name": "1234569",
       "date": "2025-04-03",
       "director": "123",
       "nation": "123",
@@ -843,25 +843,27 @@
     },
     {
       "id": "47ac",
-      "name": "NGUYỄN THẾ QUANGg",
+      "name": "NGUYỄN THẾ QUANG",
       "sdt": "0363396502",
       "email": "nguyenquang.96502@gmail.com",
       "password": "111",
       "year": "2002-12-11",
       "cinema": "Lotte",
       "status": "inactive",
-      "role": "admin"
+      "role": "admin",
+      "type_admin": "super"
     },
     {
       "id": "bee8",
-      "name": "12311",
+      "name": "123",
       "sdt": "0123456789",
       "email": "phuclam251005@gmail.com",
       "password": "123",
       "year": "2025-04-17",
       "cinema": "Cinema",
       "status": "active",
-      "role": "user"
+      "role": "user",
+      "repass": "123"
     }
   ],
   "vouchers": [
@@ -974,6 +976,17 @@
       "daSuDung": 16,
       "trangThai": "Kích Hoạt",
       "id": "1146"
+    },
+    {
+      "id": "5dee",
+      "name": "Duyệt Đẹp Trai",
+      "code": "HoangDuyetDepTrai",
+      "startDay": "2025-04-16",
+      "endDay": "2025-04-30",
+      "soLuong": 100,
+      "discount": "90",
+      "trangThai": "Hoạt Động",
+      "daSuDung": 0
     }
   ]
 }

@@ -13,6 +13,8 @@ import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 import { getVouchers,deleteVouchers } from "@/app/service/voucher.service";
 import { addData, deleteData, getData } from "@/app/redux/slices/voucherSlice";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+import UpdateVouchersForm from "./UpdateVouchersForm";
 import {
   dataRemaining,
   userSelector,
@@ -20,14 +22,22 @@ import {
   filmSelector,
 } from "@/app/redux/selectors";
 import { useOpenForm } from "../../context/OpenForm";
+import { Vouchers as VouchersType } from "@/app/voucher.interface";
 const Vouchers = () => {
    const { isOpen, setIsOpen } = useOpenForm();
+
+  const { isOpenUpdate, setIsOpenUpdate } = useOpenUpdateForm();
+  const [selectedVoucher, setSelectedVoucher] = useState<VouchersType | null>(null);
   const dispatch = useDispatch();
   const handleDelete = async (id: any) => {
     await deleteVouchers(id);
     const res = await getVouchers();
     dispatch(getData(res));
   };
+  const handleEdit = (vouchers: VouchersType) => {
+      setSelectedVoucher(vouchers);
+      setIsOpenUpdate(true);
+    };
   useEffect(() => {
     const fetchData = async () => {
       const res = await getVouchers();
@@ -64,7 +74,15 @@ const Vouchers = () => {
           >
             <MdDeleteForever />
           </button>
-          <button className={style["btnEdit"]}>
+          <button className={style["btnEdit"]}
+          style={{
+            border: "none",
+            backgroundColor: "transparent",
+            padding: 10,
+            fontSize: 20,
+            cursor: "pointer",
+          }}
+           onClick={() => handleEdit(row)}>
             <FaRegEdit />
           </button>
         </div>
@@ -80,6 +98,7 @@ const Vouchers = () => {
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={10} />
       {isOpen && <AddFromVouchers />}
+      {isOpenUpdate && selectedVoucher && <UpdateVouchersForm data={selectedVoucher} />}
     </Card>
   );
 };
