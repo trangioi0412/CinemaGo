@@ -9,10 +9,11 @@ import { Vouchers } from "@/app/voucher.interface";
 import Select from "../../Components/Form/Select/Select";
 import { voucherSelector } from "@/app/redux/selectors";
 import { addVouchers } from "@/app/service/voucher.service";
+import { useOpenForm } from "../../context/OpenForm";
 const AddFromVouchers = () => {
   const dispatch = useDispatch();
   const initValue = {
-    code:"",
+    code: "",
     name: "",
     discount: "",
     startDay: "",
@@ -66,10 +67,12 @@ const AddFromVouchers = () => {
       console.log(error);
     }
   };
+  const { setIsOpen } = useOpenForm();
   return (
     <>
       <ToastContainer theme="colored" />
       <Form
+        cancel={() => setIsOpen(false)}
         button="Thêm Vouchers"
         title="thêm Vouchers"
         submit={handleSubmit}
@@ -92,14 +95,18 @@ const AddFromVouchers = () => {
         />
         <Input
           value={formData.discount}
-          onChange={(e) => setFormData({ ...formData, discount: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, discount: e.target.value })
+          }
           type="number"
           label="Phần Trăm Giảm"
           required={true}
         />
         <Input
           value={formData.startDay}
-          onChange={(e) => setFormData({ ...formData, startDay: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, startDay: e.target.value })
+          }
           type="date"
           label="Ngày Bắt Đầu"
           required={true}
@@ -110,7 +117,6 @@ const AddFromVouchers = () => {
           onChange={(e) => setFormData({ ...formData, endDay: e.target.value })}
           label="Ngày Kết Thúc"
           required={true}
-
         />
         <Input
           value={formData.soLuong.toString()}

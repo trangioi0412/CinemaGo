@@ -11,13 +11,14 @@ import { MdDeleteForever } from "react-icons/md";
 import { Movies } from "@/app/movie.interface";
 import { deleteMovie, getAllMovies } from "@/app/service/movie.service";
 import { useDispatch, useSelector } from "react-redux";
-import { addData, deleteData, getData } from "@/app/redux/slices/filmSlice";
-import { dataRemaining, filmSelector } from "@/app/redux/selectors";
+import { deleteData, getData } from "@/app/redux/slices/filmSlice";
+import { filmSelector } from "@/app/redux/selectors";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormFilm from "./AddFormFilm";
 import { useOpenUpdateForm } from "../../context/OpenUpdate";
 import UpdateFormFilm from "./UpdateForm";
 import { toast } from "react-toastify";
+import AcitonTable from "../../Components/Table/AcitonTable";
 
 const Film = () => {
   const { isOpen, setIsOpen } = useOpenForm();

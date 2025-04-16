@@ -10,7 +10,7 @@ import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 import { deleteData, getData } from "@/app/redux/slices/userSlice";
 import { userSelector } from "@/app/redux/selectors";
-import { getUser, deleteUser } from "@/app/service/user.service";
+import { getUser } from "@/app/service/user.service";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormUser from "./addFromUser";
 import { useOpenUpdateForm } from "../../context/OpenUpdate";
@@ -62,7 +62,6 @@ const User = () => {
         </div>
       ),
     },
-    { key: "status", title: "Trạng Thái" },
     {
       key: "action",
       title: "Hành động",
@@ -83,38 +82,6 @@ const User = () => {
       ),
     },
   ];
-
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
-  const handleAddUser = (data: {
-    fullName: string;
-    email: string;
-    phone: string;
-    role: string;
-    permission: string;
-    status: string;
-  }) => {
-    const newUser = {
-      id: users.length + 1,
-      name: data.fullName,
-      sdt: data.phone,
-      email: data.email,
-      password: "default123", // Có thể thêm trường password vào form nếu cần
-      year: 2005, // Giá trị mặc định, có thể thêm vào form
-      cinema: "CGV", // Giá trị mặc định, có thể thêm vào form
-      status: data.status,
-      role: data.role,
-      type_admin: data.permission,
-    };
-    setUsers([...users, newUser]);
-    console.log("Người dùng mới:", newUser);
-  };
 
   return (
     <Card>

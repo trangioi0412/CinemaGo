@@ -843,19 +843,18 @@
     },
     {
       "id": "47ac",
-      "name": "NGUYỄN THẾ QUANG",
+      "name": "NGUYỄN THẾ QUANGg",
       "sdt": "0363396502",
       "email": "nguyenquang.96502@gmail.com",
       "password": "111",
       "year": "2002-12-11",
       "cinema": "Lotte",
       "status": "inactive",
-      "role": "admin",
-      "type_admin": "super"
+      "role": "admin"
     },
     {
       "id": "bee8",
-      "name": "12310",
+      "name": "12311",
       "sdt": "0123456789",
       "email": "phuclam251005@gmail.com",
       "password": "123",
@@ -975,17 +974,6 @@
       "daSuDung": 16,
       "trangThai": "Kích Hoạt",
       "id": "1146"
-    },
-    {
-      "id": "5dee",
-      "code": "HoangDuyetDepTrai",
-      "name": "Duyệt Đẹp Trai",
-      "discount": "90",
-      "startDay": "2025-04-16",
-      "endDay": "2025-04-30",
-      "soLuong": 10,
-      "daSuDung": 0,
-      "trangThai": "Hoạt Động"
     }
   ]
 }
