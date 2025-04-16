@@ -17,6 +17,7 @@ import { useOpenForm } from "../../context/OpenForm";
 import AddFormFilm from "./AddFormFilm";
 import { useOpenUpdateForm } from "../../context/OpenUpdate";
 import UpdateFormFilm from "./UpdateForm";
+import AcitonTable from "../../Components/Table/AcitonTable";
 
 const Film = () => {
   const { isOpen, setIsOpen } = useOpenForm();
@@ -46,17 +47,10 @@ const Film = () => {
       key: "action",
       title: "Hành động",
       render: (row: any) => (
-        <div className={style["btnAction"]}>
-          <button
-            onClick={() => handleDelete(row.id)}
-            className={style["btnDelete"]}
-          >
-            <MdDeleteForever />
-          </button>
-          <button className={style["btnEdit"]} onClick={() => handleEdit(row)}>
-            <FaRegEdit />
-          </button>
-        </div>
+        <AcitonTable
+          handleDelete={() => handleDelete(row.id)}
+          handleEdit={() => handleEdit(row)}
+        />
       ),
     },
   ];

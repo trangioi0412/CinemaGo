@@ -19,9 +19,8 @@ const filmSlice = createSlice({
       if (index !== -1) {
         state[index] = action.payload;
       }
-      return state;
     },
   },
 });
-export default filmSlice.reducer;
+export default filmSlice;
 export const { getData, addData, deleteData, updateData } = filmSlice.actions;

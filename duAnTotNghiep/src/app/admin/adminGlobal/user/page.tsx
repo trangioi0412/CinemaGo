@@ -13,14 +13,22 @@ import { userSelector } from "@/app/redux/selectors";
 import { getUser } from "@/app/service/user.service";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormUser from "./addFromUser";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+import { Users } from "@/app/user.interface";
+import UpdateFormUser from "./UpdateUserForm";
 const User = () => {
   const { isOpen, setIsOpen } = useOpenForm();
 
+  const { isOpenUpdate, setIsOpenUpdate } = useOpenUpdateForm();
+  const [selectedUser, setSelectedUser] = useState<Users | null>(null);
   const dispatch = useDispatch();
   const handleDelete = (id: any) => {
     dispatch(deleteData(id));
   };
-
+  const handleEdit = (user: Users) => {
+    setSelectedUser(user);
+    setIsOpenUpdate(true);
+  };
   useEffect(() => {
     const fetchData = async () => {
       const res = await getUser();
@@ -35,6 +43,25 @@ const User = () => {
     { key: "sdt", title: "Số điện thoại" },
     { key: "role", title: "Quyền" },
     { key: "status", title: "Trạng Thái" },
+    {
+      key: "action",
+      title: "Hành động",
+      render: (row: any) => (
+        <button
+          className={style["btnEdit"]}
+          style={{
+            border: "none",
+            backgroundColor: "transparent",
+            padding: 10,
+            fontSize: 20,
+            cursor: "pointer",
+          }}
+          onClick={() => handleEdit(row)}
+        >
+          <FaRegEdit />
+        </button>
+      ),
+    },
   ];
   return (
     <Card>
@@ -45,6 +72,7 @@ const User = () => {
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={5} />
       {isOpen && <AddFormUser />}
+      {isOpenUpdate && selectedUser && <UpdateFormUser data={selectedUser} />}
     </Card>
   );
 };
