@@ -7,13 +7,14 @@ const Form = ({
   button,
   submit,
   children,
+  cancel,
 }: {
   title: string;
   button: string;
   submit: (e: React.FormEvent<HTMLFormElement>) => void;
   children: React.ReactNode;
+  cancel: () => void;
 }) => {
-  const { setIsOpen } = useOpenForm();
   return (
     <div className={style.wrapper}>
       <form className={style["form-group"]} onSubmit={submit}>
@@ -22,11 +23,7 @@ const Form = ({
           <div className={style["input-group"]}>{children}</div>
         </div>
         <div className={style["btn-group"]}>
-          <button
-            onClick={() => setIsOpen(false)}
-            type="button"
-            className="cancel-btn"
-          >
+          <button onClick={cancel} type="button" className="cancel-btn">
             Hủy
           </button>
           <button type="submit" className="btn">

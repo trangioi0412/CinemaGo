@@ -9,25 +9,37 @@ import AddBtn from "../../Components/AddBtn/AddBtn";
 import style from "./film.module.css";
 import { MdDeleteForever } from "react-icons/md";
 import { Movies } from "@/app/movie.interface";
-import { getAllMovies } from "@/app/service/movie.service";
+import { deleteMovie, getAllMovies } from "@/app/service/movie.service";
 import { useDispatch, useSelector } from "react-redux";
 import { addData, deleteData, getData } from "@/app/redux/slices/filmSlice";
 import { dataRemaining, filmSelector } from "@/app/redux/selectors";
 import { useOpenForm } from "../../context/OpenForm";
 import AddFormFilm from "./AddFormFilm";
 import { useOpenUpdateForm } from "../../context/OpenUpdate";
+import UpdateFormFilm from "./UpdateForm";
+import { toast } from "react-toastify";
 
-// const data = [
-//   { id: 1, filmname: "Phim hấp dẫn",  date: "07/03/2025", director: "Pom Nguyễn", nation: "Việt Nam", age: "18", category: "Kinh dị", time: "122",  },
-//   { id: 2, filmname: "Phim hấp dẫn",  date: "07/03/2025", director: "Pom Nguyễn", nation: "Việt Nam", age: "18", category: "Kinh dị", time: "122",  },
-//   { id: 3, filmname: "Phim hấp dẫn",  date: "07/03/2025", director: "Pom Nguyễn", nation: "Việt Nam", age: "18", category: "Kinh dị", time: "122",  },
-// ];
 const Film = () => {
   const { isOpen, setIsOpen } = useOpenForm();
   const { isOpenUpdate, setIsOpenUpdate } = useOpenUpdateForm();
+  const [selectedFilm, setSelectedFilm] = useState<Movies | null>(null);
   const dispatch = useDispatch();
-  const handleDelete = (id: any) => {
-    dispatch(deleteData(id));
+
+  const handleDelete = async (id: any) => {
+    const isConfirmed = window.confirm("Bạn có chắc muốn xóa film này không?");
+    if (!isConfirmed) return;
+    try {
+      await deleteMovie(id);
+      dispatch(deleteData(id));
+      toast.success("Delete succesfully !!!");
+    } catch (error) {
+      console.error(error);
+      toast.error(" Delete fail");
+    }
+  };
+  const handleEdit = (film: Movies) => {
+    setSelectedFilm(film);
+    setIsOpenUpdate(true);
   };
   const column = [
     {
@@ -52,7 +64,7 @@ const Film = () => {
           >
             <MdDeleteForever />
           </button>
-          <button className={style["btnEdit"]}>
+          <button className={style["btnEdit"]} onClick={() => handleEdit(row)}>
             <FaRegEdit />
           </button>
         </div>
@@ -67,7 +79,8 @@ const Film = () => {
     };
     fetchData();
   }, [dispatch]);
-  const data = useSelector(dataRemaining);
+  const data = useSelector(filmSelector);
+  console.log(data);
 
   return (
     <Card>
@@ -78,7 +91,7 @@ const Film = () => {
       <OptionTable />
       <Table data={data} column={column} rowsPerPage={5} />
       {isOpen && <AddFormFilm />}
-      {isOpenUpdate && <AddFormFilm />}
+      {isOpenUpdate && selectedFilm && <UpdateFormFilm data={selectedFilm} />}
     </Card>
   );
 };

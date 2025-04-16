@@ -19,6 +19,7 @@ const filmSlice = createSlice({
       if (index !== -1) {
         state[index] = action.payload;
       }
+      return state;
     },
   },
 });
