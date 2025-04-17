@@ -4,46 +4,64 @@ import Card from "../../Components/Card/Card";
 import HeadingCard from "../../Components/HeadingCard/HeadingCard";
 import OptionTable from "../../Components/OptionTable/OptionTable";
 import Table from "../../Components/Table/Table";
-import Pagination from "../../Components/Pagination/Pagination";
 import { FaRegEdit } from "react-icons/fa";
 import AddBtn from "../../Components/AddBtn/AddBtn";
 import style from "./film.module.css";
 import { MdDeleteForever } from "react-icons/md";
-import AddFromFilm from "./addFromFilm";
 import { Movies } from "@/app/movie.interface";
-import { addFilm, deleteFilm, getAllMovies } from "@/app/service/movie.service";
+import { deleteMovie, getAllMovies } from "@/app/service/movie.service";
 import { useDispatch, useSelector } from "react-redux";
-import { addData, deleteData, getData } from "@/app/redux/slices/filmSlice";
+import { deleteData, getData } from "@/app/redux/slices/filmSlice";
 import { filmSelector } from "@/app/redux/selectors";
+import { useOpenForm } from "../../context/OpenForm";
+import AddFormFilm from "./AddFormFilm";
+import { useOpenUpdateForm } from "../../context/OpenUpdate";
+import UpdateFormFilm from "./UpdateForm";
+import { toast } from "react-toastify";
+import AcitonTable from "../../Components/Table/AcitonTable";
 
 const Film = () => {
-  const [open, setOpen] = useState(false);
-
+  const { isOpen, setIsOpen } = useOpenForm();
+  const { isOpenUpdate, setIsOpenUpdate } = useOpenUpdateForm();
+  const [selectedFilm, setSelectedFilm] = useState<Movies | null>(null);
   const dispatch = useDispatch();
+
   const handleDelete = async (id: any) => {
-    const deleted = await deleteFilm(id)
-    dispatch(deleteData(id));
+    const isConfirmed = window.confirm("Bạn có chắc muốn xóa film này không?");
+    if (!isConfirmed) return;
+    try {
+      await deleteMovie(id);
+      dispatch(deleteData(id));
+      toast.success("Delete succesfully !!!");
+    } catch (error) {
+      console.error(error);
+      toast.error(" Delete fail");
+    }
+  };
+  const handleEdit = (film: Movies) => {
+    setSelectedFilm(film);
+    setIsOpenUpdate(true);
   };
   const column = [
-    { key: "name",title: "Tên phim",render: (row: Movies) => <p>{row.name}</p>},
+    {
+      key: "name",
+      title: "Tên phim",
+      render: (row: Movies) => <p>{row.name}</p>,
+    },
     { key: "date", title: "Ngày chiếu" },
     { key: "director", title: "Đạo điễn" },
     { key: "nation", title: "Quốc gia" },
     { key: "age", title: "Tuổi" },
     { key: "category", title: "Thể loại" },
     { key: "time", title: "Thời lượng" },
-    { key: "action", title: "Hành động", render: (row: any) => (
-        <div className={style["btnAction"]}>
-          <button
-            onClick={() => handleDelete(row.id)}
-            className={style["btnDelete"]}
-          >
-            <MdDeleteForever />
-          </button>
-          <button className={style["btnEdit"]}>
-            <FaRegEdit />
-          </button>
-        </div>
+    {
+      key: "action",
+      title: "Hành động",
+      render: (row: any) => (
+        <AcitonTable
+          handleDelete={() => handleDelete(row.id)}
+          handleEdit={() => handleEdit(row)}
+        />
       ),
     },
   ];
@@ -56,18 +74,18 @@ const Film = () => {
     fetchData();
   }, [dispatch]);
   const data = useSelector(filmSelector);
- console.log(data);
+  console.log(data);
+
   return (
     <Card>
-      {/* <button onClick={handleAdd}>Add</button> */}
       <HeadingCard title="danh sách phim">
         {" "}
-        <AddBtn onClick={() => setOpen(!open)}></AddBtn>{" "}
+        <AddBtn onClick={() => setIsOpen(true)}></AddBtn>{" "}
       </HeadingCard>
       <OptionTable />
-      <Table data={data} column={column} />
-      <Pagination />
-      {open && <AddFromFilm onClick={() => setOpen(!open)}></AddFromFilm>}
+      <Table data={data} column={column} rowsPerPage={5} />
+      {isOpen && <AddFormFilm />}
+      {isOpenUpdate && selectedFilm && <UpdateFormFilm data={selectedFilm} />}
     </Card>
   );
 };
