@@ -1,0 +1,121 @@
+.sidebar {
+    background: var(--foreground);
+    height: 100vh;
+    position: sticky;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    .logo {
+      span {
+        display: none;
+      }
+    }
+  
+    .link {
+      justify-content: center;
+      span {
+        font-size: var(--size-heading-24);
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  .sidebar.active {
+    min-height: 100vh;
+    min-width: 230px;
+    max-width: 300px;
+    color: #fff;
+  
+    .logo {
+      span {
+        display: flex;
+      }
+    }
+    .link {
+      justify-content: flex-start;
+      p {
+        display: flex;
+      }
+    }
+  }
+  .logo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border-navbar);
+    span {
+      font-family: var(--font-oswald-sans);
+      font-size: var(--size-heading-24);
+    }
+  }
+  .logo img {
+    height: 50px;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .link {
+    font-weight: 400;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    text-transform: capitalize;
+    gap: 10px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--size-2);
+      color: rgba(255, 255, 255, 0.4);
+    }
+    p {
+      font-size: var(--size-14);
+    }
+  }
+  .link.active,
+  .link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    span {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  .toggle_sidebar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid var(--border-navbar);
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--size-heading-24);
+        color: rgba(255, 255, 255, 0.4);
+      }
+      &:hover {
+        span {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #2a2a72;
+    color: white;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 15px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu li.active {
+    background: #4a4ae9;
+    border-radius: 5px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 10px 0 0 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification, .message {
+    background: #ff4d4d;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.table-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 24px;
+}
+
+.add-user {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.table-controls select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.export-buttons button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background:  #0756a5;
+    color: white;
+}
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #dddfe2;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status.active {
+    background: #28a745;
+    color: white;
+}
+
+.action {
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete{
+    background-color: rgb(255, 0, 0) ;
+    border-radius: 5px;
+    color: white;
+}
+
+.update{
+    background-color: rgb(74, 146, 255) ;
+    border-radius: 5px;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-buttons button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: none;
+    cursor: pointer;
+}
+
+.pagination-buttons button.active {
+    background: #007bff;
+    color: white;
+    border: none;
+}

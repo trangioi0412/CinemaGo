@@ -1,0 +1,19 @@
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search_bar {
+  input {
+    min-width: 240px;
+    background-color: #fff;
+    border: 2px solid var(--border-container);
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 5px var(--color-primary);
+    }
+  }
+}

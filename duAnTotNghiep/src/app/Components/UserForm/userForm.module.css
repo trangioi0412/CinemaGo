@@ -1,0 +1,208 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  display: flex;
+}
+.background_login_resgister {
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.wrapper {
+  background: var(--background);
+  width: 500px;
+  height: 100vh;
+  padding: 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  overflow-y: auto;
+  right: -500px;
+  animation: mount 0.5s forwards;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.closeForm {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  right: 20px;
+  background: transparent;
+  border: none;
+  span {
+    display: flex;
+    align-items: center;
+    font-size: var(--size-heading-32);
+    color: #fff;
+  }
+  &:hover {
+    span {
+      color: var(--color-primary);
+    }
+  }
+}
+.logo {
+  width: 99px;
+  align-self: center;
+  height: 64px;
+  margin-top: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.option {
+  align-self: center;
+  border-top: none;
+  width: 320px;
+
+  border-radius: 99px;
+
+  border: 2px solid var(--color-primary);
+  button {
+    font-size: var(--size-2);
+    font-weight: 600;
+    width: 50%;
+    border-radius: 99px;
+    padding: 8px 0;
+    background-color: transparent;
+    color: var(--color-primary);
+    outline: none;
+    transition: all 0.5s ease;
+    border: none;
+  }
+}
+button.active {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: #fff;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  top: 20px;
+  &:focus-within label,
+  input:valid + label,
+  input:user-valid + label {
+    transform: translate(-10px, calc(-100% - 15px));
+    color: var(--color-primary);
+    &::after {
+      content: " *";
+      color: red;
+    }
+  }
+  &:focus-within {
+    input {
+      border-color: var(--color-primary);
+    }
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  input {
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    &::placeholder {
+      color: #fff;
+    }
+    &[type="date"]:not(:valid) {
+      color: transparent;
+    }
+    &[type="date"]:focus:not(:valid) {
+      color: #fff;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    transition: all 0.5s ease;
+    left: 10px;
+    font-size: var(--size-14);
+  }
+  span {
+    font-size: var(--size-heading-2);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+.loginAction {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginAction input {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 2px solid #2396f3;
+  border-radius: 3px;
+}
+
+.loginAction input:checked {
+  background-color: #2396f3;
+  border-color: #2396f3;
+}
+.buttonLogin {
+  width: 50%;
+  &:disabled {
+    background-color: rgb(35, 150, 243, 0.5);
+    color: rgb(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
+}
+.savePassword,
+.forgotPassword {
+  display: flex;
+  align-items: center;
+  font-size: var(--size-14);
+}
+.forgotPassword {
+  a:hover {
+    color: var(--color-primary);
+  }
+}
+@keyframes mount {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0;
+  }
+}

@@ -11,7 +11,7 @@ import MovieSchedule from "./MovieSchedule/MovieSchedule";
 import ChooseCinema from "../Components/ChooseCinema/ChooseCinema";
 export default async function Schedule({ title }: { title: string }) {
   return (
-    <div className={`container ${style.schedule}`}>
+    <div className={`wrapper container ${style.schedule}`}>
       <h1>Lịch chiếu phim</h1>
       <div>
         <ChooseCinema />

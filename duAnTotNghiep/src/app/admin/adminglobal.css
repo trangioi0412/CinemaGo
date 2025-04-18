@@ -1,0 +1,76 @@
+:root {
+  --background: #f1f1f1;
+  --foreground: #212631;
+  --size-12: 1.2rem;
+  --size-14: 1.4rem;
+  --size-16: 1.6rem;
+  --size-18: 1.8rem;
+  --size-2: 2rem;
+  --size-heading-24: 2.4rem;
+  --size-heading-32: 3.2rem;
+  --size-heading-4: 4rem;
+  --color-primary: #007bff;
+  --color-text: #212529;
+  --border-container: #dbdfe6;
+  --border-navbar: #323a49;
+}
+body {
+  color: var(--color-text);
+  background: var(--background);
+  height: 100vh;
+  display: flex;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.btn {
+  background-color: var(--color-primary);
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 10px;
+  font-weight: 600;
+  transition: none;
+  font-size: var(--size-14);
+  color: #fff;
+  cursor: pointer;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-18);
+    color: #fff;
+  }
+  &:hover {
+    background-color: #007bff;
+    filter: brightness(0.8);
+  }
+}
+.cancel-btn {
+  background-color: #fff;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 10px;
+  color: red;
+  font-weight: 600;
+  transition: none;
+  font-size: var(--size-14);
+  cursor: pointer;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-18);
+  }
+  &:hover {
+    background-color: red;
+    color: #fff;
+  }
+}

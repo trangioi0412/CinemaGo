@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.open-btn {
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.open-btn:hover {
+  background-color: #005fcc;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 95%;
+  margin: 5% auto;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 70vh ;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup-form input,
+.popup-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.popup-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-form button:hover {
+  background-color: #218838;
+}
+
+
+
+</style>
+<body>
+<!-- Nút mở popup -->
+<!-- Nút mở popup -->
+<button class="open-btn" onclick="document.getElementById('popup').style.display='block'">
+  Thêm phim
+</button>
+
+<!-- Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Thêm phim mới</h2>
+    <form class="popup-form">
+      <input type="text" placeholder="Tên phim" required />
+      <input type="date" placeholder="Ngày chiếu" required />
+      <input type="text" placeholder="Đạo diễn" required />
+      <input type="text" placeholder="Quốc gia" required />
+      <input type="number" placeholder="Độ tuổi" required />
+      <input type="text" placeholder="Thể loại" required />
+      <input type="text" placeholder="Ngôn ngữ" required />
+      <input type="number" placeholder="Thời lượng (phút)" required />
+      <textarea placeholder="Tóm tắt nội dung" rows="4" required></textarea>
+      <input type="text" placeholder="Trạng thái (1: Sắp chiếu, 2: Đang chiếu, ...)" required />
+      <input type="text" placeholder="Link ảnh đại diện (image)" required />
+      <input type="text" placeholder="Link banner" required />
+      <input type="text" placeholder="Link trailer (YouTube embed)" required />
+      <button type="submit">Lưu phim</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
+<span class="close-btn" onclick="document.getElementById('popup').style.display='none'">&times;</span>

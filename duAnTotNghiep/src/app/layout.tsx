@@ -1,38 +1,38 @@
 "use client";
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import { usePathname } from "next/navigation";
-import Banner from "./Components/Banner/Banner";
-const robotoSans = Roboto({
-  variable: "--font-roboto-sans",
-  subsets: ["latin"],
+import { AppProvider } from "./Context/context";
+const beVietNamProSans = Be_Vietnam_Pro({
+  weight: ["400", "700"],
+  variable: "--font-be-vietnam-pro-sans",
+  subsets: ["latin", "vietnamese"],
 });
-
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
+const oswald = Oswald({
+  weight: ["400", "700"],
+  variable: "--font-oswald-sans",
+  subsets: ["latin", "vietnamese"],
 });
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const pathName = usePathname();
+  if (pathName.startsWith("/admin")) {
+    return <>{children}</>;
+  }
   return (
     <html lang="en">
-      <body className={`${robotoSans.variable} ${robotoMono.variable}`}>
-        <Navbar />
-        {pathName === "/" && <Banner />}
-        {pathName === "/" ? (
-          <main style={{ marginTop: 0 }}>{children}</main>
-        ) : (
-          <main>{children}</main>
-        )}
-        <Footer />
+      <body className={`${beVietNamProSans.variable} ${oswald.variable}`}>
+        <AppProvider>
+          <Navbar />
+          <main style={{ display: "contents" }}>{children}</main>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );
